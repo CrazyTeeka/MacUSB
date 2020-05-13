@@ -7,6 +7,14 @@ clover="5117"
 user1="CLOVER.SERIES.CHIPSET"
 user2="CLOVER.SERIES.100.200.300"
 
+# CleanUp
+rm -rf Clover
+rm -rf Clover.Config
+rm -rf Clover.User
+rm -rf Scripts
+rm -rf Tools
+rm -rf Temp
+
 # Create Folders
 mkdir -p Clover/EFI/BOOT
 mkdir -p Clover/EFI/CLOVER
@@ -18,16 +26,6 @@ mkdir -p Clover.User/$user2/EFI
 mkdir -p Scripts
 mkdir -p Tools
 mkdir -p Temp
-
-# Rerun CleanUp
-rm -rf Clover/EFI/BOOT/*
-rm -rf Clover/EFI/CLOVER/*
-rm -rf Clover.Config/Config/*
-rm -rf Clover.Config/DSDT/*
-rm -rf Clover.Config/Themes/*
-rm -rf Scripts/*
-rm -rf Tools/*
-rm -rf Temp/*
 
 # Download Clover
 wget  -q -P  Temp/ https://github.com/CloverHackyColor/CloverBootloader/releases/download/$clover/CloverV2-$clover.zip
