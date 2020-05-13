@@ -22,5 +22,7 @@ unzip -o -qq Temp/Clovy.zip -d Clover.Config/Themes/
 
 wget -q -P Temp/ https://www.olarila.com/files/Clover.Folder/CLOVER.SERIES.CHIPSET.zip
 unzip -o -qq Temp/CLOVER.SERIES.CHIPSET.zip -d Temp/
+cp -rf Temp/EFI Clover.User/James/
+rm -rf Temp/*
 
 rm -rf Temp
