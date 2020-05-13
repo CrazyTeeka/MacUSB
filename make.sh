@@ -47,7 +47,6 @@ sudo cp -rf $EFI/EFI /media/$USER/macOS/
 sudo mkdir -p /media/$USER/macOS/SharedSupport
 sudo cp -rf ../MacOS/$VER/* /media/$USER/macOS/SharedSupport/
 
-sudo cp -rf Printers /media/$USER/macOS/
 sudo cp -rf Scripts  /media/$USER/macOS/
 sudo cp -rf Tools    /media/$USER/macOS/
 
