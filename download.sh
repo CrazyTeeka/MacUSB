@@ -1,9 +1,9 @@
 #!/bin/bash
 
 if [ -z "$1" ]; then
-    echo "Usage:   download.sh <version>"
-    echo "Example: download.sh 10.15.4"
-    exit 0
+   echo "Usage:   download.sh <version>"
+   echo "Example: download.sh 10.15.4"
+   exit 0
 fi
 
 if   [ "$1" = "10.13.6" ]; then URL="http://swcdn.apple.com/content/downloads/06/50/041-91758-A_M8T44LH2AW/b5r4og05fhbgatve4agwy4kgkzv07mdid9"
