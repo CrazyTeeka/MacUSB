@@ -12,3 +12,4 @@ mkdir -p Temp
 
 wget -q -O Temp/Clovy.zip https://github.com/CrazyTeeka/Clover-Themes/raw/master/Clovy.zip
 unzip -o -qq Temp/Clovy.zip -d Clover.Config/Themes/
+rm -f Temp/Clovy.zip
