@@ -8,3 +8,7 @@ mkdir -p Clover.User/James/EFI
 mkdir -p Clover.User/Frank/EFI
 mkdir -p Scripts
 mkdir -p Tools
+mkdir -p Temp
+
+wget -O Temp/Clovy.zip https://github.com/CrazyTeeka/Clover-Themes/raw/master/Clovy.zip
+unzip Temp/Clovy.zip
