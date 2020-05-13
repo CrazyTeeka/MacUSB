@@ -10,6 +10,7 @@ mkdir -p Scripts
 mkdir -p Tools
 mkdir -p Temp
 
+rm -rf Clover.Config/Config/*
 rm -rf Clover.Config/DSDT/*
 rm -rf Clover.Config/Themes/*
 
