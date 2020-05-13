@@ -10,5 +10,5 @@ mkdir -p Scripts
 mkdir -p Tools
 mkdir -p Temp
 
-wget -O Temp/Clovy.zip https://github.com/CrazyTeeka/Clover-Themes/raw/master/Clovy.zip
+wget -q -O Temp/Clovy.zip https://github.com/CrazyTeeka/Clover-Themes/raw/master/Clovy.zip
 unzip Temp/Clovy.zip
