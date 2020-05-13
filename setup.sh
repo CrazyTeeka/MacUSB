@@ -13,4 +13,7 @@ mkdir -p Temp
 wget -q -O Temp/Clovy.zip https://github.com/CrazyTeeka/Clover-Themes/raw/master/Clovy.zip
 unzip -o -qq Temp/Clovy.zip -d Clover.Config/Themes/
 
+wget -q -O Clover.Config/DSDT/MAXIMUS-VII-HERO-ASUS-3503.aml https://github.com/CrazyTeeka/Clover-DSDT/raw/master/MAXIMUS-VII-HERO-ASUS-3503.aml
+wget -q -O Clover.Config/DSDT/MAXIMUS-VIII-GENE-ASUS.aml https://github.com/CrazyTeeka/Clover-DSDT/raw/master/MAXIMUS-VIII-GENE-ASUS.aml
+
 rm -rf Temp
