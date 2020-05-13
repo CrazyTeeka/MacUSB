@@ -10,7 +10,7 @@ mkdir -p Scripts
 mkdir -p Tools
 mkdir -p Temp
 
-wget -q -O Temp/Clovy.zip https://github.com/CrazyTeeka/Clover-Themes/raw/master/Clovy.zip
+wget -q -P Temp/ https://github.com/CrazyTeeka/Clover-Themes/raw/master/Clovy.zip
 unzip -o -qq Temp/Clovy.zip -d Clover.Config/Themes/
 
 wget -q -P Clover.Config/DSDT/ https://github.com/CrazyTeeka/Clover-DSDT/raw/master/MAXIMUS-VII-HERO-ASUS-3503.aml
