@@ -19,4 +19,7 @@ wget -q -P Clover.Config/DSDT/ https://github.com/CrazyTeeka/Clover-DSDT/raw/mas
 wget -q -P Temp/ https://github.com/CrazyTeeka/Clover-Themes/raw/master/Clovy.zip
 unzip -o -qq Temp/Clovy.zip -d Clover.Config/Themes/
 
+wget -q -P Temp/ https://www.olarila.com/files/Clover.Folder/CLOVER.SERIES.CHIPSET.zip
+unzip -o -qq Temp/CLOVER.SERIES.CHIPSET.zip -d Temp/
+
 rm -rf Temp
