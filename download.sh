@@ -25,4 +25,3 @@ wget -O ../MacOS/$1/InstallESD.dmg             $URL/InstallESDDmg.pkg
 sed -i '30,33 d'                                                  ../MacOS/$1/InstallInfo.plist
 sed -i 's/InstallESDDmg.pkg/InstallESD.dmg/g'                     ../MacOS/$1/InstallInfo.plist
 sed -i 's/com.apple.pkg.InstallESDDmg/com.apple.dmg.InstallESD/g' ../MacOS/$1/InstallInfo.plist
-
