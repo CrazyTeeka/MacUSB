@@ -55,4 +55,3 @@ sudo chown -R $USER:$USER /media/$USER/macOS/*
 sudo chmod +x /media/$USER/macOS/Scripts/*
 
 sudo eject $USB
-
