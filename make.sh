@@ -1,14 +1,14 @@
 #!/bin/bash
 
 if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ]; then
-    echo "Usage:   make.sh <target> <folder> <version>"
-    echo "Example: make.sh /dev/sdb Clover.User/James 10.15.4"
-    exit 0
+   echo "Usage:   make.sh <target> <folder> <version>"
+   echo "Example: make.sh /dev/sdb Clover.User/James 10.15.4"
+   exit 0
 fi
 
 if [ "$1" = "/dev/sda" ]; then
-    echo "You cannot write to boot drive."
-    exit 0
+   echo "You cannot write to boot drive."
+   exit 0
 fi
 
 USB="$1" # Target Device (USB)
