@@ -1,9 +1,9 @@
 #!/bin/bash
 
 if [ -z "$1" ]; then
-    echo "Usage:   catalog.sh <version>"
-    echo "Example: catalog.sh 10.15.4"
-    exit 0
+   echo "Usage:   catalog.sh <version>"
+   echo "Example: catalog.sh 10.15.4"
+   exit 0
 fi
 
 mkdir -p ../MacOS/Catalog
