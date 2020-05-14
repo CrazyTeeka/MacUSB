@@ -13,17 +13,17 @@ mkdir Temp
 echo "Downloading Catalog..."
 wget -q -O Temp/catalog.gz $C1$C2
 
-echo "Processing Catalog..."
+echo "Processing..."
 zgrep "InstallInfo.plist" Temp/catalog.gz > Temp/catalog.tmp
 sed -i 's/[[:space:]]//g' Temp/catalog.tmp
 sed -i 's/<string>//g'    Temp/catalog.tmp
 sed -i 's/<\/string>//g'  Temp/catalog.tmp
 
-echo "Downloading Versions..."
+echo "Processing..."
 touch Temp/InstallInfo.plist
-wget -q -i Temp/catalog.tmp
+wget -q -P Temp/ -i Temp/catalog.tmp
 
-echo "Processing Versions..."
+echo "Processing..."
 for i in 1 2 3 4 5 6 7 8 9; do
    cat Temp/InstallInfo.plist.$i | grep -m 1 $1 >> Temp/version.tmp
    sed -i 's/[[:space:]]//g'                       Temp/version.tmp
@@ -31,9 +31,11 @@ for i in 1 2 3 4 5 6 7 8 9; do
    sed -i 's/\/InstallInfo.plist<\/string>/"/g'    Temp/version.tmp
 done
 
+echo "Processing..."
 n=1; while read -r catalog; do catalog_array[n]=$catalog; ((n++)); done < Temp/catalog.tmp
 n=1; while read -r version; do version_array[n]=$version; ((n++)); done < Temp/version.tmp
 
+echo "Processing..."
 for i in 1 2 3 4 5 6 7 8 9; do
    echo ${version_array[i]} ${catalog_array[i]} >> Temp/search.tmp
 done
