@@ -8,7 +8,7 @@ USER2="CLOVER.SERIES.100.200.300"
 echo "Removing Folders..."
 rm -rf Clover
 rm -rf Clover.Config
-rm -rf Clover.User
+rm -rf Clover.Folder
 rm -rf Scripts
 rm -rf Tools
 rm -rf Temp
@@ -19,8 +19,9 @@ mkdir -p Clover/EFI/CLOVER
 mkdir -p Clover.Config/CONFIG
 mkdir -p Clover.Config/DSDT
 mkdir -p Clover.Config/THEMES
-mkdir -p Clover.User/$USER1
-mkdir -p Clover.User/$USER2
+mkdir -p Clover.Custom
+mkdir -p Clover.Folder/$USER1
+mkdir -p Clover.Folder/$USER2
 mkdir -p Scripts
 mkdir -p Tools
 mkdir -p Temp/$USER1
