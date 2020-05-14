@@ -1,2 +1,2 @@
 # MacUSB
-Make a bootable USB flash drive for installing MacOS on PC
+Bootable USB flash drive for installing MacOS on a Hackintosh
