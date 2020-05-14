@@ -1,8 +1,8 @@
 #!/bin/bash
 
 if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ]; then
-   echo "Usage:   make.sh <target> <folder> <version>"
-   echo "Example: make.sh /dev/sdb Clover.User/James 10.15.4"
+   echo "Usage:   make.sh <target> <version> <folder>"
+   echo "Example: make.sh /dev/sdb 10.15.4 Clover.Folder/"
    exit 0
 fi
 
@@ -11,13 +11,12 @@ if [ "$1" = "/dev/sda" ]; then
    exit 0
 fi
 
-USB="$1" # Target Device (USB)
-EFI="$2" # EFI Folder    (Clover.User)
-VER="$3" # MacOS Version (10.15.4)
-
-P1=$USB"1" # Partition 1 (USB)
-P2=$USB"2" # Partition 2 (USB)
-P3=$USB"3" # Partition 3 (USB)
+USB="$1"   # Target Device
+VER="$2"   # MacOS Version
+EFI="$3"   # EFI Folder
+P1=$USB"1" # Partition 1
+P2=$USB"2" # Partition 2
+P3=$USB"3" # Partition 3
 
 sh update.sh
 
