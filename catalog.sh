@@ -1,13 +1,12 @@
 #!/bin/bash
 
 if [ -z "$1" ]; then
-   echo "Usage:   catalog.sh <version>"
-   echo "Example: catalog.sh 10.15.4"
+   echo "Usage: catalog.sh <version>"
    exit 0
 fi
 
-mkdir -p ../MacOS/Catalog
-cd       ../MacOS/Catalog
+mkdir -p ~/MacOS/Catalog
+cd       ~/MacOS/Catalog
 
 wget -q -O catalog.gz https://swscan.apple.com/content/catalogs/others/index-10.13-10.12-10.11-10.10-10.9-mountainlion-lion-snowleopard-leopard.merged-1.sucatalog.gz
 zgrep "InstallInfo.plist" catalog.gz | sed 's/[[:blank:]]//g' | sed 's/<string>//g' | sed 's/<\/string>//g' > catalog.txt
