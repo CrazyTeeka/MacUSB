@@ -51,14 +51,14 @@ cp -f  Temp/CloverV2/EFI/BOOT/BOOTX64.efi                   Clover/EFI/BOOT/
 cp -f  Temp/CloverV2/EFI/CLOVER/CLOVERX64.efi               Clover/EFI/CLOVER/
 cp -rf Temp/CloverV2/EFI/CLOVER/drivers                     Clover/EFI/CLOVER/
 cp -rf Temp/CloverV2/EFI/CLOVER/tools                       Clover/EFI/CLOVER/
-cp -rf Temp/$USER1/EFI                                      Clover.User/$USER1/
-cp -rf Temp/$USER2/EFI                                      Clover.User/$USER2/
-cp -f  Clover.Config/CONFIG/CLOVER.SERIES.CHIPSET.plist     Clover.User/$USER1/EFI/CLOVER/config.plist
-cp -f  Clover.Config/CONFIG/CLOVER.SERIES.100.200.300.plist Clover.User/$USER2/EFI/CLOVER/config.plist
-cp -f  Clover.Config/DSDT/MAXIMUS-VII-HERO-ASUS-3503.aml    Clover.User/$USER1/EFI/CLOVER/ACPI/patched/DSDT.aml
-cp -f  Clover.Config/DSDT/MAXIMUS-VIII-GENE-ASUS.aml        Clover.User/$USER2/EFI/CLOVER/ACPI/patched/DSDT.aml
-cp -rf Clover.Config/THEMES/Clovy                           Clover.User/$USER1/EFI/CLOVER/themes/
-cp -rf Clover.Config/THEMES/Clovy                           Clover.User/$USER2/EFI/CLOVER/themes/
+cp -rf Temp/$USER1/EFI                                      Clover.Folder/$USER1/
+cp -rf Temp/$USER2/EFI                                      Clover.Folder/$USER2/
+cp -f  Clover.Config/CONFIG/CLOVER.SERIES.CHIPSET.plist     Clover.Folder/$USER1/EFI/CLOVER/config.plist
+cp -f  Clover.Config/CONFIG/CLOVER.SERIES.100.200.300.plist Clover.Folder/$USER2/EFI/CLOVER/config.plist
+cp -f  Clover.Config/DSDT/MAXIMUS-VII-HERO-ASUS-3503.aml    Clover.Folder/$USER1/EFI/CLOVER/ACPI/patched/DSDT.aml
+cp -f  Clover.Config/DSDT/MAXIMUS-VIII-GENE-ASUS.aml        Clover.Folder/$USER2/EFI/CLOVER/ACPI/patched/DSDT.aml
+cp -rf Clover.Config/THEMES/Clovy                           Clover.Folder/$USER1/EFI/CLOVER/themes/
+cp -rf Clover.Config/THEMES/Clovy                           Clover.Folder/$USER2/EFI/CLOVER/themes/
 cp -rf Temp/MacUSB-Scripts-master/*                         Scripts/
 
 echo "Cleaning Up..."
