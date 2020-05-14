@@ -2,6 +2,9 @@
 
 if [ -z "$1" ]; then
    echo "Usage:   download.sh <version>"
+   echo
+   echo "Example: download.sh 10.13.6"
+   echo "Example: download.sh 10.14.6"
    echo "Example: download.sh 10.15.4"
    exit 0
 fi
@@ -15,13 +18,27 @@ fi
 mkdir -p ../MacOS/$1
 rm -rf   ../MacOS/$1/*
 
+echo "Downloading AppleDiagnostics.dmg..."
 wget -O ../MacOS/$1/AppleDiagnostics.dmg       $URL/AppleDiagnostics.dmg
+
+echo "Downloading AppleDiagnostics.chunklist..."
 wget -O ../MacOS/$1/AppleDiagnostics.chunklist $URL/AppleDiagnostics.chunklist
+
+echo "Downloading BaseSystem.dmg..."
 wget -O ../MacOS/$1/BaseSystem.dmg             $URL/BaseSystem.dmg
+
+echo "Downloading BaseSystem.chunklist..."
 wget -O ../MacOS/$1/BaseSystem.chunklist       $URL/BaseSystem.chunklist
+
+echo "Downloading InstallInfo.plist..."
 wget -O ../MacOS/$1/InstallInfo.plist          $URL/InstallInfo.plist
+
+echo "Downloading InstallESD.dmg..."
 wget -O ../MacOS/$1/InstallESD.dmg             $URL/InstallESDDmg.pkg
 
+echo "Fixing InstallInfo.plist..."
 sed -i '30,33 d'                                                  ../MacOS/$1/InstallInfo.plist
 sed -i 's/InstallESDDmg.pkg/InstallESD.dmg/g'                     ../MacOS/$1/InstallInfo.plist
 sed -i 's/com.apple.pkg.InstallESDDmg/com.apple.dmg.InstallESD/g' ../MacOS/$1/InstallInfo.plist
+
+echo "Done"
