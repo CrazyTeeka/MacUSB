@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TARGET="~/MacOS"
+TARGET="MacOS"
 
 if [ -z "$1" ]; then
    echo "Usage: download.sh <version>"
@@ -14,30 +14,30 @@ else exit 0
 fi
 
 echo "Preparing..."
-mkdir -p $TARGET/$1
-rm -rf   $TARGET/$1/*
+mkdir -p $HOME/$TARGET/$1
+rm -rf   $HOME/$TARGET/$1/*
 
 echo "Downloading AppleDiagnostics.dmg..."
-wget -q -P $TARGET/$1/ $URL/AppleDiagnostics.dmg
+wget -q -P $HOME/$TARGET/$1/ $URL/AppleDiagnostics.dmg
 
 echo "Downloading AppleDiagnostics.chunklist..."
-wget -q -P $TARGET/$1/ $URL/AppleDiagnostics.chunklist
+wget -q -P $HOME/$TARGET/$1/ $URL/AppleDiagnostics.chunklist
 
 echo "Downloading BaseSystem.dmg..."
-wget -q -P $TARGET/$1/ $URL/BaseSystem.dmg
+wget -q -P $HOME/$TARGET/$1/ $URL/BaseSystem.dmg
 
 echo "Downloading BaseSystem.chunklist..."
-wget -q -P $TARGET/$1/ $URL/BaseSystem.chunklist
+wget -q -P $HOME/$TARGET/$1/ $URL/BaseSystem.chunklist
 
 echo "Downloading InstallInfo.plist..."
-wget -q -P $TARGET/$1/ $URL/InstallInfo.plist
+wget -q -P $HOME/$TARGET/$1/ $URL/InstallInfo.plist
 
 echo "Downloading InstallESD.dmg..."
-wget -q -O $TARGET/$1/InstallESD.dmg $URL/InstallESDDmg.pkg
+wget -q -O $HOME/$TARGET/$1/InstallESD.dmg $URL/InstallESDDmg.pkg
 
 echo "Fixing InstallInfo.plist..."
-sed -i '30,33 d'                                                  $TARGET/$1/InstallInfo.plist
-sed -i 's/InstallESDDmg.pkg/InstallESD.dmg/g'                     $TARGET/$1/InstallInfo.plist
-sed -i 's/com.apple.pkg.InstallESDDmg/com.apple.dmg.InstallESD/g' $TARGET/$1/InstallInfo.plist
+sed -i '30,33 d'                                                  $HOME/$TARGET/$1/InstallInfo.plist
+sed -i 's/InstallESDDmg.pkg/InstallESD.dmg/g'                     $HOME/$TARGET/$1/InstallInfo.plist
+sed -i 's/com.apple.pkg.InstallESDDmg/com.apple.dmg.InstallESD/g' $HOME/$TARGET/$1/InstallInfo.plist
 
 echo "Done"
