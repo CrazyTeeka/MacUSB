@@ -25,5 +25,5 @@ done
 
 cat urls.txt | grep $1
 
-cd     ../../MacUSB
-rm -rf ../MacOS/Catalog
+cd     ~/MacUSB
+rm -rf ~/MacOS/Catalog
