@@ -25,10 +25,10 @@ wget -q -i Temp/catalog.tmp
 
 echo "Processing..."
 for i in 1 2 3 4 5 6 7 8 9; do
-   cat InstallInfo.plist.$i | grep -m 1 "10."
-   sed 's/[[:space:]]//g'
-   sed 's/<string>//g'
-   sed 's/<\/string>//g'
+   cat InstallInfo.plist.$i | grep -m 1 $1 > Temp/catalog.tmp
+   sed -i 's/[[:space:]]//g' Temp/catalog.tmp
+   sed -i 's/<string>//g'    Temp/catalog.tmp
+   sed -i 's/<\/string>//g'  Temp/catalog.tmp
 done
 
 n=1; while read -r catalog; do catalog_array[n]=$catalog; ((n++)); done < catalog.txt
