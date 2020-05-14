@@ -1,11 +1,7 @@
 #!/bin/bash
 
 if [ -z "$1" ]; then
-   echo "Usage:   download.sh <version>"
-   echo
-   echo "Example: download.sh 10.13.6"
-   echo "Example: download.sh 10.14.6"
-   echo "Example: download.sh 10.15.4"
+   echo "Usage: download.sh <version>"
    exit 0
 fi
 
