@@ -17,10 +17,10 @@ wget -q -i catalog.txt
 for i in 1 2 3 4 5 6 7 8 9; do cat InstallInfo.plist.$i | grep -m 1 "10." | sed 's/[[:blank:]]//g' | sed 's/<string>//g' | sed 's/<\/string>//g' >> version.txt
 done
 
-n=0; while read -r catalog; do catalog_array[n]=$catalog; ((n++)); done < catalog.txt
-n=0; while read -r version; do version_array[n]=$version; ((n++)); done < version.txt
+n=1; while read -r catalog; do catalog_array[n]=$catalog; ((n++)); done < catalog.txt
+n=1; while read -r version; do version_array[n]=$version; ((n++)); done < version.txt
 
-for i in 0 1 2 3 4 5 6 7 8; do echo ${version_array[i]} 'URL="'${catalog_array[i]} | sed 's/\/InstallInfo.plist/"/g' >> urls.txt
+for i in 1 2 3 4 5 6 7 8 9; do echo ${version_array[i]} 'URL="'${catalog_array[i]} | sed 's/\/InstallInfo.plist/"/g' >> urls.txt
 done
 
 cat urls.txt | grep $1
