@@ -1,8 +1,7 @@
 #!/bin/bash
 
 if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ]; then
-   echo "Usage:   make.sh <target> <version> <folder>"
-   echo "Example: make.sh /dev/sdb 10.15.4 Clover.Folder/"
+   echo "Usage: make.sh <target> <version> <folder>"
    exit 0
 fi
 
