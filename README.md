@@ -1,2 +1,2 @@
 # MacUSB
-Create a bootable USB flash drive for MacOS with Linux
+Make a bootable USB flash drive for installing MacOS on PC
