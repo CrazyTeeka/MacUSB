@@ -62,8 +62,8 @@ cp -rf Clover.Config/THEMES/Clovy                           Clover.Folder/$USER2
 cp -rf Temp/MacUSB-Scripts-master/*                         Scripts/
 
 echo "Cleaning Up..."
-rm -rf Clover.User/$USER1/EFI/CLOVER/themes/Olarila
-rm -rf Clover.User/$USER2/EFI/CLOVER/themes/Olarila
+rm -rf Clover.Folder/$USER1/EFI/CLOVER/themes/Olarila
+rm -rf Clover.Folder/$USER2/EFI/CLOVER/themes/Olarila
 rm -rf Temp
 
 echo "Done"
