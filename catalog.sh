@@ -8,24 +8,29 @@ if [ -z "$1" ]; then
    exit 0
 fi
 
-mkdir -p ~/MacOS/Catalog
-cd       ~/MacOS/Catalog
+mkdir -p Temp
 
 echo "Downloading Catalog..."
-wget -q -O catalog.gz $C1$C2
+wget -q -O Temp/catalog.gz $C1$C2
 
 echo "Processing..."
-zgrep "InstallInfo.plist" catalog.gz > catalog.tmp
-sed -i 's/[[:space:]]//g' catalog.tmp
-sed -i 's/<string>//g'    catalog.tmp
-sed -i 's/<\/string>//g'  catalog.tmp
+zgrep "InstallInfo.plist" Temp/catalog.gz > Temp/catalog.tmp
+sed -i 's/[[:space:]]//g' Temp/catalog.tmp
+sed -i 's/<string>//g'    Temp/catalog.tmp
+sed -i 's/<\/string>//g'  Temp/catalog.tmp
 
 echo "Downloading Versions..."
-touch InstallInfo.plist
-wget -q -i catalog.tmp
+touch Temp/InstallInfo.plist
+wget -q -i Temp/catalog.tmp
 
 echo "Processing..."
-for i in 1 2 3 4 5 6 7 8 9; do cat InstallInfo.plist.$i | grep -m 1 "10." | sed 's/[[:space:]]//g' | sed 's/<string>//g' | sed 's/<\/string>//g' >> version.txt; done
+for i in 1 2 3 4 5 6 7 8 9; do
+   cat InstallInfo.plist.$i | grep -m 1 "10."
+   sed 's/[[:space:]]//g'
+   sed 's/<string>//g'
+   sed 's/<\/string>//g'
+done
+
 n=1; while read -r catalog; do catalog_array[n]=$catalog; ((n++)); done < catalog.txt
 n=1; while read -r version; do version_array[n]=$version; ((n++)); done < version.txt
 for i in 1 2 3 4 5 6 7 8 9; do echo ${version_array[i]} 'URL="'${catalog_array[i]} | sed 's/\/InstallInfo.plist/"/g' >> urls.txt; done
@@ -34,7 +39,6 @@ echo "Searching..."
 cat urls.txt | grep $1
 
 echo "Cleaning Up..."
-cd     ~/MacUSB
-rm -rf ~/MacOS/Catalog
+rm -rf Temp
 
 echo "Done"
