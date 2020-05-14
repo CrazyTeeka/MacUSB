@@ -32,7 +32,7 @@ sudo mkfs.hfsplus -v BaseSystem $P2
 sudo mkfs.hfsplus -v macOS $P3
 
 echo "Writing Base System..."
-sudo dmg2img -i ../MacOS/$VER/BaseSystem.dmg -p 4 -o $P2
+sudo dmg2img -i $HOME/MacOS/$VER/BaseSystem.dmg -p 4 -o $P2
 
 echo "Preparing..."
 sudo mkdir -p /media/$USER/EFI
@@ -50,7 +50,7 @@ sudo cp -rf $EFI/EFI /media/$USER/macOS/
 
 echo "Copying MacOS..."
 sudo mkdir -p /media/$USER/macOS/SharedSupport
-sudo cp -rf ../MacOS/$VER/* /media/$USER/macOS/SharedSupport/
+sudo cp -rf $HOME/MacOS/$VER/* /media/$USER/macOS/SharedSupport/
 
 echo "Copying Scripts..."
 sudo cp -rf Scripts  /media/$USER/macOS/
