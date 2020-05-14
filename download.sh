@@ -18,22 +18,22 @@ mkdir -p $TARGET/$1
 rm -rf   $TARGET/$1/*
 
 echo "Downloading AppleDiagnostics.dmg..."
-wget -q -O $TARGET/$1/AppleDiagnostics.dmg       $URL/AppleDiagnostics.dmg
+wget -q -P $TARGET/$1/ $URL/AppleDiagnostics.dmg
 
 echo "Downloading AppleDiagnostics.chunklist..."
-wget -q -O $TARGET/$1/AppleDiagnostics.chunklist $URL/AppleDiagnostics.chunklist
+wget -q -P $TARGET/$1/ $URL/AppleDiagnostics.chunklist
 
 echo "Downloading BaseSystem.dmg..."
-wget -q -O $TARGET/$1/BaseSystem.dmg             $URL/BaseSystem.dmg
+wget -q -P $TARGET/$1/ $URL/BaseSystem.dmg
 
 echo "Downloading BaseSystem.chunklist..."
-wget -q -O $TARGET/$1/BaseSystem.chunklist       $URL/BaseSystem.chunklist
+wget -q -P $TARGET/$1/ $URL/BaseSystem.chunklist
 
 echo "Downloading InstallInfo.plist..."
-wget -q -O $TARGET/$1/InstallInfo.plist          $URL/InstallInfo.plist
+wget -q -P $TARGET/$1/ $URL/InstallInfo.plist
 
 echo "Downloading InstallESD.dmg..."
-wget -q -O $TARGET/$1/InstallESD.dmg             $URL/InstallESDDmg.pkg
+wget -q -O $TARGET/$1/InstallESD.dmg $URL/InstallESDDmg.pkg
 
 echo "Fixing InstallInfo.plist..."
 sed -i '30,33 d'                                                  $TARGET/$1/InstallInfo.plist
