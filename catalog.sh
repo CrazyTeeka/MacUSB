@@ -13,14 +13,16 @@ cd       ~/MacOS/Catalog
 
 echo "Downloading Catalog..."
 wget -q -O catalog.gz $C1$C2
-zgrep "InstallInfo.plist" catalog.gz > file.txt
-sed 's/[[:space:]]//g'
-sed 's/<string>//g'
-sed 's/<\/string>//g'
+
+echo "Processing..."
+zgrep "InstallInfo.plist" catalog.gz > catalog.tmp
+sed -i 's/[[:space:]]//g' catalog.tmp
+sed -i 's/<string>//g'    catalog.tmp
+sed -i 's/<\/string>//g'  catalog.tmp
 
 echo "Downloading Versions..."
 touch InstallInfo.plist
-wget -q -i catalog.txt
+wget -q -i catalog.tmp
 
 echo "Processing..."
 for i in 1 2 3 4 5 6 7 8 9; do cat InstallInfo.plist.$i | grep -m 1 "10." | sed 's/[[:space:]]//g' | sed 's/<string>//g' | sed 's/<\/string>//g' >> version.txt; done
