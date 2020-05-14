@@ -1,5 +1,8 @@
 #!/bin/bash
 
+C1="https://swscan.apple.com/content/catalogs/others/"
+C2="index-10.13-10.12-10.11-10.10-10.9-mountainlion-lion-snowleopard-leopard.merged-1.sucatalog.gz"
+
 if [ -z "$1" ]; then
    echo "Usage: catalog.sh <version>"
    exit 0
@@ -9,8 +12,11 @@ mkdir -p ~/MacOS/Catalog
 cd       ~/MacOS/Catalog
 
 echo "Downloading Catalog..."
-wget -q -O catalog.gz https://swscan.apple.com/content/catalogs/others/index-10.13-10.12-10.11-10.10-10.9-mountainlion-lion-snowleopard-leopard.merged-1.sucatalog.gz
-zgrep "InstallInfo.plist" catalog.gz | sed 's/[[:space:]]//g' | sed 's/<string>//g' | sed 's/<\/string>//g' > catalog.txt
+wget -q -O catalog.gz $C1$C2
+zgrep "InstallInfo.plist" catalog.gz > file.txt
+sed 's/[[:space:]]//g'
+sed 's/<string>//g'
+sed 's/<\/string>//g'
 
 echo "Downloading Versions..."
 touch InstallInfo.plist
