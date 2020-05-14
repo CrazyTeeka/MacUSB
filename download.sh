@@ -11,8 +11,8 @@ elif [ "$1" = "10.15.4" ]; then URL="http://swcdn.apple.com/content/downloads/37
 else exit 0
 fi
 
-mkdir -p ~/MacOS/$1
-rm -rf   ~/MacOS/$1/*
+echo "Preparing..."
+mkdir -p ~/MacOS/$1 && rm -rf ~/MacOS/$1/*
 
 echo "Downloading AppleDiagnostics.dmg..."
 wget -O ~/MacOS/$1/AppleDiagnostics.dmg       $URL/AppleDiagnostics.dmg
