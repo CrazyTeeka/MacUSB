@@ -25,16 +25,18 @@ wget -q -i Temp/catalog.tmp
 
 echo "Processing Versions..."
 for i in 1 2 3 4 5 6 7 8 9; do
-   cat InstallInfo.plist.$i | grep -m 1 $1 > Temp/version.tmp
-   sed -i 's/[[:space:]]//g' Temp/version.tmp
-   sed -i 's/<string>//g'    Temp/version.tmp
-   sed -i 's/<\/string>//g'  Temp/version.tmp
+   cat InstallInfo.plist.$i | grep -m 1 $1 >    Temp/version.tmp
+   sed -i 's/[[:space:]]//g'                    Temp/version.tmp
+   sed -i 's/<string>/URL="/g'                  Temp/version.tmp
+   sed -i 's/\/InstallInfo.plist<\/string>/"/g' Temp/version.tmp
 done
 
 n=1; while read -r catalog; do catalog_array[n]=$catalog; ((n++)); done < catalog.tmp
 n=1; while read -r version; do version_array[n]=$version; ((n++)); done < version.tmp
 
-for i in 1 2 3 4 5 6 7 8 9; do echo ${version_array[i]} 'URL="'${catalog_array[i]} | sed 's/\/InstallInfo.plist/"/g' >> urls.txt; done
+for i in 1 2 3 4 5 6 7 8 9; do
+   echo ${version_array[i]} ${catalog_array[i]}
+done
 
 echo "Searching..."
 cat urls.txt | grep $1
