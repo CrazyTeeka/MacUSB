@@ -11,8 +11,14 @@ sh setup.sh
 ```
 MacUSB
 MacUSB/Clover
+MacUSB/Clover/EFI
 MacUSB/Clover.Config
+MacUSB/Clover.Config/CONFIG
+MacUSB/Clover.Config/DSDT
+MacUSB/Clover.Config/THEMES
 MacUSB/Clover.Folder
+MacUSB/Clover.Folder/CLOVER.SERIES.100.200.300
+MacUSB/Clover.Folder/CLOVER.SERIES.CHIPSET
 MacUSB/Scripts
 MacUSB/Tools
 ```
