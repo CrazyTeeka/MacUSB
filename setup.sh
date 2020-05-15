@@ -19,7 +19,6 @@ mkdir -p Clover/EFI/CLOVER
 mkdir -p Clover.Config/CONFIG
 mkdir -p Clover.Config/DSDT
 mkdir -p Clover.Config/THEMES
-mkdir -p Clover.Custom
 mkdir -p Clover.Folder/$USER1
 mkdir -p Clover.Folder/$USER2
 mkdir -p Scripts
