@@ -37,12 +37,14 @@ echo "Writing BaseSystem to $P2..."
 sudo apt-get -y install dmg2img &> /dev/null
 sudo dmg2img -i $HOME/MacOS/$VER/BaseSystem.dmg -p 4 -o $P2 &> /dev/null
 
-echo "Mounting $USB..."
+echo "Mounting EFI..."
 sudo mkdir -p  /media/$USER/EFI
 sudo mkdir -p  /media/$USER/macOS
 sudo rm -rf    /media/$USER/EFI/*
 sudo rm -rf    /media/$USER/macOS/*
 sudo mount $P1 /media/$USER/EFI
+
+echo "Mounting MacOS..."
 sudo mount $P3 /media/$USER/macOS
 
 echo "Copying EFI..."
