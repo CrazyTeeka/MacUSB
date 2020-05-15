@@ -6,3 +6,4 @@ In a terminal type:
 ```
 sh setup.sh
 ```
+It's that easy!
