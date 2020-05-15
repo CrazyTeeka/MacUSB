@@ -22,60 +22,57 @@ sudo -v
 echo "Updating Clover..."
 sh update.sh
 
-echo "Unmounting $USB..."
+echo "Unmounting USB Flash Drive..."
 sudo umount $P1 &> /dev/null
 sudo umount $P2 &> /dev/null
 sudo umount $P3 &> /dev/null
 
-echo "Formatting $USB..."
+echo "Formatting USB Flash Drive..."
 sudo gdisk $USB < macOS.gdisk &> /dev/null
 sudo mkfs.fat -F 32 -n EFI -v $P1 &> /dev/null
 sudo mkfs.hfsplus -v BaseSystem $P2 &> /dev/null
 sudo mkfs.hfsplus -v macOS $P3 &> /dev/null
 
-echo "Writing BaseSystem to $P2..."
+echo "Writing BaseSystem to USB Flash Drive..."
 sudo apt-get -y install dmg2img &> /dev/null
 sudo dmg2img -i $HOME/MacOS/$VER/BaseSystem.dmg -p 4 -o $P2 &> /dev/null
 
-echo "Mounting EFI..."
+echo "Mounting USB Flash Drive..."
 sudo mkdir -p  /media/$USER/EFI
 sudo mkdir -p  /media/$USER/macOS
 sudo rm -rf    /media/$USER/EFI/*
 sudo rm -rf    /media/$USER/macOS/*
 sudo mount $P1 /media/$USER/EFI
-
-echo "Mounting MacOS..."
 sudo mount $P3 /media/$USER/macOS
 
-echo "Copying EFI..."
+echo "Copying EFI to USB Flash Drive..."
 sudo cp -rf $EFI/EFI /media/$USER/EFI/
 sudo cp -rf $EFI/EFI /media/$USER/macOS/
 
-echo "Copying MacOS..."
+echo "Copying MacOS to USB Flash Drive..."
 sudo mkdir -p /media/$USER/macOS/SharedSupport
 sudo cp -rf $HOME/MacOS/$VER/* /media/$USER/macOS/SharedSupport/
 
-echo "Copying Scripts..."
+echo "Copying Scripts to USB Flash Drive..."
 sudo cp -rf Scripts  /media/$USER/macOS/
 
-echo "Copying Tools..."
+echo "Copying Tools to USB Flash Drive..."
 sudo cp -rf Tools    /media/$USER/macOS/
 
 if [ -d "$HOME/KeePassXC" ]; then
-   echo "Copying KeePassXC..."
+   echo "Copying KeePassXC to USB Flash Drive..."
    sudo cp -rf $HOME/KeePassXC /media/$USER/macOS/
 fi
 
-echo "Cleaning Up..."
 sudo chown -R $USER:$USER /media/$USER/macOS/*
 sudo chmod +x /media/$USER/macOS/Scripts/*
 
-echo "Unmounting $USB..."
+echo "Unmounting USB Flash Drive..."
 sudo umount $P1 &> /dev/null
 sudo umount $P2 &> /dev/null
 sudo umount $P3 &> /dev/null
 
-echo "Ejecting $USB..."
+echo "Ejecting USB Flash Drive..."
 sudo eject $USB
 
 echo "Done"
