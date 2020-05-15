@@ -19,30 +19,29 @@ P3=$USB"3" # Partition 3
 
 sudo -v
 
+echo "Updating Clover..."
 sh update.sh
 
-echo "Unmounting..."
+echo "Unmounting $USB..."
 sudo umount $P1 &> /dev/null
 sudo umount $P2 &> /dev/null
 sudo umount $P3 &> /dev/null
 
-echo "Formatting..."
+echo "Formatting $USB..."
 sudo gdisk $USB < macOS.gdisk &> /dev/null
 sudo mkfs.fat -F 32 -n EFI -v $P1 &> /dev/null
 sudo mkfs.hfsplus -v BaseSystem $P2 &> /dev/null
 sudo mkfs.hfsplus -v macOS $P3 &> /dev/null
 
-echo "Writing BaseSystem..."
+echo "Writing BaseSystem to $P2..."
 sudo apt-get -y install dmg2img &> /dev/null
 sudo dmg2img -i $HOME/MacOS/$VER/BaseSystem.dmg -p 4 -o $P2 &> /dev/null
 
-echo "Preparing..."
-sudo mkdir -p /media/$USER/EFI
-sudo mkdir -p /media/$USER/macOS
-sudo rm -rf   /media/$USER/EFI/*
-sudo rm -rf   /media/$USER/macOS/*
-
-echo "Mounting..."
+echo "Mounting $USB..."
+sudo mkdir -p  /media/$USER/EFI
+sudo mkdir -p  /media/$USER/macOS
+sudo rm -rf    /media/$USER/EFI/*
+sudo rm -rf    /media/$USER/macOS/*
 sudo mount $P1 /media/$USER/EFI
 sudo mount $P3 /media/$USER/macOS
 
@@ -69,12 +68,12 @@ echo "Cleaning Up..."
 sudo chown -R $USER:$USER /media/$USER/macOS/*
 sudo chmod +x /media/$USER/macOS/Scripts/*
 
-echo "Unmounting..."
+echo "Unmounting $USB..."
 sudo umount $P1 &> /dev/null
 sudo umount $P2 &> /dev/null
 sudo umount $P3 &> /dev/null
 
-echo "Ejecting..."
+echo "Ejecting $USB..."
 sudo eject $USB
 
 echo "Done"
