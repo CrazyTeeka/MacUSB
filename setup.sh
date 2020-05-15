@@ -35,13 +35,13 @@ wget -q -P Clover.Config/CONFIG/ https://github.com/CrazyTeeka/Clover-Config/raw
 wget -q -P Clover.Config/CONFIG/ https://github.com/CrazyTeeka/Clover-Config/raw/master/CLOVER.SERIES.100.200.300.plist
 wget -q -P Clover.Config/DSDT/   https://github.com/CrazyTeeka/Clover-DSDT/raw/master/MAXIMUS-VII-HERO-ASUS-3503.aml
 wget -q -P Clover.Config/DSDT/   https://github.com/CrazyTeeka/Clover-DSDT/raw/master/MAXIMUS-VIII-GENE-ASUS.aml
-wget -q -P Temp/                 https://github.com/CrazyTeeka/MacUSB-Scripts/archive/master.zip
+wget -q -O Temp/Scripts.zip      https://github.com/CrazyTeeka/MacUSB-Scripts/archive/master.zip
 wget -q -P Tools/                https://github.com/CrazyTeeka/MacUSB-Tools/raw/master/RunMe.app.zip
 
 echo "Unpacking Files..."
 unzip -o -qq Temp/CloverV2-$CLOVER.zip -d Temp/
 unzip -o -qq Temp/Clovy.zip            -d Clover.Config/THEMES/
-unzip -o -qq Temp/master.zip           -d Temp/
+unzip -o -qq Temp/Scripts.zip          -d Temp/
 unzip -o -qq Temp/$USER1.zip           -d Temp/$USER1/
 unzip -o -qq Temp/$USER2.zip           -d Temp/$USER2/
 
