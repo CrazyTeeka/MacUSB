@@ -6,4 +6,13 @@ In a terminal type:
 ```
 sh setup.sh
 ```
-It's that easy!
+
+## Folder Layout:
+```
+MacUSB
+MacUSB/Clover
+MacUSB/Clover.Config
+MacUSB/Clover.Folder
+MacUSB/Scripts
+MacUSB/Tools
+```
