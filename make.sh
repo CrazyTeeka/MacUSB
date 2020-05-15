@@ -17,22 +17,24 @@ P1=$USB"1" # Partition 1
 P2=$USB"2" # Partition 2
 P3=$USB"3" # Partition 3
 
-echo "Updating Clover..."
+sudo -v
+
 sh update.sh
 
 echo "Unmounting..."
-sudo umount $P1
-sudo umount $P2
-sudo umount $P3
+sudo umount $P1 &> /dev/null
+sudo umount $P2 &> /dev/null
+sudo umount $P3 &> /dev/null
 
 echo "Formatting..."
-sudo gdisk $USB < macOS.gdisk
-sudo mkfs.fat -F 32 -n EFI -v $P1
-sudo mkfs.hfsplus -v BaseSystem $P2
-sudo mkfs.hfsplus -v macOS $P3
+sudo gdisk $USB < macOS.gdisk &> /dev/null
+sudo mkfs.fat -F 32 -n EFI -v $P1 &> /dev/null
+sudo mkfs.hfsplus -v BaseSystem $P2 &> /dev/null
+sudo mkfs.hfsplus -v macOS $P3 &> /dev/null
 
-echo "Writing Base System..."
-sudo dmg2img -i $HOME/MacOS/$VER/BaseSystem.dmg -p 4 -o $P2
+echo "Writing BaseSystem..."
+sudo apt-get -y install dmg2img &> /dev/null
+sudo dmg2img -i $HOME/MacOS/$VER/BaseSystem.dmg -p 4 -o $P2 &> /dev/null
 
 echo "Preparing..."
 sudo mkdir -p /media/$USER/EFI
@@ -58,9 +60,19 @@ sudo cp -rf Scripts  /media/$USER/macOS/
 echo "Copying Tools..."
 sudo cp -rf Tools    /media/$USER/macOS/
 
+if [ -d "$HOME/KeePassXC" ]; then
+   echo "Copying KeePassXC..."
+   sudo cp -rf $HOME/KeePassXC /media/$USER/macOS/
+fi
+
 echo "Cleaning Up..."
 sudo chown -R $USER:$USER /media/$USER/macOS/*
 sudo chmod +x /media/$USER/macOS/Scripts/*
+
+echo "Unmounting..."
+sudo umount $P1 &> /dev/null
+sudo umount $P2 &> /dev/null
+sudo umount $P3 &> /dev/null
 
 echo "Ejecting..."
 sudo eject $USB
