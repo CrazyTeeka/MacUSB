@@ -53,20 +53,20 @@ echo "Unpacking Files..."
 unzip -o -qq Temp/CloverV2-$CLOVER.zip -d Temp/
 unzip -o -qq Temp/Clovy.zip            -d Clover.Config/THEMES/
 unzip -o -qq Temp/Scripts.zip          -d Temp/
-unzip -o -qq Temp/$OLARILA1            -d Clover.Folder/$USER1/
-unzip -o -qq Temp/$OLARILA2            -d Clover.Folder/$USER2/
-unzip -o -qq Temp/$OLARILA3            -d Clover.Folder/$USER3/
-unzip -o -qq Temp/$OLARILA4            -d Clover.Folder/$USER4/
+unzip -o -qq Temp/$OLARILA1            -d Temp/$USER1/
+unzip -o -qq Temp/$OLARILA2            -d Temp/$USER2/
+unzip -o -qq Temp/$OLARILA3            -d Temp/$USER3/
+unzip -o -qq Temp/$OLARILA4            -d Temp/$USER4/
 
 echo "Copying Files..."
 cp -f  Temp/CloverV2/EFI/BOOT/BOOTX64.efi                Clover/EFI/BOOT/
 cp -f  Temp/CloverV2/EFI/CLOVER/CLOVERX64.efi            Clover/EFI/CLOVER/
 cp -rf Temp/CloverV2/EFI/CLOVER/drivers                  Clover/EFI/CLOVER/
 cp -rf Temp/CloverV2/EFI/CLOVER/tools                    Clover/EFI/CLOVER/
-#cp -rf Temp/$USER1/EFI                                   Clover.Folder/$USER1/
-#cp -rf Temp/$USER2/EFI                                   Clover.Folder/$USER2/
-#cp -rf Temp/$USER3/EFI                                   Clover.Folder/$USER3/
-#cp -rf Temp/$USER4/EFI                                   Clover.Folder/$USER4/
+cp -rf Temp/$USER1/EFI                                   Clover.Folder/$USER1/
+cp -rf Temp/$USER2/EFI                                   Clover.Folder/$USER2/
+cp -rf Temp/$USER3/EFI                                   Clover.Folder/$USER3/
+cp -rf Temp/$USER4/EFI                                   Clover.Folder/$USER4/
 cp -rf Clover.Config/THEMES/Clovy                        Clover.Folder/$USER1/EFI/CLOVER/themes/
 cp -rf Clover.Config/THEMES/Clovy                        Clover.Folder/$USER2/EFI/CLOVER/themes/
 cp -rf Clover.Config/THEMES/Clovy                        Clover.Folder/$USER3/EFI/CLOVER/themes/
