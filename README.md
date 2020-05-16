@@ -1,7 +1,7 @@
 # MacUSB
 Create **Bootable Flash Media** with Linux. Install **macOS** on any Desktop or Laptop computer.
 ```
-Credits: MaLd0n from Olarila.com for working Clover EFI folders and custom DSDT's.
+Credits: MaLd0n from Olarila.com for the EFI folders and custom DSDTs.
 ```
 
 ## Install MacUSB
