@@ -16,3 +16,11 @@ sh download.sh 10.15.4
 ```
 
 ## Create Bootable Flash Media
+CHIPSET SERIES 5 6 7 8 9 (NEHALEM / SANDY BRIDGE / IVY BRIDGE / HASWELL / BROADWELL):
+```
+...
+```
+NOTEBOOKS CHIPSET SERIES (NEHALEM / SANDY BRIDGE / IVY BRIDGE / HASWELL / BROADWELL):
+```
+...
+```
