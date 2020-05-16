@@ -1,13 +1,13 @@
 # MacUSB
 Simple toolkit for **Linux** that makes a USB flash media bootable installer for **macOS** on a regular PC computer.
 
-## Download
+## How To Download
 Open a terminal then use:
 ```
 wget -O MacUSB.zip https://github.com/CrazyTeeka/MacUSB/archive/master.zip
 ```
 
-## Setup
+## How To Setup
 Open a terminal then use:
 ```
 unzip MacUSB.zip && mv MacUSB-master MacUSB && cd MacUSB && sh setup.sh
