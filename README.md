@@ -12,7 +12,7 @@ Open a terminal then use:
 ```
 unzip MacUSB.zip && mv MacUSB-master MacUSB && cd MacUSB && sh setup.sh
 ```
-When **setup.sh** has finished. The **MacUSB** folder should look like:
+When **setup.sh** has finished. The **MacUSB** folder should look like this:
 ```
 MacUSB
 ├───Clover
