@@ -1,5 +1,5 @@
 # MacUSB
-Simple toolkit for **Linux** that makes **Bootable Flash Media** for **macOS** on a regular PC computer.
+Create **Bootable Flash Media** with Linux. Install **macOS** on any Desktop or Laptop computer.
 ```
 Credits: MaLd0n from Olarila.com for working Clover EFI folders and custom DSDT's.
 ```
