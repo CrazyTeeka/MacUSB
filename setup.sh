@@ -65,11 +65,15 @@ cp -rf Temp/$USER4/EFI                                      Clover.Folder/$USER4
 #cp -f  Clover.Config/DSDT/MAXIMUS-VIII-GENE-ASUS.aml        Clover.Folder/$USER2/EFI/CLOVER/ACPI/patched/DSDT.aml
 cp -rf Clover.Config/THEMES/Clovy                           Clover.Folder/$USER1/EFI/CLOVER/themes/
 cp -rf Clover.Config/THEMES/Clovy                           Clover.Folder/$USER2/EFI/CLOVER/themes/
+cp -rf Clover.Config/THEMES/Clovy                           Clover.Folder/$USER3/EFI/CLOVER/themes/
+cp -rf Clover.Config/THEMES/Clovy                           Clover.Folder/$USER4/EFI/CLOVER/themes/
 cp -rf Temp/MacUSB-Scripts-master/*                         Scripts/
 
 echo "Cleaning Up..."
 rm -rf Clover.Folder/$USER1/EFI/CLOVER/themes/Olarila
 rm -rf Clover.Folder/$USER2/EFI/CLOVER/themes/Olarila
+rm -rf Clover.Folder/$USER3/EFI/CLOVER/themes/Olarila
+rm -rf Clover.Folder/$USER4/EFI/CLOVER/themes/Olarila
 rm -rf Temp
 
 echo "Done"
