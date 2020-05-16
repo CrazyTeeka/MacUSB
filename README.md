@@ -54,6 +54,10 @@ MacUSB
 ```
 
 ## How To Use
+Download macOS 10.15.4:
+```
+sh download.sh 10.15.4
+```
 Intel Series 5 6 7 8 9 (NEHALEM / SANDY BRIDGE / IVY BRIDGE / HASWELL / BROADWELL):
 ```
 sh make.sh /dev/sdb 10.15.4 Clover.Folder/CLOVER.SERIES.CHIPSET
