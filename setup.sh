@@ -7,6 +7,11 @@ USER2="DESKTOPS.SKYLAKE+"
 USER3="NOTEBOOKS.NEHALEM+"
 USER4="NOTEBOOKS.SKYLAKE+"
 
+OLARILA1="CLOVER.SERIES.CHIPSET.zip"
+OLARILA2="CLOVER.SERIES.100.200.300.zip"
+OLARILA3="CLOVER.NOTEBOOKS.SERIES.CHIPSET.zip"
+OLARILA4="CLOVER.NOTEBOOKS.100.200.300.zip"
+
 echo "Removing Folders..."
 rm -rf Clover
 rm -rf Clover.Config
@@ -34,10 +39,10 @@ mkdir -p Temp/$USER4
 echo "Downloading Files..."
 wget -q -P Temp/               https://github.com/CloverHackyColor/CloverBootloader/releases/download/$CLOVER/CloverV2-$CLOVER.zip
 wget -q -P Temp/               https://github.com/CrazyTeeka/Clover-Themes/raw/master/Clovy.zip
-wget -q -P Temp/               https://www.olarila.com/files/Clover.Folder/$USER1.zip
-wget -q -P Temp/               https://www.olarila.com/files/Clover.Folder/$USER2.zip
-wget -q -P Temp/               https://www.olarila.com/files/Clover.Folder/$USER3.zip
-wget -q -P Temp/               https://www.olarila.com/files/Clover.Folder/$USER4.zip
+wget -q -P Temp/               https://www.olarila.com/files/Clover.Folder/$OLARILA1
+wget -q -P Temp/               https://www.olarila.com/files/Clover.Folder/$OLARILA2
+wget -q -P Temp/               https://www.olarila.com/files/Clover.Folder/$OLARILA3
+wget -q -P Temp/               https://www.olarila.com/files/Clover.Folder/$OLARILA4
 wget -q -P Clover.Config/DSDT/ https://github.com/CrazyTeeka/Clover-DSDT/raw/master/MAXIMUS-VII-HERO-ASUS-3503.aml
 wget -q -P Clover.Config/DSDT/ https://github.com/CrazyTeeka/Clover-DSDT/raw/master/MAXIMUS-VIII-GENE-ASUS.aml
 wget -q -O Temp/Scripts.zip    https://github.com/CrazyTeeka/MacUSB-Scripts/archive/master.zip
@@ -47,10 +52,10 @@ echo "Unpacking Files..."
 unzip -o -qq Temp/CloverV2-$CLOVER.zip -d Temp/
 unzip -o -qq Temp/Clovy.zip            -d Clover.Config/THEMES/
 unzip -o -qq Temp/Scripts.zip          -d Temp/
-unzip -o -qq Temp/$USER1.zip           -d Temp/$USER1/
-unzip -o -qq Temp/$USER2.zip           -d Temp/$USER2/
-unzip -o -qq Temp/$USER3.zip           -d Temp/$USER3/
-unzip -o -qq Temp/$USER4.zip           -d Temp/$USER4/
+unzip -o -qq Temp/$OLARILA1            -d Temp/$USER1/
+unzip -o -qq Temp/$OLARILA2            -d Temp/$USER2/
+unzip -o -qq Temp/$OLARILA3            -d Temp/$USER3/
+unzip -o -qq Temp/$OLARILA4            -d Temp/$USER4/
 
 echo "Copying Files..."
 cp -f  Temp/CloverV2/EFI/BOOT/BOOTX64.efi                Clover/EFI/BOOT/
