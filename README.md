@@ -20,8 +20,8 @@ When **setup.sh** has finished. The **MacUSB** folder should look like this:
 MacUSB
 ├───Clover
 ├──────EFI
-├──────BOOT
-├──────CLOVER
+├─────────BOOT
+├─────────CLOVER
 ├───Clover.Config
 ├──────CONFIG
 ├──────DSDT
