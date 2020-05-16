@@ -1,7 +1,8 @@
 # MacUSB
 Simple toolkit for **Linux** that makes a USB flash media bootable installer for **macOS** on a regular PC computer.
-
+```
 Credits: MaLd0n from Olarila.com for working Clover EFI folders and custom DSDT's.
+```
 
 ## How To Download
 Open a terminal then use:
