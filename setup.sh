@@ -67,8 +67,6 @@ cp -rf Temp/$USER1/EFI                                   Clover.Folder/$USER1/
 cp -rf Temp/$USER2/EFI                                   Clover.Folder/$USER2/
 cp -rf Temp/$USER3/EFI                                   Clover.Folder/$USER3/
 cp -rf Temp/$USER4/EFI                                   Clover.Folder/$USER4/
-#cp -f  Clover.Config/DSDT/MAXIMUS-VII-HERO-ASUS-3503.aml Clover.Folder/$USER1/EFI/CLOVER/ACPI/patched/DSDT.aml
-#cp -f  Clover.Config/DSDT/MAXIMUS-VIII-GENE-ASUS.aml     Clover.Folder/$USER2/EFI/CLOVER/ACPI/patched/DSDT.aml
 cp -rf Clover.Config/THEMES/Clovy                        Clover.Folder/$USER1/EFI/CLOVER/themes/
 cp -rf Clover.Config/THEMES/Clovy                        Clover.Folder/$USER2/EFI/CLOVER/themes/
 cp -rf Clover.Config/THEMES/Clovy                        Clover.Folder/$USER3/EFI/CLOVER/themes/
