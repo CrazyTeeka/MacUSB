@@ -69,6 +69,12 @@ cp -rf Clover.Config/THEMES/Clovy                           Clover.Folder/$USER3
 cp -rf Clover.Config/THEMES/Clovy                           Clover.Folder/$USER4/EFI/CLOVER/themes/
 cp -rf Temp/MacUSB-Scripts-master/*                         Scripts/
 
+echo "Clovy Theme..."
+sed -i 's/<string>Olarila<\/string>/<string>Clovy<\/string>/g' Clover.Folder/$USER1/EFI/CLOVER/config.plist
+sed -i 's/<string>Olarila<\/string>/<string>Clovy<\/string>/g' Clover.Folder/$USER2/EFI/CLOVER/config.plist
+sed -i 's/<string>Olarila<\/string>/<string>Clovy<\/string>/g' Clover.Folder/$USER3/EFI/CLOVER/config.plist
+sed -i 's/<string>Olarila<\/string>/<string>Clovy<\/string>/g' Clover.Folder/$USER4/EFI/CLOVER/config.plist
+
 echo "Cleaning Up..."
 rm -rf Clover.Folder/$USER1/EFI/CLOVER/themes/Olarila
 rm -rf Clover.Folder/$USER2/EFI/CLOVER/themes/Olarila
