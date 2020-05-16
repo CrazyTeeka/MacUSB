@@ -7,13 +7,6 @@ USER2="CLOVER.SERIES.100.200.300"
 USER3="CLOVER.NOTEBOOKS.SERIES.CHIPSET"
 USER4="CLOVER.NOTEBOOKS.100.200.300"
 
-echo "Self Updating..."
-rm -rf *.sh
-wget -q -P . https://github.com/CrazyTeeka/MacUSB/raw/master/download.sh
-wget -q -P . https://github.com/CrazyTeeka/MacUSB/raw/master/make.sh
-wget -q -P . https://github.com/CrazyTeeka/MacUSB/raw/master/setup.sh
-wget -q -P . https://github.com/CrazyTeeka/MacUSB/raw/master/update.sh
-
 exit 0
 
 echo "Removing Folders..."
