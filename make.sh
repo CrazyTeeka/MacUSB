@@ -23,19 +23,19 @@ echo "Updating Clover..."
 sh clover-update.sh
 
 echo "Unmounting USB Flash Drive..."
-sudo umount $P1 &> /dev/null
-sudo umount $P2 &> /dev/null
-sudo umount $P3 &> /dev/null
+sudo umount $P1 >/dev/null 2>/dev/null
+sudo umount $P2 >/dev/null 2>/dev/null
+sudo umount $P3 >/dev/null 2>/dev/null
 
 echo "Formatting USB Flash Drive..."
-sudo gdisk $USB < macOS.gdisk &> /dev/null
-sudo mkfs.fat -F 32 -n EFI -v $P1 &> /dev/null
-sudo mkfs.hfsplus -v BaseSystem $P2 &> /dev/null
-sudo mkfs.hfsplus -v macOS $P3 &> /dev/null
+sudo gdisk $USB < macOS.gdisk >/dev/null 2>/dev/null
+sudo mkfs.fat -F 32 -n EFI -v $P1 >/dev/null 2>/dev/null
+sudo mkfs.hfsplus -v BaseSystem $P2 >/dev/null 2>/dev/null
+sudo mkfs.hfsplus -v macOS $P3 >/dev/null 2>/dev/null
 
 echo "Writing BaseSystem to USB Flash Drive..."
-sudo apt-get -y install dmg2img &> /dev/null
-sudo dmg2img -i $HOME/MacOS/$VER/BaseSystem.dmg -p 4 -o $P2 &> /dev/null
+sudo apt-get -y install dmg2img >/dev/null 2>/dev/null
+sudo dmg2img -i $HOME/MacOS/$VER/BaseSystem.dmg -p 4 -o $P2 >/dev/null 2>/dev/null
 
 echo "Mounting USB Flash Drive..."
 sudo mkdir -p  /media/$USER/EFI
@@ -68,9 +68,9 @@ sudo chown -R $USER:$USER /media/$USER/macOS/*
 sudo chmod +x /media/$USER/macOS/Scripts/*
 
 echo "Unmounting USB Flash Drive..."
-sudo umount $P1 &> /dev/null
-sudo umount $P2 &> /dev/null
-sudo umount $P3 &> /dev/null
+sudo umount $P1 >/dev/null 2>/dev/null
+sudo umount $P2 >/dev/null 2>/dev/null
+sudo umount $P3 >/dev/null 2>/dev/null
 
 echo "Ejecting USB Flash Drive..."
 sudo eject $USB
