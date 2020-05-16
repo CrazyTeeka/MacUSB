@@ -4,9 +4,7 @@ Simple Toolkit to make a Bootable USB flash drive with Linux for installing Mac 
 ## Download
 Open a terminal then type:
 ```
-cd $HOME
 wget -O MacUSB.zip https://github.com/CrazyTeeka/MacUSB/archive/master.zip
-unzip MacUSB.zip
 ```
 
 ## Setup
