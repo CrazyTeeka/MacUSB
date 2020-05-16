@@ -10,7 +10,7 @@ wget -O MacUSB.zip https://github.com/CrazyTeeka/MacUSB/archive/master.zip
 ## Setup
 Open a terminal then use:
 ```
-cd MacUSB
+cd MacUSB-master
 sh setup.sh
 ```
 After using **setup.sh** the folder layout should look like this:
