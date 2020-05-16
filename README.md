@@ -4,7 +4,7 @@ Simple Toolkit to make a Bootable USB flash drive with Linux for installing Mac 
 ## Setup
 Open a terminal then type:
 ```
-sh setup.sh
+cd MacUSB && sh setup.sh
 ```
 
 After using **setup.sh** the folder layout should look like this:
