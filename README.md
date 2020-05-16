@@ -12,7 +12,7 @@ Open a terminal then use:
 ```
 unzip MacUSB.zip && mv MacUSB-master MacUSB && cd MacUSB && sh setup.sh
 ```
-After using **setup.sh** the folder layout should look like this:
+The directory/file structure should look like:
 ```
 MacUSB
 MacUSB/Clover
@@ -34,6 +34,12 @@ MacUSB/Clover.Folder/CLOVER.SERIES.CHIPSET/EFI/BOOT
 MacUSB/Clover.Folder/CLOVER.SERIES.CHIPSET/EFI/CLOVER
 MacUSB/Scripts
 MacUSB/Tools
+MacUSB/download.sh
+MacUSB/macOS.gdisk
+MacUSB/make.sh
+MacUSB/README.md
+MacUSB/setup.sh
+MacUSB/update.sh
 ```
 
 ## How To Use
