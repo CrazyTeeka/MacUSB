@@ -53,6 +53,9 @@ echo "Copying MacOS to USB Flash Drive..."
 sudo mkdir -p /media/$USER/macOS/SharedSupport
 sudo cp -rf $HOME/MacOS/$VER/* /media/$USER/macOS/SharedSupport/
 
+echo "Copying DSDTs to USB Flash Drive..."
+sudo cp -rf Clover.Config/DSDT /media/$USER/macOS/
+
 echo "Copying Scripts to USB Flash Drive..."
 sudo cp -rf Scripts  /media/$USER/macOS/
 
