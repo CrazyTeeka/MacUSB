@@ -27,6 +27,14 @@ MacUSB
 ├──────DSDT
 ├──────THEMES
 ├───Clover.Folder
+├──────CLOVER.NOTEBOOKS.100.200.300
+├─────────EFI
+├────────────BOOT
+├────────────CLOVER
+├──────CLOVER.NOTEBOOKS.SERIES.CHIPSET
+├─────────EFI
+├────────────BOOT
+├────────────CLOVER
 ├──────CLOVER.SERIES.100.200.300
 ├─────────EFI
 ├────────────BOOT
@@ -37,12 +45,12 @@ MacUSB
 ├────────────CLOVER
 ├───Scripts
 ├───Tools
+├───clover-update.sh
 ├───download.sh
 ├───macOS.gdisk
 ├───make.sh
 ├───README.md
-├───setup.sh
-└───update.sh
+└───setup.sh
 ```
 
 ## How To Use
