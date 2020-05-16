@@ -1,5 +1,5 @@
 # MacUSB
-Simple Toolkit to make a Bootable USB flash drive with Linux for installing Mac OS on a Hackintosh
+Simple toolkit to make a bootable USB flash drive with **Linux** for installing **MacOS** on a hackintosh
 
 ## Download
 Open a terminal then type:
