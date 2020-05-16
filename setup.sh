@@ -28,6 +28,8 @@ mkdir -p Scripts
 mkdir -p Tools
 mkdir -p Temp/$USER1
 mkdir -p Temp/$USER2
+mkdir -p Temp/$USER3
+mkdir -p Temp/$USER4
 
 echo "Downloading Files..."
 wget -q -P Temp/                 https://github.com/CloverHackyColor/CloverBootloader/releases/download/$CLOVER/CloverV2-$CLOVER.zip
