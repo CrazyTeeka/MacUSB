@@ -43,3 +43,11 @@ MacUSB
 ```
 
 ## How To Use
+Intel Series 5 6 7 8 9:
+```
+sh make.sh /dev/sdb 10.15.4 Clover.Folder/CLOVER.SERIES.CHIPSET
+```
+Intel Series 10 20 30:
+```
+sh make.sh /dev/sdb 10.15.4 Clover.Folder/CLOVER.SERIES.100.200.300
+```
