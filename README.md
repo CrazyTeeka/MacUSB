@@ -50,13 +50,13 @@ Intel Series 5 6 7 8 9 (NEHALEM / SANDY BRIDGE / IVY BRIDGE / HASWELL / BROADWEL
 ```
 sh make.sh /dev/sdb 10.15.4 Clover.Folder/CLOVER.SERIES.CHIPSET
 ```
-Intel Series 5 6 7 8 9 NOTEBOOKS/LAPTOPS:
-```
-sh make.sh /dev/sdb 10.15.4 Clover.Folder/CLOVER.NOTEBOOKS.SERIES.CHIPSET
-```
 Intel Series 10 20 30 (SKYLAKE / KABYLAKE / COFFEELAKE / WHISKEYLAKE / COMETLAKE):
 ```
 sh make.sh /dev/sdb 10.15.4 Clover.Folder/CLOVER.SERIES.100.200.300
+```
+Intel Series 5 6 7 8 9 NOTEBOOKS/LAPTOPS:
+```
+sh make.sh /dev/sdb 10.15.4 Clover.Folder/CLOVER.NOTEBOOKS.SERIES.CHIPSET
 ```
 Intel Series 10 20 30 NOTEBOOKS/LAPTOPS:
 ```
