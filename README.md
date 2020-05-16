@@ -35,3 +35,5 @@ MacUSB/Clover.Folder/CLOVER.SERIES.CHIPSET/EFI/CLOVER
 MacUSB/Scripts
 MacUSB/Tools
 ```
+
+## How To Use
