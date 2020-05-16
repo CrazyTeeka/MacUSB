@@ -5,13 +5,13 @@ Credits: MaLd0n from Olarila.com for working Clover EFI folders and custom DSDT'
 ```
 
 ## How To Download
-Open a terminal then use:
+#### Open a terminal then use:
 ```
 wget -O MacUSB.zip https://github.com/CrazyTeeka/MacUSB/archive/master.zip
 ```
 
 ## How To Setup
-Open a terminal then use:
+#### Open a terminal then use:
 ```
 unzip MacUSB.zip && mv MacUSB-master MacUSB && cd MacUSB && sh setup.sh
 ```
