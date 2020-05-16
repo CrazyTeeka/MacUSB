@@ -7,7 +7,6 @@ In a terminal type:
 sh setup.sh
 ```
 
-## Folder Layout
 After using **setup.sh** the folder layout should look like this:
 ```
 MacUSB
