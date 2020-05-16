@@ -1,12 +1,19 @@
 # MacUSB
 Simple Toolkit to make a Bootable USB flash drive with Linux for installing Mac OS on a Hackintosh
 
+## Download
+Open a terminal then type:
+```
+cd $HOME
+wget -O MacUSB.zip https://github.com/CrazyTeeka/MacUSB/archive/master.zip
+unzip MacUSB.zip
+```
+
 ## Setup
 Open a terminal then type:
 ```
 cd MacUSB && sh setup.sh
 ```
-
 After using **setup.sh** the folder layout should look like this:
 ```
 MacUSB
