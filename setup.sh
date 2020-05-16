@@ -29,6 +29,7 @@ mkdir -p Clover.Folder/$USER1
 mkdir -p Clover.Folder/$USER2
 mkdir -p Clover.Folder/$USER3
 mkdir -p Clover.Folder/$USER4
+mkdir -p Clover.Custom
 mkdir -p Scripts
 mkdir -p Tools
 mkdir -p Temp/$USER1
