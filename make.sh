@@ -20,7 +20,7 @@ P3=$USB"3" # Partition 3
 sudo -v
 
 echo "Updating Clover..."
-sh update.sh
+sh clover-update.sh
 
 echo "Unmounting USB Flash Drive..."
 sudo umount $P1 &> /dev/null
