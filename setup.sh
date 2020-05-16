@@ -46,8 +46,8 @@ wget -q -P Temp/               https://www.olarila.com/files/Clover.Folder/$USER
 wget -q -P Temp/               https://www.olarila.com/files/Clover.Folder/$USER2.zip
 wget -q -P Temp/               https://www.olarila.com/files/Clover.Folder/$USER3.zip
 wget -q -P Temp/               https://www.olarila.com/files/Clover.Folder/$USER4.zip
-#wget -q -P Clover.Config/DSDT/ https://github.com/CrazyTeeka/Clover-DSDT/raw/master/MAXIMUS-VII-HERO-ASUS-3503.aml
-#wget -q -P Clover.Config/DSDT/ https://github.com/CrazyTeeka/Clover-DSDT/raw/master/MAXIMUS-VIII-GENE-ASUS.aml
+wget -q -P Clover.Config/DSDT/ https://github.com/CrazyTeeka/Clover-DSDT/raw/master/MAXIMUS-VII-HERO-ASUS-3503.aml
+wget -q -P Clover.Config/DSDT/ https://github.com/CrazyTeeka/Clover-DSDT/raw/master/MAXIMUS-VIII-GENE-ASUS.aml
 wget -q -O Temp/Scripts.zip    https://github.com/CrazyTeeka/MacUSB-Scripts/archive/master.zip
 wget -q -P Tools/              https://github.com/CrazyTeeka/MacUSB-Tools/raw/master/RunMe.app.zip
 
@@ -69,8 +69,8 @@ cp -rf Temp/$USER1/EFI                                   Clover.Folder/$USER1/
 cp -rf Temp/$USER2/EFI                                   Clover.Folder/$USER2/
 cp -rf Temp/$USER3/EFI                                   Clover.Folder/$USER3/
 cp -rf Temp/$USER4/EFI                                   Clover.Folder/$USER4/
-cp -f  Clover.Config/DSDT/MAXIMUS-VII-HERO-ASUS-3503.aml Clover.Folder/$USER1/EFI/CLOVER/ACPI/patched/DSDT.aml
-cp -f  Clover.Config/DSDT/MAXIMUS-VIII-GENE-ASUS.aml     Clover.Folder/$USER2/EFI/CLOVER/ACPI/patched/DSDT.aml
+#cp -f  Clover.Config/DSDT/MAXIMUS-VII-HERO-ASUS-3503.aml Clover.Folder/$USER1/EFI/CLOVER/ACPI/patched/DSDT.aml
+#cp -f  Clover.Config/DSDT/MAXIMUS-VIII-GENE-ASUS.aml     Clover.Folder/$USER2/EFI/CLOVER/ACPI/patched/DSDT.aml
 cp -rf Clover.Config/THEMES/Clovy                        Clover.Folder/$USER1/EFI/CLOVER/themes/
 cp -rf Clover.Config/THEMES/Clovy                        Clover.Folder/$USER2/EFI/CLOVER/themes/
 cp -rf Clover.Config/THEMES/Clovy                        Clover.Folder/$USER3/EFI/CLOVER/themes/
