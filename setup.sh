@@ -8,6 +8,7 @@ USER3="CLOVER.NOTEBOOKS.SERIES.CHIPSET"
 USER4="CLOVER.NOTEBOOKS.100.200.300"
 
 echo "Self Updating..."
+rm -rf *
 wget -q -P . https://github.com/CrazyTeeka/MacUSB/raw/master/README.md
 wget -q -P . https://github.com/CrazyTeeka/MacUSB/raw/master/download.sh
 wget -q -P . https://github.com/CrazyTeeka/MacUSB/raw/master/macOS.gdisk
