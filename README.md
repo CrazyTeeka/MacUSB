@@ -15,43 +15,6 @@ wget -O MacUSB.zip https://github.com/CrazyTeeka/MacUSB/archive/master.zip
 ```
 unzip MacUSB.zip && mv MacUSB-master MacUSB && cd MacUSB && sh setup.sh
 ```
-When **setup.sh** has finished. The **MacUSB** folder should look like this:
-```
-MacUSB
-├───Clover
-├──────EFI
-├─────────BOOT
-├─────────CLOVER
-├───Clover.Config
-├──────CONFIG
-├──────DSDT
-├──────THEMES
-├───Clover.Folder
-├──────CLOVER.NOTEBOOKS.100.200.300
-├─────────EFI
-├────────────BOOT
-├────────────CLOVER
-├──────CLOVER.NOTEBOOKS.SERIES.CHIPSET
-├─────────EFI
-├────────────BOOT
-├────────────CLOVER
-├──────CLOVER.SERIES.100.200.300
-├─────────EFI
-├────────────BOOT
-├────────────CLOVER
-├──────CLOVER.SERIES.CHIPSET
-├─────────EFI
-├────────────BOOT
-├────────────CLOVER
-├───Scripts
-├───Tools
-├───clover-update.sh
-├───download.sh
-├───macOS.gdisk
-├───make.sh
-├───README.md
-└───setup.sh
-```
 
 ## How To Use
 #### Download macOS 10.15.4:
