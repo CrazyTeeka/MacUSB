@@ -2,7 +2,7 @@
 Simple Toolkit to make a Bootable USB flash drive with Linux for installing Mac OS on a Hackintosh
 
 ## Setup
-In a terminal type:
+Open a terminal then type:
 ```
 sh setup.sh
 ```
