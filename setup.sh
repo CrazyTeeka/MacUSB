@@ -7,8 +7,6 @@ USER2="CLOVER.SERIES.100.200.300"
 USER3="CLOVER.NOTEBOOKS.SERIES.CHIPSET"
 USER4="CLOVER.NOTEBOOKS.100.200.300"
 
-exit 0
-
 echo "Removing Folders..."
 rm -rf Clover
 rm -rf Clover.Config
