@@ -37,8 +37,8 @@ wget -q -P Temp/                 https://www.olarila.com/files/Clover.Folder/$US
 wget -q -P Temp/                 https://www.olarila.com/files/Clover.Folder/$USER2.zip
 wget -q -P Temp/                 https://www.olarila.com/files/Clover.Folder/$USER3.zip
 wget -q -P Temp/                 https://www.olarila.com/files/Clover.Folder/$USER4.zip
-wget -q -P Clover.Config/CONFIG/ https://github.com/CrazyTeeka/Clover-Config/raw/master/CLOVER.SERIES.CHIPSET.plist
-wget -q -P Clover.Config/CONFIG/ https://github.com/CrazyTeeka/Clover-Config/raw/master/CLOVER.SERIES.100.200.300.plist
+wget -q -P Clover.Config/CONFIG/ https://github.com/CrazyTeeka/Clover-Config/raw/master/SERIES.CHIPSET.plist
+wget -q -P Clover.Config/CONFIG/ https://github.com/CrazyTeeka/Clover-Config/raw/master/SERIES.100.200.300.plist
 wget -q -P Clover.Config/DSDT/   https://github.com/CrazyTeeka/Clover-DSDT/raw/master/MAXIMUS-VII-HERO-ASUS-3503.aml
 wget -q -P Clover.Config/DSDT/   https://github.com/CrazyTeeka/Clover-DSDT/raw/master/MAXIMUS-VIII-GENE-ASUS.aml
 wget -q -O Temp/Scripts.zip      https://github.com/CrazyTeeka/MacUSB-Scripts/archive/master.zip
