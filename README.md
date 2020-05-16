@@ -14,3 +14,5 @@ unzip MacUSB.zip && mv MacUSB-master MacUSB && cd MacUSB && sh setup.sh
 ```
 sh download.sh 10.15.4
 ```
+
+## Create Bootable Flash Media
