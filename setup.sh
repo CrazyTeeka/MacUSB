@@ -8,12 +8,14 @@ USER3="CLOVER.NOTEBOOKS.SERIES.CHIPSET"
 USER4="CLOVER.NOTEBOOKS.100.200.300"
 
 echo "Self Updating..."
-wget -q -O README.md   https://github.com/CrazyTeeka/MacUSB/raw/master/README.md
-wget -q -O download.sh https://github.com/CrazyTeeka/MacUSB/raw/master/download.sh
-wget -q -O macOS.gdisk https://github.com/CrazyTeeka/MacUSB/raw/master/macOS.gdisk
-wget -q -O make.sh     https://github.com/CrazyTeeka/MacUSB/raw/master/make.sh
-wget -q -O setup.sh    https://github.com/CrazyTeeka/MacUSB/raw/master/setup.sh
-wget -q -O update.sh   https://github.com/CrazyTeeka/MacUSB/raw/master/update.sh
+wget -q -P . https://github.com/CrazyTeeka/MacUSB/raw/master/README.md
+wget -q -P . https://github.com/CrazyTeeka/MacUSB/raw/master/download.sh
+wget -q -P . https://github.com/CrazyTeeka/MacUSB/raw/master/macOS.gdisk
+wget -q -P . https://github.com/CrazyTeeka/MacUSB/raw/master/make.sh
+wget -q -P . https://github.com/CrazyTeeka/MacUSB/raw/master/setup.sh
+wget -q -P . https://github.com/CrazyTeeka/MacUSB/raw/master/update.sh
+
+exit 0
 
 echo "Removing Folders..."
 rm -rf Clover
