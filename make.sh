@@ -59,9 +59,9 @@ sudo apt-get -y install dmg2img >/dev/null 2>/dev/null
 sudo dmg2img -i $HOME/MacOS/$VER/BaseSystem.dmg -p 4 -o $P2 >/dev/null 2>/dev/null
 
 echo "${tty_blue}==>${tty_bold} Copying EFI...${tty_reset}"
-sudo mkdir -p          /media/$USER/macOS/EFI-CL/
+sudo mkdir -p          /media/$USER/macOS/EFI-CLOVER/
 sudo cp -rf $EFI/EFI   /media/$USER/EFI/
-sudo cp -rf $EFI/EFI/* /media/$USER/macOS/EFI-CL/
+sudo cp -rf $EFI/EFI/* /media/$USER/macOS/EFI-CLOVER/
 
 echo "${tty_blue}==>${tty_bold} Copying macOS...${tty_reset}"
 sudo mkdir -p /media/$USER/macOS/SharedSupport
