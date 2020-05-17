@@ -14,7 +14,7 @@ tty_bold="$(tty_mkbold 39)"
 tty_reset="$(tty_escape 0)"
 
 if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ]; then
-   echo "${tty_bold}Usage: ${tty_blue}make.sh${tty_bold} <${tty_blue}target${tty_bold}> <${tty_blue}version${tty_bold}> <${tty_blue}folder${tty_bold}>${tty_reset}"
+   echo "${tty_bold}Usage:${tty_blue} make.sh${tty_bold} <${tty_blue}target${tty_bold}> <${tty_blue}version${tty_bold}> <${tty_blue}folder${tty_bold}>${tty_reset}"
    exit 0
 fi
 

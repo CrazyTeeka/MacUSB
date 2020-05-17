@@ -1,9 +1,22 @@
 #!/bin/bash
 
-TARGET="MacOS"
+if [ -t 1 ]; then
+   tty_escape() { printf "\033[%sm" "$1"; }
+else
+   tty_escape() { :; }
+fi
+
+tty_mkbold() { tty_escape "1;$1"; }
+tty_underline="$(tty_escape "4;39")"
+tty_blue="$(tty_mkbold 34)"
+tty_red="$(tty_mkbold 31)"
+tty_bold="$(tty_mkbold 39)"
+tty_reset="$(tty_escape 0)"
+
+TARGET="Z"
 
 if [ -z "$1" ]; then
-   echo "Usage: download.sh <version>"
+   echo "${tty_bold}Usage:${tty_blue} download.sh${tty_bold} <${tty_blue}version${tty_bold}>${tty_reset}"
    exit 0
 fi
 
@@ -13,31 +26,31 @@ elif [ "$1" = "10.15.4" ]; then URL="http://swcdn.apple.com/content/downloads/37
 else exit 0
 fi
 
-echo "Preparing..."
+echo "${tty_blue}==>${tty_bold} Preparing...${tty_reset}"
 mkdir -p $HOME/$TARGET/$1
 rm -rf   $HOME/$TARGET/$1/*
 
-echo "Downloading AppleDiagnostics.dmg..."
+echo "${tty_blue}==>${tty_bold} Downloading AppleDiagnostics.dmg...${tty_reset}"
 wget -q -P $HOME/$TARGET/$1/ $URL/AppleDiagnostics.dmg
 
-echo "Downloading AppleDiagnostics.chunklist..."
+echo "${tty_blue}==>${tty_bold} Downloading AppleDiagnostics.chunklist...${tty_reset}"
 wget -q -P $HOME/$TARGET/$1/ $URL/AppleDiagnostics.chunklist
 
-echo "Downloading BaseSystem.dmg..."
+echo "${tty_blue}==>${tty_bold} Downloading BaseSystem.dmg...${tty_reset}"
 wget -q -P $HOME/$TARGET/$1/ $URL/BaseSystem.dmg
 
-echo "Downloading BaseSystem.chunklist..."
+echo "${tty_blue}==>${tty_bold} Downloading BaseSystem.chunklist...${tty_reset}"
 wget -q -P $HOME/$TARGET/$1/ $URL/BaseSystem.chunklist
 
-echo "Downloading InstallInfo.plist..."
+echo "${tty_blue}==>${tty_bold} Downloading InstallInfo.plist...${tty_reset}"
 wget -q -P $HOME/$TARGET/$1/ $URL/InstallInfo.plist
 
-echo "Downloading InstallESD.dmg..."
+echo "${tty_blue}==>${tty_bold} Downloading InstallESD.dmg...${tty_reset}"
 wget -q -O $HOME/$TARGET/$1/InstallESD.dmg $URL/InstallESDDmg.pkg
 
-echo "Fixing InstallInfo.plist..."
+echo "${tty_blue}==>${tty_bold} Fixing InstallInfo.plist...${tty_reset}"
 sed -i '30,33 d'                                                  $HOME/$TARGET/$1/InstallInfo.plist
 sed -i 's/InstallESDDmg.pkg/InstallESD.dmg/g'                     $HOME/$TARGET/$1/InstallInfo.plist
 sed -i 's/com.apple.pkg.InstallESDDmg/com.apple.dmg.InstallESD/g' $HOME/$TARGET/$1/InstallInfo.plist
 
-echo "Done"
+echo "${tty_blue}==>${tty_bold} Done${tty_reset}"
