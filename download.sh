@@ -13,7 +13,7 @@ tty_red="$(tty_mkbold 31)"
 tty_bold="$(tty_mkbold 39)"
 tty_reset="$(tty_escape 0)"
 
-TARGET="Z"
+TARGET="MacOS"
 
 if [ -z "$1" ]; then
    echo "${tty_bold}Usage:${tty_blue} download.sh${tty_bold} <${tty_blue}version${tty_bold}>${tty_reset}"
