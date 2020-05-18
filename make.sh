@@ -71,10 +71,10 @@ echo "${tty_blue}==>${tty_bold} Copying DSDT...${tty_reset}"
 sudo cp -rf Clover.Config/DSDT /media/$USER/macOS/
 
 echo "${tty_blue}==>${tty_bold} Copying Scripts...${tty_reset}"
-sudo cp -rf Scripts  /media/$USER/macOS/
+sudo cp -rf Scripts /media/$USER/macOS/
 
 echo "${tty_blue}==>${tty_bold} Copying Tools...${tty_reset}"
-sudo cp -rf Tools    /media/$USER/macOS/
+sudo cp -rf Tools /media/$USER/macOS/
 
 if [ -d "$HOME/KeePassXC" ]; then
 echo "${tty_blue}==>${tty_bold} Copying KeePassXC...${tty_reset}"
