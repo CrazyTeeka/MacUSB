@@ -1,9 +1,9 @@
 #!/bin/bash
 
 if [ -t 1 ]; then
-   tty_escape() { printf "\033[%sm" "$1"; }
+  tty_escape() { printf "\033[%sm" "$1"; }
 else
-   tty_escape() { :; }
+  tty_escape() { :; }
 fi
 
 tty_mkbold() { tty_escape "1;$1"; }
@@ -16,8 +16,8 @@ tty_reset="$(tty_escape 0)"
 TARGET="MacOS"
 
 if [ -z "$1" ]; then
-   echo "${tty_bold}Usage:${tty_blue} download.sh${tty_bold} <${tty_blue}version${tty_bold}>${tty_reset}"
-   exit 0
+  echo "${tty_bold}Usage:${tty_blue} download.sh${tty_bold} <${tty_blue}version${tty_bold}>${tty_reset}"
+  exit 0
 fi
 
 if   [ "$1" = "10.13.6" ]; then URL="http://swcdn.apple.com/content/downloads/06/50/041-91758-A_M8T44LH2AW/b5r4og05fhbgatve4agwy4kgkzv07mdid9"
