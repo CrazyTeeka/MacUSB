@@ -1,9 +1,9 @@
 #!/bin/bash
 
 if [ -t 1 ]; then
-   tty_escape() { printf "\033[%sm" "$1"; }
+  tty_escape() { printf "\033[%sm" "$1"; }
 else
-   tty_escape() { :; }
+  tty_escape() { :; }
 fi
 
 tty_mkbold() { tty_escape "1;$1"; }
@@ -24,15 +24,15 @@ OLARILA3="CLOVER.NOTEBOOKS.SERIES.CHIPSET.zip"
 OLARILA4="CLOVER.NOTEBOOKS.100.200.300.zip"
 
 CheckFile() {
-   if [ ! -f "$1" ]; then
-      echo "${tty_blue}==>${tty_red} EEP! $1 is missing${tty_reset}"
-   fi
+  if [ ! -f "$1" ]; then
+    echo "${tty_blue}==>${tty_red} EEP! $1 is missing${tty_reset}"
+  fi
 }
 
 CheckDir() {
-   if [ ! -d "$1" ]; then
-      echo "${tty_blue}==>${tty_red} EEP! $1 is missing${tty_reset}"
-   fi
+  if [ ! -d "$1" ]; then
+    echo "${tty_blue}==>${tty_red} EEP! $1 is missing${tty_reset}"
+  fi
 }
 
 echo "${tty_blue}==>${tty_bold} Removing Folders...${tty_reset}"
