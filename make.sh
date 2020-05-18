@@ -1,9 +1,9 @@
 #!/bin/bash
 
 if [ -t 1 ]; then
-   tty_escape() { printf "\033[%sm" "$1"; }
+  tty_escape() { printf "\033[%sm" "$1"; }
 else
-   tty_escape() { :; }
+  tty_escape() { :; }
 fi
 
 tty_mkbold() { tty_escape "1;$1"; }
@@ -14,13 +14,13 @@ tty_bold="$(tty_mkbold 39)"
 tty_reset="$(tty_escape 0)"
 
 if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ]; then
-   echo "${tty_bold}Usage:${tty_blue} make.sh${tty_bold} <${tty_blue}target${tty_bold}> <${tty_blue}version${tty_bold}> <${tty_blue}folder${tty_bold}>${tty_reset}"
-   exit 0
+  echo "${tty_bold}Usage:${tty_blue} make.sh${tty_bold} <${tty_blue}target${tty_bold}> <${tty_blue}version${tty_bold}> <${tty_blue}folder${tty_bold}>${tty_reset}"
+  exit 0
 fi
 
 if [ "$1" = "/dev/sda" ]; then
-   echo "${tty_red}You cannot write to boot drive.${tty_reset}"
-   exit 0
+  echo "${tty_red}You cannot write to boot drive.${tty_reset}"
+  exit 0
 fi
 
 USB="$1"   # Target Device
@@ -77,8 +77,8 @@ echo "${tty_blue}==>${tty_bold} Copying Tools...${tty_reset}"
 sudo cp -rf Tools    /media/$USER/macOS/
 
 if [ -d "$HOME/KeePassXC" ]; then
-   echo "${tty_blue}==>${tty_bold} Copying KeePassXC...${tty_reset}"
-   sudo cp -rf $HOME/KeePassXC /media/$USER/macOS/
+echo "${tty_blue}==>${tty_bold} Copying KeePassXC...${tty_reset}"
+sudo cp -rf $HOME/KeePassXC /media/$USER/macOS/
 fi
 
 sudo chown -R $USER:$USER /media/$USER/macOS/*
