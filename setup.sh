@@ -37,24 +37,17 @@ CheckDir() {
 
 echo "${tty_blue}==>${tty_bold} Removing Folders...${tty_reset}"
 rm -rf Clover
-rm -rf Clover.Config
 rm -rf Clover.Folder
-rm -rf Scripts
-rm -rf Tools
 rm -rf Temp
 
 echo "${tty_blue}==>${tty_bold} Creating Folders...${tty_reset}"
 mkdir -p Clover/EFI/BOOT
 mkdir -p Clover/EFI/CLOVER
-mkdir -p Clover.Config/DSDT
-mkdir -p Clover.Config/THEMES
 mkdir -p Clover.Folder/$USER1
 mkdir -p Clover.Folder/$USER2
 mkdir -p Clover.Folder/$USER3
 mkdir -p Clover.Folder/$USER4
 mkdir -p Clover.Custom
-mkdir -p Scripts
-mkdir -p Tools
 mkdir -p Temp/$USER1
 mkdir -p Temp/$USER2
 mkdir -p Temp/$USER3
@@ -62,20 +55,13 @@ mkdir -p Temp/$USER4
 
 echo "${tty_blue}==>${tty_bold} Downloading Files...${tty_reset}"
 wget -q -P Temp/               https://github.com/CloverHackyColor/CloverBootloader/releases/download/$CLOVER/CloverV2-$CLOVER.zip
-wget -q -P Temp/               https://github.com/CrazyTeeka/Clover-Themes/raw/master/Clovy.zip
 wget -q -P Temp/               https://www.olarila.com/files/Clover.Folder/$OLARILA1
 wget -q -P Temp/               https://www.olarila.com/files/Clover.Folder/$OLARILA2
 wget -q -P Temp/               https://www.olarila.com/files/Clover.Folder/$OLARILA3
 wget -q -P Temp/               https://www.olarila.com/files/Clover.Folder/$OLARILA4
-wget -q -P Clover.Config/DSDT/ https://github.com/CrazyTeeka/Clover-DSDT/raw/master/MAXIMUS-VII-HERO-ASUS-3503.aml
-wget -q -P Clover.Config/DSDT/ https://github.com/CrazyTeeka/Clover-DSDT/raw/master/MAXIMUS-VIII-GENE-ASUS.aml
-wget -q -O Temp/Scripts.zip    https://github.com/CrazyTeeka/MacUSB-Scripts/archive/master.zip
-wget -q -P Tools/              https://github.com/CrazyTeeka/MacUSB-Tools/raw/master/RunMe.app.zip
 
 echo "${tty_blue}==>${tty_bold} Unpacking Files...${tty_reset}"
 unzip -o -qq Temp/CloverV2-$CLOVER.zip -d Temp/
-unzip -o -qq Temp/Clovy.zip            -d Clover.Config/THEMES/
-unzip -o -qq Temp/Scripts.zip          -d Temp/
 unzip -o -qq Temp/$OLARILA1            -d Temp/$USER1/
 unzip -o -qq Temp/$OLARILA2            -d Temp/$USER2/
 unzip -o -qq Temp/$OLARILA3            -d Temp/$USER3/
@@ -93,7 +79,6 @@ cp -rf Clover.Config/THEMES/Clovy             Clover.Folder/$USER1/EFI/CLOVER/th
 cp -rf Clover.Config/THEMES/Clovy             Clover.Folder/$USER2/EFI/CLOVER/themes/
 cp -rf Clover.Config/THEMES/Clovy             Clover.Folder/$USER3/EFI/CLOVER/themes/
 cp -rf Clover.Config/THEMES/Clovy             Clover.Folder/$USER4/EFI/CLOVER/themes/
-cp -rf Temp/MacUSB-Scripts-master/*           Scripts/
 
 echo "${tty_blue}==>${tty_bold} Clovy Theme...${tty_reset}"
 sed -i 's/<string>Olarila<\/string>/<string>Clovy<\/string>/g' Clover.Folder/$USER1/EFI/CLOVER/config.plist
