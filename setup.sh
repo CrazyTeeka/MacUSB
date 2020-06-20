@@ -39,6 +39,7 @@ echo "${tty_blue}==>${tty_bold} Removing Folders...${tty_reset}"
 rm -rf Clover
 rm -rf Clover.Folder
 rm -rf Temp
+rm -rf Tools
 
 echo "${tty_blue}==>${tty_bold} Creating Folders...${tty_reset}"
 mkdir -p Clover/EFI/BOOT
@@ -52,6 +53,7 @@ mkdir -p Temp/$USER1
 mkdir -p Temp/$USER2
 mkdir -p Temp/$USER3
 mkdir -p Temp/$USER4
+mkdir -p Tools
 
 echo "${tty_blue}==>${tty_bold} Downloading Files...${tty_reset}"
 wget -q -P Temp/  https://github.com/CloverHackyColor/CloverBootloader/releases/download/$CLOVER/CloverV2-$CLOVER.zip
