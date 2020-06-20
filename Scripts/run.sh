@@ -22,7 +22,7 @@ elif [ "$1" = "restore" ]; then
   rsync -a $SOURCE/${(C)USER}/Home/Movies    $HOME/
   rsync -a $SOURCE/${(C)USER}/Home/Music     $HOME/
   rsync -a $SOURCE/${(C)USER}/Home/Pictures  $HOME/
-elif [ "$1" = "copy-efi" ]; then
+elif [ "$1" = "copy-clover" ]; then
   sudo diskutil mount /dev/disk0s1 >/dev/null 2>/dev/null
   sudo rm -rf /Volumes/EFI/EFI
   sudo mkdir  /Volumes/EFI/EFI
