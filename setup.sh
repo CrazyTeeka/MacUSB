@@ -54,11 +54,12 @@ mkdir -p Temp/$USER3
 mkdir -p Temp/$USER4
 
 echo "${tty_blue}==>${tty_bold} Downloading Files...${tty_reset}"
-wget -q -P Temp/               https://github.com/CloverHackyColor/CloverBootloader/releases/download/$CLOVER/CloverV2-$CLOVER.zip
-wget -q -P Temp/               https://www.olarila.com/files/Clover.Folder/$OLARILA1
-wget -q -P Temp/               https://www.olarila.com/files/Clover.Folder/$OLARILA2
-wget -q -P Temp/               https://www.olarila.com/files/Clover.Folder/$OLARILA3
-wget -q -P Temp/               https://www.olarila.com/files/Clover.Folder/$OLARILA4
+wget -q -P Temp/  https://github.com/CloverHackyColor/CloverBootloader/releases/download/$CLOVER/CloverV2-$CLOVER.zip
+wget -q -P Temp/  https://www.olarila.com/files/Clover.Folder/$OLARILA1
+wget -q -P Temp/  https://www.olarila.com/files/Clover.Folder/$OLARILA2
+wget -q -P Temp/  https://www.olarila.com/files/Clover.Folder/$OLARILA3
+wget -q -P Temp/  https://www.olarila.com/files/Clover.Folder/$OLARILA4
+wget -q -P Tools/ https://www.olarila.com/files/Utils/RunMe.app.zip
 
 echo "${tty_blue}==>${tty_bold} Unpacking Files...${tty_reset}"
 unzip -o -qq Temp/CloverV2-$CLOVER.zip -d Temp/
