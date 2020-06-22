@@ -28,9 +28,6 @@ elif [ "$1" = "copy-clover" ]; then
   sudo mkdir  /Volumes/EFI/EFI
   sudo cp -rf /Volumes/macOS/EFI-CLOVER/* /Volumes/EFI/EFI/
 elif [ "$1" = "setup" ]; then
-  sudo scutil --set ComputerName "Macintosh"
-  sudo scutil --set HostName "Macintosh"
-  sudo scutil --set LocalHostName "Macintosh"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
   brew cask install keepassxc
   brew cask install meld
@@ -38,9 +35,13 @@ elif [ "$1" = "setup" ]; then
   brew install rsync
   brew unlink  rsync
   brew link    rsync
-elif [ "$1" = "trim" ]; then
+elif [ "$1" = "trim-enable" ]; then
   sudo trimforce enable
-elif [ "$1" = "config-dock" ]; then
+elif [ "$1" = "disable-gatekeeper" ]; then
+  sudo spctl --master-disable
+elif [ "$1" = "mount-efi" ]; then
+  sudo diskutil mount /dev/disk0s1 >/dev/null 2>/dev/null
+elif [ "$1" = "reset-dock" ]; then
   defaults write com.apple.dock "tilesize" -float 64
   defaults write com.apple.dock "magnification" -boolean false
   defaults write com.apple.dock "largesize" -float 128
@@ -53,19 +54,4 @@ elif [ "$1" = "config-dock" ]; then
   defaults write com.apple.dock "show-recents" -boolean false
   sleep 1
   killall Dock
-elif [ "$1" = "config-finder" ]; then
-  defaults write com.apple.finder "FXPreferencesWindow.Location" -string '{{775, 775}, {525, 525}}'
-  defaults write com.apple.finder "SidebarWidth" -float 260
-  sleep 1
-  killall Finder
-elif [ "$1" = "disable-gatekeeper" ]; then
-  sudo spctl --master-disable
-elif [ "$1" = "remove-dsdt" ]; then
-  sudo diskutil mount /dev/disk0s1 >/dev/null 2>/dev/null
-  sudo rm -f /Volumes/EFI/EFI/CLOVER/ACPI/patched/DSDT.aml
-  sudo rm -f /Volumes/EFI/EFI/OC/ACPI/DSDT.aml
-elif [ "$1" = "mount" ]; then
-  sudo diskutil mount /dev/disk0s1 >/dev/null 2>/dev/null
-elif [ "$1" = "unmount" ]; then
-  sudo diskutil unmount /dev/disk0s1 >/dev/null 2>/dev/null
 fi
