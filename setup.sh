@@ -1,5 +1,19 @@
 #!/bin/bash
 
+CLOVER="5119"
+
+USER1="DESKTOPS.NEHALEM+"
+USER2="DESKTOPS.SKYLAKE+"
+USER3="NOTEBOOKS.NEHALEM+"
+USER4="NOTEBOOKS.SKYLAKE+"
+
+OLARILA1="CLOVER.SERIES.CHIPSET.zip"
+OLARILA2="CLOVER.SERIES.100.200.300.zip"
+OLARILA3="CLOVER.NOTEBOOKS.SERIES.CHIPSET.zip"
+OLARILA4="CLOVER.NOTEBOOKS.100.200.300.zip"
+
+AirportBrcmFixup="2.0.7"
+
 if [ -t 1 ]; then
   tty_escape() { printf "\033[%sm" "$1"; }
 else
@@ -12,16 +26,6 @@ tty_blue="$(tty_mkbold 34)"
 tty_red="$(tty_mkbold 31)"
 tty_bold="$(tty_mkbold 39)"
 tty_reset="$(tty_escape 0)"
-
-CLOVER="5119"
-USER1="DESKTOPS.NEHALEM+"
-USER2="DESKTOPS.SKYLAKE+"
-USER3="NOTEBOOKS.NEHALEM+"
-USER4="NOTEBOOKS.SKYLAKE+"
-OLARILA1="CLOVER.SERIES.CHIPSET.zip"
-OLARILA2="CLOVER.SERIES.100.200.300.zip"
-OLARILA3="CLOVER.NOTEBOOKS.SERIES.CHIPSET.zip"
-OLARILA4="CLOVER.NOTEBOOKS.100.200.300.zip"
 
 CheckFile() {
   if [ ! -f "$1" ]; then
@@ -84,6 +88,12 @@ cp -rf Clover.Config/THEMES/Clovy             Clover.Folder/$USER1/EFI/CLOVER/th
 cp -rf Clover.Config/THEMES/Clovy             Clover.Folder/$USER2/EFI/CLOVER/themes/
 cp -rf Clover.Config/THEMES/Clovy             Clover.Folder/$USER3/EFI/CLOVER/themes/
 cp -rf Clover.Config/THEMES/Clovy             Clover.Folder/$USER4/EFI/CLOVER/themes/
+
+echo "${tty_blue}==>${tty_bold} Downloading Kexts...${tty_reset}"
+wget -q -P Temp/ https://github.com/acidanthera/AirportBrcmFixup/releases/download/$AirportBrcmFixup/AirportBrcmFixup-$AirportBrcmFixup-RELEASE.zip
+
+echo "${tty_blue}==>${tty_bold} Unpacking Kexts...${tty_reset}"
+unzip -o -qq Temp/AirportBrcmFixup-$AirportBrcmFixup-RELEASE.zip -d Kexts/
 
 echo "${tty_blue}==>${tty_bold} Clovy Theme...${tty_reset}"
 sed -i 's/<string>Olarila<\/string>/<string>Clovy<\/string>/g' Clover.Folder/$USER1/EFI/CLOVER/config.plist
