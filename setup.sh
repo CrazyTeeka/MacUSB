@@ -113,6 +113,8 @@ rm -rf Clover.Folder/$USER2/EFI/CLOVER/themes/Olarila
 rm -rf Clover.Folder/$USER3/EFI/CLOVER/themes/Olarila
 rm -rf Clover.Folder/$USER4/EFI/CLOVER/themes/Olarila
 rm -rf Kexts/AirportBrcmFixup.kext.dSYM
+rm -rf Kexts/AppleALC.kext.dSYM
+rm -rf Kexts/Lilu.kext.dSYM
 rm -rf Temp
 
 echo "${tty_blue}==>${tty_bold} Verifying...${tty_reset}"
