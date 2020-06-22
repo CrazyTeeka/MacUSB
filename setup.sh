@@ -14,6 +14,7 @@ OLARILA4="CLOVER.NOTEBOOKS.100.200.300.zip"
 
 AirportBrcmFixup="2.0.7"
 AppleALC="1.5.0"
+AtherosE2200Ethernet="2.2.2"
 
 if [ -t 1 ]; then
   tty_escape() { printf "\033[%sm" "$1"; }
@@ -93,6 +94,7 @@ cp -rf Clover.Config/THEMES/Clovy             Clover.Folder/$USER4/EFI/CLOVER/th
 echo "${tty_blue}==>${tty_bold} Downloading Kexts...${tty_reset}"
 wget -q -P Temp/ https://github.com/acidanthera/AirportBrcmFixup/releases/download/$AirportBrcmFixup/AirportBrcmFixup-$AirportBrcmFixup-RELEASE.zip
 wget -q -P Temp/ https://github.com/acidanthera/AppleALC/releases/download/$AppleALC/AppleALC-$AppleALC-RELEASE.zip
+wget -q -P Temp/ https://github.com/Mieze/AtherosE2200Ethernet/releases/download/$AtherosE2200Ethernet/AtherosE2200Ethernet-V$AtherosE2200Ethernet.zip
 
 echo "${tty_blue}==>${tty_bold} Unpacking Kexts...${tty_reset}"
 unzip -o -qq Temp/AirportBrcmFixup-$AirportBrcmFixup-RELEASE.zip -d Kexts/
