@@ -15,6 +15,7 @@ OLARILA4="CLOVER.NOTEBOOKS.100.200.300.zip"
 AirportBrcmFixup="2.0.7"
 AppleALC="1.5.0"
 Lilu="1.4.5"
+VirtualSMC="1.1.4"
 
 if [ -t 1 ]; then
   tty_escape() { printf "\033[%sm" "$1"; }
