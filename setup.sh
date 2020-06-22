@@ -96,11 +96,13 @@ echo "${tty_blue}==>${tty_bold} Downloading Kexts...${tty_reset}"
 wget -q -P Temp/ https://github.com/acidanthera/AirportBrcmFixup/releases/download/$AirportBrcmFixup/AirportBrcmFixup-$AirportBrcmFixup-RELEASE.zip
 wget -q -P Temp/ https://github.com/acidanthera/AppleALC/releases/download/$AppleALC/AppleALC-$AppleALC-RELEASE.zip
 wget -q -P Temp/ https://github.com/acidanthera/Lilu/releases/download/$Lilu/Lilu-$Lilu-RELEASE.zip
+wget -q -P Temp/ https://github.com/acidanthera/VirtualSMC/releases/download/$VirtualSMC/VirtualSMC-$VirtualSMC-RELEASE.zip
 
 echo "${tty_blue}==>${tty_bold} Unpacking Kexts...${tty_reset}"
 unzip -o -qq Temp/AirportBrcmFixup-$AirportBrcmFixup-RELEASE.zip -d Kexts/
 unzip -o -qq Temp/AppleALC-$AppleALC-RELEASE.zip                 -d Kexts/
 unzip -o -qq Temp/Lilu-$Lilu-RELEASE.zip                         -d Kexts/
+unzip -o -qq Temp/VirtualSMC-$VirtualSMC-RELEASE.zip             -d Kexts/
 
 echo "${tty_blue}==>${tty_bold} Clovy Theme...${tty_reset}"
 sed -i 's/<string>Olarila<\/string>/<string>Clovy<\/string>/g' Clover.Folder/$USER1/EFI/CLOVER/config.plist
@@ -116,6 +118,7 @@ rm -rf Clover.Folder/$USER4/EFI/CLOVER/themes/Olarila
 rm -rf Kexts/AirportBrcmFixup.kext.dSYM
 rm -rf Kexts/AppleALC.kext.dSYM
 rm -rf Kexts/Lilu.kext.dSYM
+rm -rf Kexts/VirtualSMC.kext.dSYM
 rm -rf Temp
 
 echo "${tty_blue}==>${tty_bold} Verifying...${tty_reset}"
