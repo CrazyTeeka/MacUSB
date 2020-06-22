@@ -38,6 +38,7 @@ CheckDir() {
 echo "${tty_blue}==>${tty_bold} Removing Folders...${tty_reset}"
 rm -rf Clover
 rm -rf Clover.Folder
+rm -rf Kexts
 rm -rf Temp
 rm -rf Tools
 
@@ -49,6 +50,7 @@ mkdir -p Clover.Folder/$USER2
 mkdir -p Clover.Folder/$USER3
 mkdir -p Clover.Folder/$USER4
 mkdir -p Clover.Custom
+mkdir -p Kexts
 mkdir -p Temp/$USER1
 mkdir -p Temp/$USER2
 mkdir -p Temp/$USER3
