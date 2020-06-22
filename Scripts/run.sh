@@ -3,6 +3,18 @@
 SOURCE="/Volumes/USB/Mac"
 TARGET="/Volumes/USB/Mac"
 
+if [ -z "$1" ]; then
+  echo "Usage: run.sh backup"
+  echo "       run.sh restore"
+  echo "       run.sh copy-clover"
+  echo "       run.sh setup"
+  echo "       run.sh trim-enable"
+  echo "       run.sh disable-gatekeeper"
+  echo "       run.sh mount-efi"
+  echo "       run.sh reset-dock"
+  exit 0
+fi
+
 if [ "$1" = "backup" ]; then
   mkdir -p $TARGET/${(C)USER}/Applications
   mkdir -p $TARGET/${(C)USER}/Firefox
