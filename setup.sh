@@ -16,6 +16,7 @@ AirportBrcmFixup="2.0.7"
 AppleALC="1.5.0"
 Lilu="1.4.5"
 VirtualSMC="1.1.4"
+WhateverGreen="1.4.0"
 
 if [ -t 1 ]; then
   tty_escape() { printf "\033[%sm" "$1"; }
@@ -97,12 +98,14 @@ wget -q -P Temp/ https://github.com/acidanthera/AirportBrcmFixup/releases/downlo
 wget -q -P Temp/ https://github.com/acidanthera/AppleALC/releases/download/$AppleALC/AppleALC-$AppleALC-RELEASE.zip
 wget -q -P Temp/ https://github.com/acidanthera/Lilu/releases/download/$Lilu/Lilu-$Lilu-RELEASE.zip
 wget -q -P Temp/ https://github.com/acidanthera/VirtualSMC/releases/download/$VirtualSMC/VirtualSMC-$VirtualSMC-RELEASE.zip
+wget -q -P Temp/ https://github.com/acidanthera/WhateverGreen/releases/download/$WhateverGreen/WhateverGreen-$WhateverGreen-RELEASE.zip
 
 echo "${tty_blue}==>${tty_bold} Unpacking Kexts...${tty_reset}"
 unzip -o -qq Temp/AirportBrcmFixup-$AirportBrcmFixup-RELEASE.zip -d Kexts/
 unzip -o -qq Temp/AppleALC-$AppleALC-RELEASE.zip                 -d Kexts/
 unzip -o -qq Temp/Lilu-$Lilu-RELEASE.zip                         -d Kexts/
 unzip -o -qq Temp/VirtualSMC-$VirtualSMC-RELEASE.zip             -d Kexts/
+unzip -o -qq Temp/WhateverGreen-$WhateverGreen-RELEASE.zip       -d Kexts/
 
 echo "${tty_blue}==>${tty_bold} Clovy Theme...${tty_reset}"
 sed -i 's/<string>Olarila<\/string>/<string>Clovy<\/string>/g' Clover.Folder/$USER1/EFI/CLOVER/config.plist
@@ -119,6 +122,7 @@ rm -rf Kexts/AirportBrcmFixup.kext.dSYM
 rm -rf Kexts/AppleALC.kext.dSYM
 rm -rf Kexts/Lilu.kext.dSYM
 rm -rf Kexts/VirtualSMC.kext.dSYM
+rm -rf Kexts/WhateverGreen.kext.dSYM
 rm -rf Temp
 
 echo "${tty_blue}==>${tty_bold} Verifying...${tty_reset}"
