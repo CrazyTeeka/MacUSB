@@ -18,39 +18,28 @@ Lilu="1.4.5"
 VirtualSMC="1.1.4"
 WhateverGreen="1.4.0"
 
-if [ -t 1 ]; then
-  tty_escape() { printf "\033[%sm" "$1"; }
-else
-  tty_escape() { :; }
-fi
-
-tty_mkbold() { tty_escape "1;$1"; }
-tty_underline="$(tty_escape "4;39")"
-tty_blue="$(tty_mkbold 34)"
-tty_red="$(tty_mkbold 31)"
-tty_bold="$(tty_mkbold 39)"
-tty_reset="$(tty_escape 0)"
+AppCleaner="3.5"
 
 CheckFile() {
   if [ ! -f "$1" ]; then
-    echo "${tty_blue}==>${tty_red} EEP! $1 is missing${tty_reset}"
+    echo "EEP! $1 is missing."
   fi
 }
 
 CheckDir() {
   if [ ! -d "$1" ]; then
-    echo "${tty_blue}==>${tty_red} EEP! $1 is missing${tty_reset}"
+    echo "EEP! $1 is missing."
   fi
 }
 
-echo "${tty_blue}==>${tty_bold} Removing Folders...${tty_reset}"
+echo "Removing Folders..."
 rm -rf Clover
 rm -rf Clover.Folder
 rm -rf Kexts
 rm -rf Temp
 rm -rf Tools
 
-echo "${tty_blue}==>${tty_bold} Creating Folders...${tty_reset}"
+echo "Creating Folders..."
 mkdir -p Clover/EFI/BOOT
 mkdir -p Clover/EFI/CLOVER
 mkdir -p Clover.Folder/$USER1
@@ -65,22 +54,23 @@ mkdir -p Temp/$USER3
 mkdir -p Temp/$USER4
 mkdir -p Tools
 
-echo "${tty_blue}==>${tty_bold} Downloading Files...${tty_reset}"
+echo "Downloading Files..."
 wget -q -P Temp/  https://github.com/CloverHackyColor/CloverBootloader/releases/download/$CLOVER/CloverV2-$CLOVER.zip
 wget -q -P Temp/  https://www.olarila.com/files/Clover.Folder/$OLARILA1
 wget -q -P Temp/  https://www.olarila.com/files/Clover.Folder/$OLARILA2
 wget -q -P Temp/  https://www.olarila.com/files/Clover.Folder/$OLARILA3
 wget -q -P Temp/  https://www.olarila.com/files/Clover.Folder/$OLARILA4
 wget -q -P Tools/ https://www.olarila.com/files/Utils/RunMe.app.zip
+wget -q -P Tools/ https://freemacsoft.net/downloads/AppCleaner_$AppCleaner.zip
 
-echo "${tty_blue}==>${tty_bold} Unpacking Files...${tty_reset}"
+echo "Unpacking Files..."
 unzip -o -qq Temp/CloverV2-$CLOVER.zip -d Temp/
 unzip -o -qq Temp/$OLARILA1            -d Temp/$USER1/
 unzip -o -qq Temp/$OLARILA2            -d Temp/$USER2/
 unzip -o -qq Temp/$OLARILA3            -d Temp/$USER3/
 unzip -o -qq Temp/$OLARILA4            -d Temp/$USER4/
 
-echo "${tty_blue}==>${tty_bold} Copying Files...${tty_reset}"
+echo "Copying Files..."
 cp -f  Temp/CloverV2/EFI/BOOT/BOOTX64.efi     Clover/EFI/BOOT/
 cp -f  Temp/CloverV2/EFI/CLOVER/CLOVERX64.efi Clover/EFI/CLOVER/
 cp -rf Temp/CloverV2/EFI/CLOVER/tools         Clover/EFI/CLOVER/
@@ -93,41 +83,41 @@ cp -rf Clover.Config/THEMES/Clovy             Clover.Folder/$USER2/EFI/CLOVER/th
 cp -rf Clover.Config/THEMES/Clovy             Clover.Folder/$USER3/EFI/CLOVER/themes/
 cp -rf Clover.Config/THEMES/Clovy             Clover.Folder/$USER4/EFI/CLOVER/themes/
 
-echo "${tty_blue}==>${tty_bold} Downloading Kexts...${tty_reset}"
+echo "Downloading Kexts..."
 wget -q -P Temp/ https://github.com/acidanthera/AirportBrcmFixup/releases/download/$AirportBrcmFixup/AirportBrcmFixup-$AirportBrcmFixup-RELEASE.zip
 wget -q -P Temp/ https://github.com/acidanthera/AppleALC/releases/download/$AppleALC/AppleALC-$AppleALC-RELEASE.zip
 wget -q -P Temp/ https://github.com/acidanthera/Lilu/releases/download/$Lilu/Lilu-$Lilu-RELEASE.zip
 wget -q -P Temp/ https://github.com/acidanthera/VirtualSMC/releases/download/$VirtualSMC/VirtualSMC-$VirtualSMC-RELEASE.zip
 wget -q -P Temp/ https://github.com/acidanthera/WhateverGreen/releases/download/$WhateverGreen/WhateverGreen-$WhateverGreen-RELEASE.zip
 
-echo "${tty_blue}==>${tty_bold} Unpacking Kexts...${tty_reset}"
+echo "Unpacking Kexts..."
 unzip -o -qq Temp/AirportBrcmFixup-$AirportBrcmFixup-RELEASE.zip -d Temp/
 unzip -o -qq Temp/AppleALC-$AppleALC-RELEASE.zip                 -d Temp/
 unzip -o -qq Temp/Lilu-$Lilu-RELEASE.zip                         -d Temp/
 unzip -o -qq Temp/VirtualSMC-$VirtualSMC-RELEASE.zip             -d Temp/
 unzip -o -qq Temp/WhateverGreen-$WhateverGreen-RELEASE.zip       -d Temp/
 
-echo "${tty_blue}==>${tty_bold} Copying Kexts...${tty_reset}"
+echo "Copying Kexts..."
 cp -rf Temp/AirportBrcmFixup.kext Kexts/
 cp -rf Temp/AppleALC.kext         Kexts/
 cp -rf Temp/Lilu.kext             Kexts/
 cp -rf Temp/Kexts/VirtualSMC.kext Kexts/
 cp -rf Temp/WhateverGreen.kext    Kexts/
 
-echo "${tty_blue}==>${tty_bold} Clovy Theme...${tty_reset}"
+echo "Default Clover Theme..."
 sed -i 's/<string>Olarila<\/string>/<string>Clovy<\/string>/g' Clover.Folder/$USER1/EFI/CLOVER/config.plist
 sed -i 's/<string>Olarila<\/string>/<string>Clovy<\/string>/g' Clover.Folder/$USER2/EFI/CLOVER/config.plist
 sed -i 's/<string>Olarila<\/string>/<string>Clovy<\/string>/g' Clover.Folder/$USER3/EFI/CLOVER/config.plist
 sed -i 's/<string>Olarila<\/string>/<string>Clovy<\/string>/g' Clover.Folder/$USER4/EFI/CLOVER/config.plist
 
-echo "${tty_blue}==>${tty_bold} Cleaning Up...${tty_reset}"
+echo "Cleaning Up..."
 rm -rf Clover.Folder/$USER1/EFI/CLOVER/themes/Olarila
 rm -rf Clover.Folder/$USER2/EFI/CLOVER/themes/Olarila
 rm -rf Clover.Folder/$USER3/EFI/CLOVER/themes/Olarila
 rm -rf Clover.Folder/$USER4/EFI/CLOVER/themes/Olarila
 rm -rf Temp
 
-echo "${tty_blue}==>${tty_bold} Verifying...${tty_reset}"
+echo "Verifying..."
 CheckFile "Clover/EFI/BOOT/BOOTX64.efi"
 CheckFile "Clover/EFI/CLOVER/tools/bdmesg.efi"
 CheckFile "Clover/EFI/CLOVER/tools/Shell32.efi"
@@ -248,4 +238,4 @@ CheckFile "Scripts/install.sh"
 CheckFile "Scripts/run.sh"
 CheckFile "Tools/RunMe.app.zip"
 
-echo "${tty_blue}==>${tty_bold} Done${tty_reset}"
+echo "Done"
