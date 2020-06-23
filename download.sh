@@ -1,5 +1,7 @@
 #!/bin/bash
 
+TARGET="MacOS"
+
 if [ -t 1 ]; then
   tty_escape() { printf "\033[%sm" "$1"; }
 else
@@ -12,8 +14,6 @@ tty_blue="$(tty_mkbold 34)"
 tty_red="$(tty_mkbold 31)"
 tty_bold="$(tty_mkbold 39)"
 tty_reset="$(tty_escape 0)"
-
-TARGET="MacOS"
 
 if [ -z "$1" ]; then
   echo "${tty_bold}Usage:${tty_blue} download.sh${tty_bold} <${tty_blue}version${tty_bold}>${tty_reset}"
