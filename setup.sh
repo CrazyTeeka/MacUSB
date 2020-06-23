@@ -101,11 +101,18 @@ wget -q -P Temp/ https://github.com/acidanthera/VirtualSMC/releases/download/$Vi
 wget -q -P Temp/ https://github.com/acidanthera/WhateverGreen/releases/download/$WhateverGreen/WhateverGreen-$WhateverGreen-RELEASE.zip
 
 echo "${tty_blue}==>${tty_bold} Unpacking Kexts...${tty_reset}"
-unzip -o -qq Temp/AirportBrcmFixup-$AirportBrcmFixup-RELEASE.zip -d Kexts/
-unzip -o -qq Temp/AppleALC-$AppleALC-RELEASE.zip                 -d Kexts/
-unzip -o -qq Temp/Lilu-$Lilu-RELEASE.zip                         -d Kexts/
-unzip -o -qq Temp/VirtualSMC-$VirtualSMC-RELEASE.zip             -d Kexts/
-unzip -o -qq Temp/WhateverGreen-$WhateverGreen-RELEASE.zip       -d Kexts/
+unzip -o -qq Temp/AirportBrcmFixup-$AirportBrcmFixup-RELEASE.zip -d Temp/
+unzip -o -qq Temp/AppleALC-$AppleALC-RELEASE.zip                 -d Temp/
+unzip -o -qq Temp/Lilu-$Lilu-RELEASE.zip                         -d Temp/
+unzip -o -qq Temp/VirtualSMC-$VirtualSMC-RELEASE.zip             -d Temp/
+unzip -o -qq Temp/WhateverGreen-$WhateverGreen-RELEASE.zip       -d Temp/
+
+echo "${tty_blue}==>${tty_bold} Copying Kexts...${tty_reset}"
+cp -rf Temp/AirportBrcmFixup.kext Kexts/
+cp -rf Temp/AppleALC.kext         Kexts/
+cp -rf Temp/Lilu.kext             Kexts/
+cp -rf Temp/Kexts/VirtualSMC.kext Kexts/
+cp -rf Temp/WhateverGreen.kext    Kexts/
 
 echo "${tty_blue}==>${tty_bold} Clovy Theme...${tty_reset}"
 sed -i 's/<string>Olarila<\/string>/<string>Clovy<\/string>/g' Clover.Folder/$USER1/EFI/CLOVER/config.plist
