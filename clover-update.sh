@@ -25,6 +25,11 @@ if [ -d "Clover.Custom/James" ]; then
 cp -f  Clover/EFI/BOOT/BOOTX64.efi     Clover.Custom/James/EFI/BOOT/
 cp -f  Clover/EFI/CLOVER/CLOVERX64.efi Clover.Custom/James/EFI/CLOVER/
 cp -rf Clover/EFI/CLOVER/tools         Clover.Custom/James/EFI/CLOVER/
+cp -rf Kexts/AirportBrcmFixup.kext     Clover.Custom/James/EFI/CLOVER/kexts/Other/
+cp -rf Kexts/AppleALC.kext             Clover.Custom/James/EFI/CLOVER/kexts/Other/
+cp -rf Kexts/Lilu.kext                 Clover.Custom/James/EFI/CLOVER/kexts/Other/
+cp -rf Kexts/VirtualSMC.kext           Clover.Custom/James/EFI/CLOVER/kexts/Other/
+cp -rf Kexts/WhateverGreen.kext        Clover.Custom/James/EFI/CLOVER/kexts/Other/
 fi
 
 if [ -d "Clover.Custom/Frank" ]; then
