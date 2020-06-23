@@ -236,6 +236,7 @@ CheckFile "Clover.Folder/$USER4/EFI/CLOVER/CLOVERX64.efi"
 CheckFile "Clover.Folder/$USER4/EFI/CLOVER/config.plist"
 CheckFile "Scripts/install.sh"
 CheckFile "Scripts/run.sh"
+CheckFile "Tools/AppCleaner_$AppCleaner.zip"
 CheckFile "Tools/RunMe.app.zip"
 
 echo "Done"
