@@ -22,7 +22,7 @@ fi
 
 if   [ "$1" = "10.13.6" ]; then URL="http://swcdn.apple.com/content/downloads/06/50/041-91758-A_M8T44LH2AW/b5r4og05fhbgatve4agwy4kgkzv07mdid9"
 elif [ "$1" = "10.14.6" ]; then URL="http://swcdn.apple.com/content/downloads/17/32/061-26589-A_8GJTCGY9PC/25fhcu905eta7wau7aoafu8rvdm7k1j4el"
-elif [ "$1" = "10.15.4" ]; then URL="http://swcdn.apple.com/content/downloads/37/41/001-04366/a6boefh8b6bee4k2x6v5lwyfjr7od2ica3"
+elif [ "$1" = "10.15.5" ]; then URL="http://swcdn.apple.com/content/downloads/59/18/001-15219-A_EE9FN7UHJA/efuz3h0zlmx4qlinf4bxlguigo9jvhcr55"
 else exit 0
 fi
 
