@@ -65,6 +65,11 @@ sudo cp -rf Scripts /media/$USER/macOS/
 echo "Copying Tools..."
 sudo cp -rf Tools /media/$USER/macOS/
 
+if [ -d "$HOME/Hackintosh/Firefox" ]; then
+echo "Copying Firefox..."
+sudo cp -rf $HOME/Hackintosh/Firefox /media/$USER/macOS/
+fi
+
 if [ -d "$HOME/KeePassXC" ]; then
 echo "Copying KeePassXC..."
 sudo cp -rf $HOME/KeePassXC /media/$USER/macOS/
