@@ -8,6 +8,7 @@ if [ -z "$1" ]; then
   echo "       run.sh backup-apps"
   echo "       run.sh backup-firefox"
   echo "       run.sh restore"
+  echo "       run.sh restore-firefox"
   echo "       run.sh copy-clover"
   echo "       run.sh setup"
   echo "       run.sh trim-enable"
@@ -42,6 +43,11 @@ elif [ "$1" = "restore" ]; then
   rsync -a $SOURCE/${(C)USER}/Home/Movies    $HOME/
   rsync -a $SOURCE/${(C)USER}/Home/Music     $HOME/
   rsync -a $SOURCE/${(C)USER}/Home/Pictures  $HOME/
+elif [ "$1" = "restore-firefox" ]; then
+  rsync -a $TARGET/${(C)USER}/Library/Application\ Support/Firefox                             $HOME/Library/Application\ Support/
+  rsync -a $TARGET/${(C)USER}/Library/Caches/Firefox                                           $HOME/Library/Caches/
+  rsync -a $TARGET/${(C)USER}/Library/Preferences/org.mozilla.firefox.plist                    $HOME/Library/Preferences/
+  rsync -a $TARGET/${(C)USER}/Library/Saved\ Application\ State/org.mozilla.firefox.savedState $HOME/Library/Saved\ Application\ State/
 elif [ "$1" = "copy-clover" ]; then
   sudo diskutil mount /dev/disk0s1 >/dev/null 2>/dev/null
   sudo rm -rf /Volumes/EFI/EFI
