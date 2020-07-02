@@ -44,6 +44,10 @@ elif [ "$1" = "restore" ]; then
   rsync -a $SOURCE/${(C)USER}/Home/Music     $HOME/
   rsync -a $SOURCE/${(C)USER}/Home/Pictures  $HOME/
 elif [ "$1" = "restore-firefox" ]; then
+  mkdir -p $HOME/Library/Application\ Support
+  mkdir -p $HOME/Library/Caches
+  mkdir -p $HOME/Library/Preferences
+  mkdir -p $HOME/Library/Saved\ Application\ State
   rsync -a $TARGET/${(C)USER}/Library/Application\ Support/Firefox                             $HOME/Library/Application\ Support/
   rsync -a $TARGET/${(C)USER}/Library/Caches/Firefox                                           $HOME/Library/Caches/
   rsync -a $TARGET/${(C)USER}/Library/Preferences/org.mozilla.firefox.plist                    $HOME/Library/Preferences/
