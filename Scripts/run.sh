@@ -29,8 +29,8 @@ elif [ "$1" = "backup-apps" ]; then
   mkdir -p $TARGET/${(C)USER}/Applications
   rsync -a /Applications/* $TARGET/${(C)USER}/Applications/
 elif [ "$1" = "backup-firefox" ]; then
-  mkdir -p $TARGET/${(C)USER}/Library/Application\ Support/Firefox
-  mkdir -p $TARGET/${(C)USER}/Library/Caches/Firefox
+  mkdir -p $TARGET/${(C)USER}/Library/Application\ Support
+  mkdir -p $TARGET/${(C)USER}/Library/Caches
   mkdir -p $TARGET/${(C)USER}/Library/Preferences
   mkdir -p $TARGET/${(C)USER}/Library/Saved\ Application\ State
   rsync -a $HOME/Library/Application\ Support/Firefox                             $TARGET/${(C)USER}/Library/Application\ Support/
