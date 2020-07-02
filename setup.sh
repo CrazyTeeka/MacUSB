@@ -104,11 +104,51 @@ cp -rf Temp/Lilu.kext             Kexts/
 cp -rf Temp/Kexts/VirtualSMC.kext Kexts/
 cp -rf Temp/WhateverGreen.kext    Kexts/
 
-echo "Default Clover Theme..."
+echo "Clover Config..."
 sed -i 's/<string>Olarila<\/string>/<string>Clovy<\/string>/g' Clover.Folder/$USER1/EFI/CLOVER/config.plist
 sed -i 's/<string>Olarila<\/string>/<string>Clovy<\/string>/g' Clover.Folder/$USER2/EFI/CLOVER/config.plist
 sed -i 's/<string>Olarila<\/string>/<string>Clovy<\/string>/g' Clover.Folder/$USER3/EFI/CLOVER/config.plist
 sed -i 's/<string>Olarila<\/string>/<string>Clovy<\/string>/g' Clover.Folder/$USER4/EFI/CLOVER/config.plist
+sed -i 's/<string>Fix bug RTC<\/string>/<string>Fix Bug RTC<\/string>/g' Clover.Folder/$USER1/EFI/CLOVER/config.plist
+sed -i 's/<string>Fix bug RTC<\/string>/<string>Fix Bug RTC<\/string>/g' Clover.Folder/$USER2/EFI/CLOVER/config.plist
+sed -i 's/<string>Fix bug RTC<\/string>/<string>Fix Bug RTC<\/string>/g' Clover.Folder/$USER3/EFI/CLOVER/config.plist
+sed -i 's/<string>Fix bug RTC<\/string>/<string>Fix Bug RTC<\/string>/g' Clover.Folder/$USER4/EFI/CLOVER/config.plist
+sed -i 's/<string>Fix bug SKL+<\/string>/<string>Fix Bug RTC<\/string>/g' Clover.Folder/$USER1/EFI/CLOVER/config.plist
+sed -i 's/<string>Fix bug SKL+<\/string>/<string>Fix Bug RTC<\/string>/g' Clover.Folder/$USER2/EFI/CLOVER/config.plist
+sed -i 's/<string>Fix bug SKL+<\/string>/<string>Fix Bug RTC<\/string>/g' Clover.Folder/$USER3/EFI/CLOVER/config.plist
+sed -i 's/<string>Fix bug SKL+<\/string>/<string>Fix Bug RTC<\/string>/g' Clover.Folder/$USER4/EFI/CLOVER/config.plist
+sed -i 's/<string>USB port limit patch<\/string>/<string>USB Port Limit Patch<\/string>/g' Clover.Folder/$USER1/EFI/CLOVER/config.plist
+sed -i 's/<string>USB port limit patch<\/string>/<string>USB Port Limit Patch<\/string>/g' Clover.Folder/$USER2/EFI/CLOVER/config.plist
+sed -i 's/<string>USB port limit patch<\/string>/<string>USB Port Limit Patch<\/string>/g' Clover.Folder/$USER3/EFI/CLOVER/config.plist
+sed -i 's/<string>USB port limit patch<\/string>/<string>USB Port Limit Patch<\/string>/g' Clover.Folder/$USER4/EFI/CLOVER/config.plist
+sed -i 's/<string>USB port limit patch by PMHeart<\/string>/<string>USB Port Limit Patch<\/string>/g' Clover.Folder/$USER1/EFI/CLOVER/config.plist
+sed -i 's/<string>USB port limit patch by PMHeart<\/string>/<string>USB Port Limit Patch<\/string>/g' Clover.Folder/$USER2/EFI/CLOVER/config.plist
+sed -i 's/<string>USB port limit patch by PMHeart<\/string>/<string>USB Port Limit Patch<\/string>/g' Clover.Folder/$USER3/EFI/CLOVER/config.plist
+sed -i 's/<string>USB port limit patch by PMHeart<\/string>/<string>USB Port Limit Patch<\/string>/g' Clover.Folder/$USER4/EFI/CLOVER/config.plist
+sed -i 's/<string>USB port limit patch #1 10.14.x modify by DalianSky(credit ydeng)<\/string>/<string>USB Port Limit Patch<\/string>/g' Clover.Folder/$USER1/EFI/CLOVER/config.plist
+sed -i 's/<string>USB port limit patch #1 10.14.x modify by DalianSky(credit ydeng)<\/string>/<string>USB Port Limit Patch<\/string>/g' Clover.Folder/$USER2/EFI/CLOVER/config.plist
+sed -i 's/<string>USB port limit patch #1 10.14.x modify by DalianSky(credit ydeng)<\/string>/<string>USB Port Limit Patch<\/string>/g' Clover.Folder/$USER3/EFI/CLOVER/config.plist
+sed -i 's/<string>USB port limit patch #1 10.14.x modify by DalianSky(credit ydeng)<\/string>/<string>USB Port Limit Patch<\/string>/g' Clover.Folder/$USER4/EFI/CLOVER/config.plist
+sed -i 's/<string>USB port limit patch #2 10.14.x modify by DalianSky(credit PMHeart)<\/string>/<string>USB Port Limit Patch<\/string>/g' Clover.Folder/$USER1/EFI/CLOVER/config.plist
+sed -i 's/<string>USB port limit patch #2 10.14.x modify by DalianSky(credit PMHeart)<\/string>/<string>USB Port Limit Patch<\/string>/g' Clover.Folder/$USER2/EFI/CLOVER/config.plist
+sed -i 's/<string>USB port limit patch #2 10.14.x modify by DalianSky(credit PMHeart)<\/string>/<string>USB Port Limit Patch<\/string>/g' Clover.Folder/$USER3/EFI/CLOVER/config.plist
+sed -i 's/<string>USB port limit patch #2 10.14.x modify by DalianSky(credit PMHeart)<\/string>/<string>USB Port Limit Patch<\/string>/g' Clover.Folder/$USER4/EFI/CLOVER/config.plist
+sed -i 's/<string>USB Port limit patch #3 10.14.x modify by DalianSky(credits PMheart)<\/string>/<string>USB Port Limit Patch<\/string>/g' Clover.Folder/$USER1/EFI/CLOVER/config.plist
+sed -i 's/<string>USB Port limit patch #3 10.14.x modify by DalianSky(credits PMheart)<\/string>/<string>USB Port Limit Patch<\/string>/g' Clover.Folder/$USER2/EFI/CLOVER/config.plist
+sed -i 's/<string>USB Port limit patch #3 10.14.x modify by DalianSky(credits PMheart)<\/string>/<string>USB Port Limit Patch<\/string>/g' Clover.Folder/$USER3/EFI/CLOVER/config.plist
+sed -i 's/<string>USB Port limit patch #3 10.14.x modify by DalianSky(credits PMheart)<\/string>/<string>USB Port Limit Patch<\/string>/g' Clover.Folder/$USER4/EFI/CLOVER/config.plist
+sed -i 's/<string>USB Port limit patch #4 10.14.x modify by DalianSky(credits PMheart)<\/string>/<string>USB Port Limit Patch<\/string>/g' Clover.Folder/$USER1/EFI/CLOVER/config.plist
+sed -i 's/<string>USB Port limit patch #4 10.14.x modify by DalianSky(credits PMheart)<\/string>/<string>USB Port Limit Patch<\/string>/g' Clover.Folder/$USER2/EFI/CLOVER/config.plist
+sed -i 's/<string>USB Port limit patch #4 10.14.x modify by DalianSky(credits PMheart)<\/string>/<string>USB Port Limit Patch<\/string>/g' Clover.Folder/$USER3/EFI/CLOVER/config.plist
+sed -i 's/<string>USB Port limit patch #4 10.14.x modify by DalianSky(credits PMheart)<\/string>/<string>USB Port Limit Patch<\/string>/g' Clover.Folder/$USER4/EFI/CLOVER/config.plist
+sed -i 's/<string>USB Port limit patch #1(credits PMheart)<\/string>/<string>USB Port Limit Patch<\/string>/g' Clover.Folder/$USER1/EFI/CLOVER/config.plist
+sed -i 's/<string>USB Port limit patch #1(credits PMheart)<\/string>/<string>USB Port Limit Patch<\/string>/g' Clover.Folder/$USER2/EFI/CLOVER/config.plist
+sed -i 's/<string>USB Port limit patch #1(credits PMheart)<\/string>/<string>USB Port Limit Patch<\/string>/g' Clover.Folder/$USER3/EFI/CLOVER/config.plist
+sed -i 's/<string>USB Port limit patch #1(credits PMheart)<\/string>/<string>USB Port Limit Patch<\/string>/g' Clover.Folder/$USER4/EFI/CLOVER/config.plist
+sed -i 's/<string>USB Port limit patch #2(credits PMheart)<\/string>/<string>USB Port Limit Patch<\/string>/g' Clover.Folder/$USER1/EFI/CLOVER/config.plist
+sed -i 's/<string>USB Port limit patch #2(credits PMheart)<\/string>/<string>USB Port Limit Patch<\/string>/g' Clover.Folder/$USER2/EFI/CLOVER/config.plist
+sed -i 's/<string>USB Port limit patch #2(credits PMheart)<\/string>/<string>USB Port Limit Patch<\/string>/g' Clover.Folder/$USER3/EFI/CLOVER/config.plist
+sed -i 's/<string>USB Port limit patch #2(credits PMheart)<\/string>/<string>USB Port Limit Patch<\/string>/g' Clover.Folder/$USER4/EFI/CLOVER/config.plist
 
 echo "Cleaning Up..."
 rm -rf Clover.Folder/$USER1/EFI/CLOVER/themes/Olarila
@@ -234,6 +274,11 @@ CheckFile "Clover.Folder/$USER4/EFI/CLOVER/themes/Clovy/sound.wav"
 CheckFile "Clover.Folder/$USER4/EFI/CLOVER/themes/Clovy/theme.svg"
 CheckFile "Clover.Folder/$USER4/EFI/CLOVER/CLOVERX64.efi"
 CheckFile "Clover.Folder/$USER4/EFI/CLOVER/config.plist"
+CheckDir  "Kexts/AirportBrcmFixup.kext"
+CheckDir  "Kexts/AppleALC.kext"
+CheckDir  "Kexts/Lilu.kext"
+CheckDir  "Kexts/VirtualSMC.kext"
+CheckDir  "Kexts/WhateverGreen.kext"
 CheckFile "Scripts/install.sh"
 CheckFile "Scripts/run.sh"
 CheckFile "Tools/AppCleaner_$AppCleaner.zip"
