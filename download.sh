@@ -14,12 +14,12 @@ fi
 
 mkdir -p "$TARGET/$1"
 
-wget -q -P "$TARGET/$1/" $URL/AppleDiagnostics.dmg
-wget -q -P "$TARGET/$1/" $URL/AppleDiagnostics.chunklist
-wget -q -P "$TARGET/$1/" $URL/BaseSystem.dmg
-wget -q -P "$TARGET/$1/" $URL/BaseSystem.chunklist
-wget -q -P "$TARGET/$1/" $URL/InstallInfo.plist
-wget -q -O "$TARGET/$1/InstallESD.dmg" $URL/InstallESDDmg.pkg
+wget -q -P "$TARGET/$1/" "$URL/AppleDiagnostics.dmg"
+wget -q -P "$TARGET/$1/" "$URL/AppleDiagnostics.chunklist"
+wget -q -P "$TARGET/$1/" "$URL/BaseSystem.dmg"
+wget -q -P "$TARGET/$1/" "$URL/BaseSystem.chunklist"
+wget -q -P "$TARGET/$1/" "$URL/InstallInfo.plist"
+wget -q -O "$TARGET/$1/InstallESD.dmg" "$URL/InstallESDDmg.pkg"
 
 sed -i '30,33 d'                                                  "$TARGET/$1/InstallInfo.plist"
 sed -i 's/InstallESDDmg.pkg/InstallESD.dmg/g'                     "$TARGET/$1/InstallInfo.plist"
