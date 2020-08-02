@@ -7,10 +7,10 @@ if [ -z "$1" ]; then
   echo "Usage: run.sh backup"
   echo "       run.sh backup-apps"
   echo "       run.sh backup-firefox"
+  echo "       run.sh backup-library"
   echo "       run.sh restore"
   echo "       run.sh restore-firefox"
   echo "       run.sh copy-clover"
-  echo "       run.sh setup"
   echo "       run.sh trim-enable"
   echo "       run.sh disable-gatekeeper"
   echo "       run.sh mount-efi"
@@ -37,6 +37,9 @@ elif [ "$1" = "backup-firefox" ]; then
   rsync -a $HOME/Library/Caches/Firefox                                           $TARGET/${(C)USER}/Library/Caches/
   rsync -a $HOME/Library/Preferences/org.mozilla.firefox.plist                    $TARGET/${(C)USER}/Library/Preferences/
   rsync -a $HOME/Library/Saved\ Application\ State/org.mozilla.firefox.savedState $TARGET/${(C)USER}/Library/Saved\ Application\ State/
+elif [ "$1" = "backup-library" ]; then
+  mkdir -p $TARGET/${(C)USER}/Library
+  rsync -a $HOME/Library $TARGET/${(C)USER}/
 elif [ "$1" = "restore" ]; then
   rsync -a $SOURCE/${(C)USER}/Home/Documents $HOME/
   rsync -a $SOURCE/${(C)USER}/Home/Downloads $HOME/
@@ -57,14 +60,6 @@ elif [ "$1" = "copy-clover" ]; then
   sudo rm -rf /Volumes/EFI/EFI
   sudo mkdir  /Volumes/EFI/EFI
   sudo cp -rf /Volumes/macOS/EFI-CLOVER/* /Volumes/EFI/EFI/
-elif [ "$1" = "setup" ]; then
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-  brew cask install keepassxc
-  brew cask install meld
-  brew install localbrew/core/ds
-  brew install rsync
-  brew unlink  rsync
-  brew link    rsync
 elif [ "$1" = "trim-enable" ]; then
   sudo trimforce enable
 elif [ "$1" = "disable-gatekeeper" ]; then
