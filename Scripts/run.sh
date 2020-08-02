@@ -6,10 +6,8 @@ TARGET="/Volumes/USB/Mac"
 if [ -z "$1" ]; then
   echo "Usage: run.sh backup"
   echo "       run.sh backup-apps"
-  echo "       run.sh backup-firefox"
   echo "       run.sh backup-library"
   echo "       run.sh restore"
-  echo "       run.sh restore-firefox"
   echo "       run.sh copy-clover"
   echo "       run.sh trim-enable"
   echo "       run.sh disable-gatekeeper"
@@ -28,33 +26,15 @@ if [ "$1" = "backup" ]; then
 elif [ "$1" = "backup-apps" ]; then
   mkdir -p $TARGET/${(C)USER}/Applications
   rsync -a /Applications/* $TARGET/${(C)USER}/Applications/
-elif [ "$1" = "backup-firefox" ]; then
-  mkdir -p $TARGET/${(C)USER}/Library/Application\ Support
-  mkdir -p $TARGET/${(C)USER}/Library/Caches
-  mkdir -p $TARGET/${(C)USER}/Library/Preferences
-  mkdir -p $TARGET/${(C)USER}/Library/Saved\ Application\ State
-  rsync -a $HOME/Library/Application\ Support/Firefox                             $TARGET/${(C)USER}/Library/Application\ Support/
-  rsync -a $HOME/Library/Caches/Firefox                                           $TARGET/${(C)USER}/Library/Caches/
-  rsync -a $HOME/Library/Preferences/org.mozilla.firefox.plist                    $TARGET/${(C)USER}/Library/Preferences/
-  rsync -a $HOME/Library/Saved\ Application\ State/org.mozilla.firefox.savedState $TARGET/${(C)USER}/Library/Saved\ Application\ State/
 elif [ "$1" = "backup-library" ]; then
   mkdir -p $TARGET/${(C)USER}/Library
-  rsync -a $HOME/Library $TARGET/${(C)USER}/
+  rsync -a $HOME/Library/* $TARGET/${(C)USER}/Library/
 elif [ "$1" = "restore" ]; then
   rsync -a $SOURCE/${(C)USER}/Home/Documents $HOME/
   rsync -a $SOURCE/${(C)USER}/Home/Downloads $HOME/
   rsync -a $SOURCE/${(C)USER}/Home/Movies    $HOME/
   rsync -a $SOURCE/${(C)USER}/Home/Music     $HOME/
   rsync -a $SOURCE/${(C)USER}/Home/Pictures  $HOME/
-elif [ "$1" = "restore-firefox" ]; then
-  mkdir -p $HOME/Library/Application\ Support
-  mkdir -p $HOME/Library/Caches
-  mkdir -p $HOME/Library/Preferences
-  mkdir -p $HOME/Library/Saved\ Application\ State
-  rsync -a $TARGET/${(C)USER}/Library/Application\ Support/Firefox                             $HOME/Library/Application\ Support/
-  rsync -a $TARGET/${(C)USER}/Library/Caches/Firefox                                           $HOME/Library/Caches/
-  rsync -a $TARGET/${(C)USER}/Library/Preferences/org.mozilla.firefox.plist                    $HOME/Library/Preferences/
-  rsync -a $TARGET/${(C)USER}/Library/Saved\ Application\ State/org.mozilla.firefox.savedState $HOME/Library/Saved\ Application\ State/
 elif [ "$1" = "copy-clover" ]; then
   sudo diskutil mount /dev/disk0s1 >/dev/null 2>/dev/null
   sudo rm -rf /Volumes/EFI/EFI
