@@ -8,7 +8,7 @@ if [ -z "$1" ]; then
 fi
 
 if   [ "$1" = "10.14.6" ]; then URL="http://swcdn.apple.com/content/downloads/17/32/061-26589-A_8GJTCGY9PC/25fhcu905eta7wau7aoafu8rvdm7k1j4el"
-elif [ "$1" = "10.15.5" ]; then URL="http://swcdn.apple.com/content/downloads/59/18/001-15219-A_EE9FN7UHJA/efuz3h0zlmx4qlinf4bxlguigo9jvhcr55"
+elif [ "$1" = "10.15.6" ]; then URL="http://swcdn.apple.com/content/downloads/10/06/001-36801-A_9MBEQ97Z9M/672a1q4u8978ize3s15ygivp2dqwmk10qb"
 else exit 0
 fi
 
