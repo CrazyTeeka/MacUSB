@@ -7,11 +7,13 @@ if [ -z "$1" ]; then
   echo "Usage: run.sh backup"
   echo "       run.sh backup-apps"
   echo "       run.sh backup-library"
+  echo "       run.sh backup-efi"
   echo "       run.sh restore"
+  echo "       run.sh restore-efi"
+  echo "       run.sh mount-efi"
   echo "       run.sh copy-clover"
   echo "       run.sh trim-enable"
   echo "       run.sh disable-gatekeeper"
-  echo "       run.sh mount-efi"
   echo "       run.sh reset-dock"
   exit 0
 fi
@@ -29,12 +31,24 @@ elif [ "$1" = "backup-apps" ]; then
 elif [ "$1" = "backup-library" ]; then
   mkdir -p $TARGET/${(C)USER}/Library
   rsync -a $HOME/Library/* $TARGET/${(C)USER}/Library/
+elif [ "$1" = "backup-efi" ]; then
+  sudo diskutil mount /dev/disk0s1 >/dev/null 2>/dev/null
+  sudo rm -rf /Volumes/macOS/EFI.BACKUP
+  sudo mkdir  /Volumes/macOS/EFI.BACKUP
+  sudo cp -rf /Volumes/EFI/EFI/* /Volumes/macOS/EFI.BACKUP/
 elif [ "$1" = "restore" ]; then
   rsync -a $SOURCE/${(C)USER}/Home/Documents $HOME/
   rsync -a $SOURCE/${(C)USER}/Home/Downloads $HOME/
   rsync -a $SOURCE/${(C)USER}/Home/Movies    $HOME/
   rsync -a $SOURCE/${(C)USER}/Home/Music     $HOME/
   rsync -a $SOURCE/${(C)USER}/Home/Pictures  $HOME/
+elif [ "$1" = "restore-efi" ]; then
+  sudo diskutil mount /dev/disk0s1 >/dev/null 2>/dev/null
+  sudo rm -rf /Volumes/EFI/EFI
+  sudo mkdir  /Volumes/EFI/EFI
+  sudo cp -rf /Volumes/macOS/EFI.BACKUP/* /Volumes/EFI/EFI/
+elif [ "$1" = "mount-efi" ]; then
+  sudo diskutil mount /dev/disk0s1 >/dev/null 2>/dev/null
 elif [ "$1" = "copy-clover" ]; then
   sudo diskutil mount /dev/disk0s1 >/dev/null 2>/dev/null
   sudo rm -rf /Volumes/EFI/EFI
@@ -44,8 +58,6 @@ elif [ "$1" = "trim-enable" ]; then
   sudo trimforce enable
 elif [ "$1" = "disable-gatekeeper" ]; then
   sudo spctl --master-disable
-elif [ "$1" = "mount-efi" ]; then
-  sudo diskutil mount /dev/disk0s1 >/dev/null 2>/dev/null
 elif [ "$1" = "reset-dock" ]; then
   defaults write com.apple.dock "tilesize" -float 64
   defaults write com.apple.dock "magnification" -boolean false
