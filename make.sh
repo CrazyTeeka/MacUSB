@@ -19,9 +19,6 @@ P3=$USB"3" # Partition 3
 
 sudo -v
 
-echo "Updating Clover..."
-sh clover-update.sh
-
 echo "Unmounting $USB..."
 sudo umount $P1 >/dev/null 2>/dev/null
 sudo umount $P2 >/dev/null 2>/dev/null
@@ -48,16 +45,13 @@ sudo apt-get -y install dmg2img >/dev/null 2>/dev/null
 sudo dmg2img -i $HOME/MacOS/$VER/BaseSystem.dmg -p 4 -o $P2 >/dev/null 2>/dev/null
 
 echo "Copying EFI..."
-sudo mkdir -p /media/$USER/macOS/EFI-CLOVER
+sudo mkdir -p /media/$USER/macOS/EFI
 sudo cp -rf $EFI/EFI   /media/$USER/EFI/
-sudo cp -rf $EFI/EFI/* /media/$USER/macOS/EFI-CLOVER/
+sudo cp -rf $EFI/EFI/* /media/$USER/macOS/EFI/
 
 echo "Copying macOS..."
 sudo mkdir -p /media/$USER/macOS/SharedSupport
 sudo cp -rf $HOME/MacOS/$VER/* /media/$USER/macOS/SharedSupport/
-
-echo "Copying DSDT..."
-sudo cp -rf Clover.Config/DSDT /media/$USER/macOS/
 
 echo "Copying Scripts..."
 sudo cp -rf Scripts /media/$USER/macOS/
