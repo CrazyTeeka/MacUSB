@@ -1,8 +1,5 @@
 # MacUSB
 Create **Bootable Flash Media** with Linux. Install **macOS** on any desktop or notebook computer.
-```
-Credits: MaLd0n from Olarila.com for the EFI folders and custom DSDTs.
-```
 
 ## Install MacUSB
 ```
