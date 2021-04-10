@@ -1,5 +1,5 @@
 # MacUSB
-Create **Bootable Flash Media** with Linux. Install **macOS** on any desktop or notebook computer.
+Create **Bootable Flash Media** with Linux. Install **macOS** on any desktop computer.
 
 ## Install MacUSB
 ```
@@ -16,16 +16,4 @@ sh download.sh 10.15.7
 DESKTOPS - (NEHALEM / SANDY BRIDGE / IVY BRIDGE / HASWELL / BROADWELL):
 ```
 sh make.sh /dev/sdb 10.15.7 Clover.Folder/DESKTOPS.NEHALEM+
-```
-DESKTOPS - (SKYLAKE / KABYLAKE / COFFEELAKE / WHISKEYLAKE / COMETLAKE):
-```
-sh make.sh /dev/sdb 10.15.7 Clover.Folder/DESKTOPS.SKYLAKE+
-```
-NOTEBOOKS - (NEHALEM / SANDY BRIDGE / IVY BRIDGE / HASWELL / BROADWELL):
-```
-sh make.sh /dev/sdb 10.15.7 Clover.Folder/NOTEBOOKS.NEHALEM+
-```
-NOTEBOOKS - (SKYLAKE / KABYLAKE / COFFEELAKE / WHISKEYLAKE / COMETLAKE):
-```
-sh make.sh /dev/sdb 10.15.7 Clover.Folder/NOTEBOOKS.SKYLAKE+
 ```
