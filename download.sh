@@ -3,9 +3,9 @@
 TARGET="$HOME/MacOS"
 
 if [ -z "$1" ]; then
-  echo "Usage: download.sh Catalina"
-  echo "       download.sh Mojave"
-  echo "       download.sh HighSierra"
+  echo "Usage: sh download.sh Catalina"
+  echo "       sh download.sh Mojave"
+  echo "       sh download.sh HighSierra"
   exit 0
 fi
 
