@@ -1,4 +1,4 @@
-## MacUSB
+# MacUSB
 Create **Bootable Flash Media** with Linux. Install **macOS** on any desktop computer.
 
 ### Install MacUSB
