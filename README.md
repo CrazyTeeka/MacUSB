@@ -13,3 +13,6 @@ sh download.sh Catalina
 ```
 
 ### Create Bootable Flash Media
+```
+sh make.sh /dev/sdb Catalina OpenCore/Series-9
+```
