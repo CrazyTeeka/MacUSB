@@ -11,7 +11,7 @@ if [ -z "$1" ]; then
   echo "       run.sh restore"
   echo "       run.sh restore-efi"
   echo "       run.sh mount-efi"
-  echo "       run.sh copy-clover"
+  echo "       run.sh copy-efi"
   echo "       run.sh trim-enable"
   echo "       run.sh disable-gatekeeper"
   echo "       run.sh reset-dock"
@@ -49,11 +49,11 @@ elif [ "$1" = "restore-efi" ]; then
   sudo cp -rf /Volumes/macOS/EFI.BACKUP/* /Volumes/EFI/EFI/
 elif [ "$1" = "mount-efi" ]; then
   sudo diskutil mount /dev/disk0s1 >/dev/null 2>/dev/null
-elif [ "$1" = "copy-clover" ]; then
+elif [ "$1" = "copy-efi" ]; then
   sudo diskutil mount /dev/disk0s1 >/dev/null 2>/dev/null
   sudo rm -rf /Volumes/EFI/EFI
   sudo mkdir  /Volumes/EFI/EFI
-  sudo cp -rf /Volumes/macOS/EFI-CLOVER/* /Volumes/EFI/EFI/
+  sudo cp -rf /Volumes/macOS/EFI/* /Volumes/EFI/EFI/
 elif [ "$1" = "trim-enable" ]; then
   sudo trimforce enable
 elif [ "$1" = "disable-gatekeeper" ]; then
