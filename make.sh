@@ -1,7 +1,12 @@
 #!/bin/bash
 
 if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ]; then
-  echo "Usage: make.sh <target> <version> <folder>"
+  echo "Usage: make.sh /dev/sdb Catalina OpenCore/Series-9"
+  echo "       make.sh /dev/sdb Catalina OpenCore/Series-100"
+  echo "       make.sh /dev/sdb Catalina OpenCore/Series-200"
+  echo "       make.sh /dev/sdb Catalina OpenCore/Series-300"
+  echo "       make.sh /dev/sdb Catalina OpenCore/Series-400"
+  echo "       make.sh /dev/sdb Catalina OpenCore/Series-500"
   exit 0
 fi
 

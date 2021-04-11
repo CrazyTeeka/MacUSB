@@ -15,8 +15,8 @@ elif [ "$1" = "HighSierra" ]; then URL="http://swcdn.apple.com/content/downloads
 else exit 0
 fi
 
-rm    -rf "$TARGET/$1"
-mkdir -p  "$TARGET/$1"
+rm -rf "$TARGET/$1"
+mkdir  "$TARGET/$1"
 
 wget -q -P "$TARGET/$1/" "$URL/AppleDiagnostics.dmg"
 wget -q -P "$TARGET/$1/" "$URL/AppleDiagnostics.chunklist"
