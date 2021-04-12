@@ -22,3 +22,19 @@ sh make.sh /dev/sdb Catalina OpenCore/Series-300
 sh make.sh /dev/sdb Catalina OpenCore/Series-400
 sh make.sh /dev/sdb Catalina OpenCore/Series-500
 ```
+```
+sh make.sh /dev/sdb Mojave OpenCore/Series-9
+sh make.sh /dev/sdb Mojave OpenCore/Series-100
+sh make.sh /dev/sdb Mojave OpenCore/Series-200
+sh make.sh /dev/sdb Mojave OpenCore/Series-300
+sh make.sh /dev/sdb Mojave OpenCore/Series-400
+sh make.sh /dev/sdb Mojave OpenCore/Series-500
+```
+```
+sh make.sh /dev/sdb HighSierra OpenCore/Series-9
+sh make.sh /dev/sdb HighSierra OpenCore/Series-100
+sh make.sh /dev/sdb HighSierra OpenCore/Series-200
+sh make.sh /dev/sdb HighSierra OpenCore/Series-300
+sh make.sh /dev/sdb HighSierra OpenCore/Series-400
+sh make.sh /dev/sdb HighSierra OpenCore/Series-500
+```
