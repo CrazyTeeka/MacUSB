@@ -1,5 +1,4 @@
 # MacUSB
-Create **Bootable Flash Media** with Linux. Install **macOS** on intel desktop computers.
 
 ## Install MacUSB
 ```
