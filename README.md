@@ -1,4 +1,5 @@
 # MacUSB
+Install macOS on your PC.
 
 ## Install MacUSB
 ```
