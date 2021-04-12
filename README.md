@@ -1,7 +1,7 @@
 # MacUSB
-Install macOS on your PC.
+Hackintosh Toolkit for Linux
 
-## Install MacUSB
+#### Install MacUSB:
 ```
 wget -O MacUSB.zip https://github.com/CrazyTeeka/MacUSB/archive/master.zip && unzip MacUSB.zip && mv MacUSB-master MacUSB && cd MacUSB && sh setup.sh
 ```
