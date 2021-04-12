@@ -1,20 +1,20 @@
 # MacUSB
 Create **Bootable Flash Media** with Linux. Install **macOS** on intel desktop computers.
 
-### Install MacUSB
+## Install MacUSB
 ```
 wget -O MacUSB.zip https://github.com/CrazyTeeka/MacUSB/archive/master.zip
 unzip MacUSB.zip && mv MacUSB-master MacUSB && cd MacUSB && sh setup.sh
 ```
 
-### Download macOS
+## Download macOS
 ```
 sh download.sh Catalina
 sh download.sh Mojave
 sh download.sh HighSierra
 ```
 
-### Create Bootable Flash Media
+## Create Bootable Flash Media
 ```
 sh make.sh /dev/sdb Catalina OpenCore/Series-9
 sh make.sh /dev/sdb Catalina OpenCore/Series-100
