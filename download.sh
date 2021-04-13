@@ -25,6 +25,6 @@ wget -q -P "$TARGET/$1/" "$URL/BaseSystem.chunklist"
 wget -q -P "$TARGET/$1/" "$URL/InstallInfo.plist"
 wget -q -O "$TARGET/$1/InstallESD.dmg" "$URL/InstallESDDmg.pkg"
 
-sed -i '30,33 d'                                                  "$TARGET/$1/InstallInfo.plist"
+sed -i '30,33d'                                                   "$TARGET/$1/InstallInfo.plist"
 sed -i 's/InstallESDDmg.pkg/InstallESD.dmg/g'                     "$TARGET/$1/InstallInfo.plist"
 sed -i 's/com.apple.pkg.InstallESDDmg/com.apple.dmg.InstallESD/g' "$TARGET/$1/InstallInfo.plist"
