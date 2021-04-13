@@ -49,7 +49,7 @@ echo "Copying BaseSystem..."
 sudo apt-get -y install dmg2img >/dev/null 2>/dev/null
 sudo dmg2img -i $HOME/MacOS/$VER/BaseSystem.dmg -p 4 -o $P2 >/dev/null 2>/dev/null
 
-echo "Copying EFI..."
+echo "Copying $3..."
 sudo mkdir -p /media/$USER/macOS/EFI
 sudo cp -rf $EFI/EFI   /media/$USER/EFI/
 sudo cp -rf $EFI/EFI/* /media/$USER/macOS/EFI/
