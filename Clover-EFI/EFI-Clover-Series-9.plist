@@ -153,8 +153,7 @@
 		<integer>1</integer>
 	</dict>
 	<key>CPU</key>
-	<dict>
-	</dict>
+	<array/>
 	<key>Devices</key>
 	<dict>
 		<key>Audio</key>
@@ -419,10 +418,52 @@
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
+		<key>BiosReleaseDate</key>
+		<string>12/17/2020</string>
+		<key>BiosVendor</key>
+		<string>Apple Inc.</string>
+		<key>BiosVersion</key>
+		<string>IM142.88Z.F000.B00.2012171737</string>
+		<key>Board-ID</key>
+		<string>Mac-27ADBB7B4CEE8E61</string>
+		<key>BoardManufacturer</key>
+		<string>Apple Inc.</string>
+		<key>BoardSerialNumber</key>
+		<string>F5K938101CDFHDDA8</string>
+		<key>BoardType</key>
+		<integer>10</integer>
+		<key>BoardVersion</key>
+		<string>iMac14,2</string>
+		<key>ChassisAssetTag</key>
+		<string>iMac</string>
+		<key>ChassisManufacturer</key>
+		<string>Apple Inc.</string>
+		<key>ChassisType</key>
+		<string>0xD</string>
+		<key>EfiVersion</key>
+		<string>430.0.0.0.0</string>
+		<key>Family</key>
+		<string>iMac</string>
+		<key>FirmwareFeatures</key>
+		<string>0xE00FE137</string>
+		<key>FirmwareFeaturesMask</key>
+		<string>0xFF1FFF3F</string>
+		<key>Manufacturer</key>
+		<string>Apple Inc.</string>
 		<key>NoRomInfo</key>
 		<true/>
+		<key>PlatformFeature</key>
+		<string>0x1</string>
+		<key>ProductName</key>
+		<string>iMac14,2</string>
+		<key>SerialNumber</key>
+		<string>C17PH2Z9F8JC</string>
+		<key>SmUUID</key>
+		<string>255D76DF-E36B-4E44-B49D-0F78EFB26E36</string>
 		<key>Trust</key>
 		<true/>
+		<key>Version</key>
+		<real>1</real>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
