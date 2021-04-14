@@ -419,35 +419,33 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>BiosReleaseDate</key>
-		<string>01/05/2021</string>
+		<string>01/06/2021</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>IM171.88Z.F000.B00.2101051914</string>
+		<string>MP71.88Z.F000.B00.2101062036</string>
 		<key>Board-ID</key>
-		<string>Mac-DB15BD556843C820</string>
+		<string>Mac-27AD2F918AE68F61</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>F5K938101CDFHDDA8</string>
+		<string>F5K917403CDFHDDA8</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
-		<string>iMac17,1</string>
-		<key>ChassisAssetTag</key>
-		<string>iMac</string>
+		<string>MacPro7,1</string>
 		<key>ChassisManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>ChassisType</key>
-		<string>0xD</string>
+		<string>0x7</string>
 		<key>EfiVersion</key>
-		<string>429.80.1.0.0</string>
+		<string>1554.80.3.0.0</string>
 		<key>Family</key>
-		<string>iMac</string>
+		<string>MacPro</string>
 		<key>FirmwareFeatures</key>
-		<string>0xFC0FE137</string>
+		<string>0xFDAFF066</string>
 		<key>FirmwareFeaturesMask</key>
-		<string>0xFF1FFF3F</string>
+		<string>0xFFFFFF7F</string>
 		<key>Manufacturer</key>
 		<string>Apple Inc.</string>
 		<key>NoRomInfo</key>
@@ -455,11 +453,11 @@
 		<key>PlatformFeature</key>
 		<string>0x0</string>
 		<key>ProductName</key>
-		<string>iMac17,1</string>
+		<string>MacPro7,1</string>
 		<key>SerialNumber</key>
-		<string>F5KPG0MYGG7L</string>
+		<string>F5KYMGYWP7QM</string>
 		<key>SmUUID</key>
-		<string>255D76DF-E36B-4E44-B49D-0F78EFB26E36</string>
+		<string>7A6382D9-98F3-4C2A-A7EF-734D0DC7FED9</string>
 		<key>Trust</key>
 		<true/>
 		<key>Version</key>
