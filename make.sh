@@ -30,7 +30,7 @@ sudo umount $P2 >/dev/null 2>/dev/null
 sudo umount $P3 >/dev/null 2>/dev/null
 
 echo "Formatting $USB..."
-sudo gdisk $USB < macOS.gdisk >/dev/null 2>/dev/null
+sudo gdisk $USB < make.gdisk >/dev/null 2>/dev/null
 sudo mkfs.fat -F 32 -n EFI -v $P1 >/dev/null 2>/dev/null
 sudo mkfs.hfsplus -v BaseSystem $P2 >/dev/null 2>/dev/null
 sudo mkfs.hfsplus -v macOS $P3 >/dev/null 2>/dev/null
