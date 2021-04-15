@@ -6,17 +6,17 @@ TARGET="/Volumes/USB/Mac"
 clear
 
 if [ -z "$1" ]; then
-  echo "Usage: sh run.sh backup"
-  echo "       sh run.sh backup-apps"
-  echo "       sh run.sh backup-library"
-  echo "       sh run.sh backup-efi"
-  echo "       sh run.sh restore"
-  echo "       sh run.sh restore-efi"
-  echo "       sh run.sh mount-efi"
-  echo "       sh run.sh copy-efi"
-  echo "       sh run.sh trim-enable"
-  echo "       sh run.sh disable-gatekeeper"
-  echo "       sh run.sh reset-dock"
+  echo "sh run.sh backup"
+  echo "sh run.sh backup-apps"
+  echo "sh run.sh backup-library"
+  echo "sh run.sh backup-efi"
+  echo "sh run.sh restore"
+  echo "sh run.sh restore-efi"
+  echo "sh run.sh mount-efi"
+  echo "sh run.sh copy-efi"
+  echo "sh run.sh trim-enable"
+  echo "sh run.sh disable-gatekeeper"
+  echo "sh run.sh reset-dock"
   exit 0
 fi
 
