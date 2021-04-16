@@ -27,6 +27,8 @@ P1=$USB"1" # Partition 1
 P2=$USB"2" # Partition 2
 P3=$USB"3" # Partition 3
 
+sh update-clover.sh
+sh update-opencore.sh
 sudo umount $P1 >/dev/null 2>/dev/null
 sudo umount $P2 >/dev/null 2>/dev/null
 sudo umount $P3 >/dev/null 2>/dev/null
