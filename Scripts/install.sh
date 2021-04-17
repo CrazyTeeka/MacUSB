@@ -2,8 +2,6 @@
 
 MACOS="Catalina"
 
-clear
-
 if [ -z "$1" ]; then
   cp -R /Install\ macOS\ $MACOS.app /Volumes/Macintosh\ HD/
   cp -R /Volumes/macOS/SharedSupport /Volumes/Macintosh\ HD/Install\ macOS\ $MACOS.app/Contents/

@@ -3,8 +3,6 @@
 SOURCE="/Volumes/USB/Mac"
 TARGET="/Volumes/USB/Mac"
 
-clear
-
 if [ -z "$1" ]; then
   echo "sh run.sh backup"
   echo "sh run.sh backup-apps"
