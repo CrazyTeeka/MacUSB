@@ -117,7 +117,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>agdpmod=pikera alcid=1 dart=0 debug=0x100 keepsyms=1 shikigva=128 watchdog=0 -no_compat_check -v</string>
+		<string>dart=0</string>
 		<key>CustomLogo</key>
 		<false/>
 		<key>Debug</key>
@@ -141,7 +141,7 @@
 		<key>StrictHibernate</key>
 		<false/>
 		<key>Timeout</key>
-		<integer>10</integer>
+		<integer>5</integer>
 		<key>XMPDetection</key>
 		<string>Yes</string>
 	</dict>
@@ -242,70 +242,6 @@
 		<false/>
 		<key>KextsToPatch</key>
 		<array>
-			<dict>
-				<key>Comment</key>
-				<string>USB Port Limit Patch #1 (10.14)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>g/sPDw==</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>MatchOS</key>
-				<string>10.14.x</string>
-				<key>Name</key>
-				<string>com.apple.iokit.IOUSBHostFamily</string>
-				<key>Replace</key>
-				<data>g/s/Dw==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>USB Port Limit Patch #2 (10.14)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>g+MP0w==</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>MatchOS</key>
-				<string>10.14.x</string>
-				<key>Name</key>
-				<string>com.apple.iokit.IOUSBHostFamily</string>
-				<key>Replace</key>
-				<data>g+M/0w==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>USB Port Limit Patch #3 (10.14)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>g/sPDw==</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>MatchOS</key>
-				<string>10.14.x</string>
-				<key>Name</key>
-				<string>com.apple.driver.usb.AppleUSBXHCI</string>
-				<key>Replace</key>
-				<data>g/s/Dw==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>USB Port Limit Patch #4 (10.14)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>g/8PDw==</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>MatchOS</key>
-				<string>10.14.x</string>
-				<key>Name</key>
-				<string>com.apple.driver.usb.AppleUSBXHCI</string>
-				<key>Replace</key>
-				<data>g/8/Dw==</data>
-			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>USB Port Limit Patch #1 (10.15)</string>
@@ -419,13 +355,13 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>BiosReleaseDate</key>
-		<string>12/17/2020</string>
+		<string>01/05/2021</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>IM151.88Z.F000.B00.2012171740</string>
+		<string>IM191.88Z.F000.B00.2101051926</string>
 		<key>Board-ID</key>
-		<string>Mac-42FD25EABCABB274</string>
+		<string>Mac-AA95B1DDAB278B95</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
@@ -433,31 +369,29 @@
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
-		<string>iMac15,1</string>
+		<string>iMac19,1</string>
 		<key>ChassisManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>ChassisType</key>
 		<string>0xD</string>
 		<key>EfiVersion</key>
-		<string>430.0.0.0.0</string>
+		<string>1554.80.3.0.0</string>
 		<key>Family</key>
 		<string>iMac</string>
 		<key>FirmwareFeatures</key>
-		<string>0xF80FE137</string>
+		<string>0xFD8FF576</string>
 		<key>FirmwareFeaturesMask</key>
-		<string>0xFF1FFF3F</string>
-		<key>LocationInChassis</key>
-		<string>Part Component</string>
+		<string>0xFFDFFF7F</string>
 		<key>Manufacturer</key>
 		<string>Apple Inc.</string>
 		<key>NoRomInfo</key>
 		<true/>
 		<key>PlatformFeature</key>
-		<string>0x1</string>
+		<string>0x20</string>
 		<key>ProductName</key>
-		<string>iMac15,1</string>
+		<string>iMac19,1</string>
 		<key>SerialNumber</key>
-		<string>W88M8YZKFY10</string>
+		<string>C07Y3HZDJV3Q</string>
 		<key>SmUUID</key>
 		<string>C1603AF9-4166-4D6F-9EC2-796D3D7254DF</string>
 		<key>Trust</key>
