@@ -79,7 +79,7 @@
 			<array>
 				<dict>
 					<key>Comment</key>
-					<string>RTC</string>
+					<string>Fix RTC Bug</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -123,7 +123,7 @@
 		<key>Debug</key>
 		<false/>
 		<key>DefaultVolume</key>
-		<string>LastBootedVolume</string>
+		<string>Macintosh HD</string>
 		<key>DisableCloverHotkeys</key>
 		<false/>
 		<key>Legacy</key>
