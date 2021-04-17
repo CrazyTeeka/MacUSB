@@ -18,7 +18,6 @@ P1=$USB"1" # Partition 1
 P2=$USB"2" # Partition 2
 P3=$USB"3" # Partition 3
 
-sh update-clover.sh
 sh update-kexts.sh
 sh update-opencore.sh
 

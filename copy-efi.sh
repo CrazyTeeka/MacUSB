@@ -1,9 +1,7 @@
 #!/bin/bash
 
-EFI="Clover/Series-9"
-#EFI="OpenCore/Series-9"
+EFI="OpenCore/Series-9"
 
-sh update-clover.sh
 sh update-kexts.sh
 sh update-opencore.sh
 
