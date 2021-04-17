@@ -79,7 +79,7 @@
 			<array>
 				<dict>
 					<key>Comment</key>
-					<string>Fix RTC Bug</string>
+					<string>Fix RTC</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
