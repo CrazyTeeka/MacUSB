@@ -34,6 +34,7 @@ wget -q -P Temp/ $FILES/DSDT-Asus-Maximus-VIII-Gene-1902.aml
 
 wget -q -P Temp/ $FILES/OpenCore-$OpenCore-RELEASE.zip
 wget -q -P Temp/ $FILES/OpenCore-Series-9.zip
+
 wget -q -P Temp/ $FILES/OpenCore-Configuration.pdf
 wget -q -P Temp/ $FILES/OpenCore-Configurator.zip
 
@@ -72,21 +73,27 @@ cp -rf OpenCore/Update/X64/EFI OpenCore/Update/
 
 cp -f Temp/DSDT-Asus-Maximus-VII-Hero-3503.aml DSDT/
 cp -f Temp/DSDT-Asus-Maximus-VIII-Gene-1902.aml DSDT/
+
 cp -f Temp/OpenCore-Configuration.pdf Docs/
 cp -f Temp/OpenCore-Configurator.zip Tools/
+
 cp -f Temp/Tools-AppCleaner.zip Tools/AppCleaner.zip
 cp -f Temp/Tools-PlistEditPro.zip Tools/PlistEditPro.zip
 cp -f Temp/Tools-RunMe.zip Tools/RunMe.zip
 
 cp -rf Kexts/AtherosE2200Ethernet-V2.2.2/Release/AtherosE2200Ethernet.kext Kexts/
 rm -rf Kexts/AtherosE2200Ethernet-V2.2.2
+
 mkdir -p Kexts/Kexts/VirtualSMC.kext/Contents/Plugins
+
 cp -rf Kexts/Kexts/SMCLightSensor.kext Kexts/Kexts/VirtualSMC.kext/Contents/Plugins/
 cp -rf Kexts/Kexts/SMCProcessor.kext Kexts/Kexts/VirtualSMC.kext/Contents/Plugins/
 cp -rf Kexts/Kexts/VirtualSMC.kext Kexts/
 rm -rf Kexts/Kexts
+
 cp -rf Kexts/RealtekRTL8111-V2.4.0/Release/RealtekRTL8111.kext Kexts/
 rm -rf Kexts/RealtekRTL8111-V2.4.0
+
 rm -rf Kexts/IntelSnowMausi.kext
 rm -rf Kexts/*.dSYM
 rm -rf Kexts/dSYM
@@ -96,6 +103,7 @@ rm -rf Kexts/WhateverName.app
 rm -f  Kexts/alc-verb
 
 rm -rf OpenCore/Series-9/__MACOSX
+
 rm -rf OpenCore/Update/Docs
 rm -rf OpenCore/Update/IA32
 rm -rf OpenCore/Update/Utilities
@@ -113,6 +121,7 @@ rm -f  OpenCore/Update/EFI/OC/Drivers/Ps2KeyboardDxe.efi
 rm -f  OpenCore/Update/EFI/OC/Drivers/Ps2MouseDxe.efi
 rm -f  OpenCore/Update/EFI/OC/Drivers/UsbMouseDxe.efi
 rm -f  OpenCore/Update/EFI/OC/Drivers/XhciDxe.efi
+
 rm -rf Temp
 
 echo "Done"
