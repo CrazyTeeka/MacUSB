@@ -11,12 +11,14 @@ echo ""
 echo "Preparing..."
 
 mkdir -p OpenCore
+mkdir -p Docs
 mkdir -p DSDT
 mkdir -p Kexts
 mkdir -p Tools
 mkdir -p Temp
 
 rm -rf OpenCore/*
+rm -rf Docs/*
 rm -rf DSDT/*
 rm -rf Kexts/*
 rm -rf Tools/*
@@ -32,6 +34,7 @@ wget -q -P Temp/ $FILES/DSDT-Asus-Maximus-VIII-Gene-1902.aml
 
 wget -q -P Temp/ $FILES/OpenCore-$OpenCore-RELEASE.zip
 wget -q -P Temp/ $FILES/OpenCore-Series-9.zip
+wget -q -P Temp/ $FILES/OpenCore-Configuration.pdf
 wget -q -P Temp/ $FILES/OpenCore-Configurator.zip
 
 wget -q -P Temp/ $FILES/Tools-AppCleaner.zip
@@ -64,7 +67,16 @@ unzip -o -qq Temp/VirtualSMC-1.2.2-RELEASE.zip -d Kexts/
 unzip -o -qq Temp/WhateverGreen-1.4.9-RELEASE.zip -d Kexts/
 
 echo "Organising Files..."
+
 cp -rf OpenCore/Update/X64/EFI OpenCore/Update/
+
+cp -f Temp/DSDT-Asus-Maximus-VII-Hero-3503.aml DSDT/
+cp -f Temp/DSDT-Asus-Maximus-VIII-Gene-1902.aml DSDT/
+cp -f Temp/OpenCore-Configuration.pdf Docs/
+cp -f Temp/OpenCore-Configurator.zip Tools/
+cp -f Temp/Tools-AppCleaner.zip Tools/AppCleaner.zip
+cp -f Temp/Tools-PlistEditPro.zip Tools/PlistEditPro.zip
+cp -f Temp/Tools-RunMe.zip Tools/RunMe.zip
 
 cp -rf Kexts/AtherosE2200Ethernet-V2.2.2/Release/AtherosE2200Ethernet.kext Kexts/
 rm -rf Kexts/AtherosE2200Ethernet-V2.2.2
@@ -88,13 +100,6 @@ rm -rf OpenCore/Update/Docs
 rm -rf OpenCore/Update/IA32
 rm -rf OpenCore/Update/Utilities
 rm -rf OpenCore/Update/X64
-
-cp -f Temp/DSDT-Asus-Maximus-VII-Hero-3503.aml DSDT/
-cp -f Temp/DSDT-Asus-Maximus-VIII-Gene-1902.aml DSDT/
-cp -f Temp/OpenCore-Configurator.zip Tools/
-cp -f Temp/Tools-AppCleaner.zip Tools/AppCleaner.zip
-cp -f Temp/Tools-PlistEditPro.zip Tools/PlistEditPro.zip
-cp -f Temp/Tools-RunMe.zip Tools/RunMe.zip
 
 rm -rf OpenCore/Update/EFI/OC/ACPI
 rm -rf OpenCore/Update/EFI/OC/Kexts
