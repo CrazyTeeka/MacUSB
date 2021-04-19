@@ -25,6 +25,7 @@ rm -rf Tools/*
 rm -rf Temp/*
 
 mkdir -p OpenCore/Series-9
+mkdir -p OpenCore/Series-100
 mkdir -p OpenCore/Series-200
 mkdir -p OpenCore/Update
 
@@ -58,6 +59,7 @@ echo "Unpacking Files..."
 
 unzip -o -qq Temp/OpenCore-$OpenCore-RELEASE.zip -d OpenCore/Update/
 unzip -o -qq Temp/OpenCore-Series-9.zip -d OpenCore/Series-9/
+unzip -o -qq Temp/OpenCore-Series-200.zip -d OpenCore/Series-100/
 unzip -o -qq Temp/OpenCore-Series-200.zip -d OpenCore/Series-200/
 
 unzip -o -qq Temp/AirportBrcmFixup-2.1.2-RELEASE.zip -d Kexts/
@@ -105,8 +107,6 @@ rm -rf Kexts/Tools
 rm -rf Kexts/WhateverName.app
 rm -f  Kexts/alc-verb
 
-rm -rf OpenCore/Series-9/__MACOSX
-
 rm -rf OpenCore/Update/Docs
 rm -rf OpenCore/Update/IA32
 rm -rf OpenCore/Update/Utilities
@@ -126,5 +126,8 @@ rm -f  OpenCore/Update/EFI/OC/Drivers/UsbMouseDxe.efi
 rm -f  OpenCore/Update/EFI/OC/Drivers/XhciDxe.efi
 
 rm -rf Temp
+
+sh update-kexts.sh
+sh update-opencore.sh
 
 echo "Done"
