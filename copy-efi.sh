@@ -1,6 +1,11 @@
 #!/bin/bash
 
-EFI="OpenCore/Series-9"
+if [ -z "$1" ]; then
+  echo "sh copy-efi.sh OpenCore/Series-9"
+  exit 0
+fi
+
+EFI="$1" # EFI Folder
 
 sh update-kexts.sh
 sh update-opencore.sh

@@ -25,6 +25,7 @@ rm -rf Tools/*
 rm -rf Temp/*
 
 mkdir -p OpenCore/Series-9
+mkdir -p OpenCore/Series-200
 mkdir -p OpenCore/Update
 
 echo "Downloading Files..."
@@ -34,6 +35,7 @@ wget -q -P Temp/ $FILES/DSDT-Asus-Maximus-VIII-Gene-1902.aml
 
 wget -q -P Temp/ $FILES/OpenCore-$OpenCore-RELEASE.zip
 wget -q -P Temp/ $FILES/OpenCore-Series-9.zip
+wget -q -P Temp/ $FILES/OpenCore-Series-200.zip
 
 wget -q -P Temp/ $FILES/OpenCore-Configuration.pdf
 wget -q -P Temp/ $FILES/OpenCore-Configurator.zip
@@ -56,6 +58,7 @@ echo "Unpacking Files..."
 
 unzip -o -qq Temp/OpenCore-$OpenCore-RELEASE.zip -d OpenCore/Update/
 unzip -o -qq Temp/OpenCore-Series-9.zip -d OpenCore/Series-9/
+unzip -o -qq Temp/OpenCore-Series-200.zip -d OpenCore/Series-200/
 
 unzip -o -qq Temp/AirportBrcmFixup-2.1.2-RELEASE.zip -d Kexts/
 unzip -o -qq Temp/AppleALC-1.5.9-RELEASE.zip -d Kexts/
