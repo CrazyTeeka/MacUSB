@@ -18,6 +18,7 @@ mkdir -p Kexts
 mkdir -p Scripts
 mkdir -p Tools
 mkdir -p Temp
+mkdir -p Uploads
 
 rm -rf OpenCore/*
 rm -rf Docs/*
@@ -26,6 +27,7 @@ rm -rf Kexts/*
 rm -rf Scripts/*
 rm -rf Tools/*
 rm -rf Temp/*
+rm -rf Uploads/*
 
 mkdir -p OpenCore/Series-9
 mkdir -p OpenCore/Series-100
@@ -126,8 +128,4 @@ rm -f  OpenCore/Update/EFI/OC/Drivers/UsbMouseDxe.efi
 rm -f  OpenCore/Update/EFI/OC/Drivers/XhciDxe.efi
 
 rm -rf Temp
-
-sh update-kexts.sh
-sh update-opencore.sh
-
 echo "Done"

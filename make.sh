@@ -2,6 +2,8 @@
 
 if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ]; then
   echo "sh make.sh /dev/sdb Catalina OpenCore/Series-9"
+  echo "sh make.sh /dev/sdb Catalina OpenCore/Series-100"
+  echo "sh make.sh /dev/sdb Catalina OpenCore/Series-200"
   exit 0
 fi
 
