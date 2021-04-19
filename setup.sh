@@ -47,6 +47,7 @@ wget -q -P Docs/ $FILES/OpenCore-Configuration.pdf
 wget -q -P Tools/ $FILES/OpenCore-Configurator.zip
 
 wget -q -P Temp/ $FILES/Tools-AppCleaner.zip
+wget -q -P Temp/ $FILES/Tools-ESPMounterPro.zip
 wget -q -P Temp/ $FILES/Tools-PlistEditPro.zip
 wget -q -P Temp/ $FILES/Tools-RunMe.zip
 
@@ -85,6 +86,7 @@ echo "Organising Files..."
 cp -rf OpenCore/Update/X64/EFI OpenCore/Update/
 
 cp -f Temp/Tools-AppCleaner.zip Tools/AppCleaner.zip
+cp -f Temp/Tools-ESPMounterPro.zip Tools/ESPMounterPro.zip
 cp -f Temp/Tools-PlistEditPro.zip Tools/PlistEditPro.zip
 cp -f Temp/Tools-RunMe.zip Tools/RunMe.zip
 
