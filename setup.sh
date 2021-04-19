@@ -4,6 +4,7 @@ OpenCore="0.6.8"
 
 FILES="https://github.com/CrazyTeeka/MacUSB/raw/master/Files"
 KEXTS="https://github.com/CrazyTeeka/MacUSB/raw/master/Kexts"
+SCRIPTS="https://github.com/CrazyTeeka/MacUSB/raw/master/Scripts"
 
 echo "OpenCore: $OpenCore"
 echo ""
@@ -14,6 +15,7 @@ mkdir -p OpenCore
 mkdir -p Docs
 mkdir -p DSDT
 mkdir -p Kexts
+mkdir -p Scripts
 mkdir -p Tools
 mkdir -p Temp
 
@@ -21,6 +23,7 @@ rm -rf OpenCore/*
 rm -rf Docs/*
 rm -rf DSDT/*
 rm -rf Kexts/*
+rm -rf Scripts/*
 rm -rf Tools/*
 rm -rf Temp/*
 
@@ -31,15 +34,15 @@ mkdir -p OpenCore/Update
 
 echo "Downloading Files..."
 
-wget -q -P Temp/ $FILES/DSDT-Asus-Maximus-VII-Hero-3503.aml
-wget -q -P Temp/ $FILES/DSDT-Asus-Maximus-VIII-Gene-1902.aml
+wget -q -P DSDT/ $FILES/DSDT-Asus-Maximus-VII-Hero-3503.aml
+wget -q -P DSDT/ $FILES/DSDT-Asus-Maximus-VIII-Gene-1902.aml
 
 wget -q -P Temp/ $FILES/OpenCore-$OpenCore-RELEASE.zip
 wget -q -P Temp/ $FILES/OpenCore-Series-9.zip
 wget -q -P Temp/ $FILES/OpenCore-Series-200.zip
 
-wget -q -P Temp/ $FILES/OpenCore-Configuration.pdf
-wget -q -P Temp/ $FILES/OpenCore-Configurator.zip
+wget -q -P Docs/ $FILES/OpenCore-Configuration.pdf
+wget -q -P Tools/ $FILES/OpenCore-Configurator.zip
 
 wget -q -P Temp/ $FILES/Tools-AppCleaner.zip
 wget -q -P Temp/ $FILES/Tools-PlistEditPro.zip
@@ -54,6 +57,9 @@ wget -q -P Temp/ $KEXTS/RealtekRTL8111-V2.4.0.zip
 wget -q -P Temp/ $KEXTS/RestrictEvents-1.0.0-RELEASE.zip
 wget -q -P Temp/ $KEXTS/VirtualSMC-1.2.2-RELEASE.zip
 wget -q -P Temp/ $KEXTS/WhateverGreen-1.4.9-RELEASE.zip
+
+wget -q -P Scripts/ $SCRIPTS/install.sh
+wget -q -P Scripts/ $SCRIPTS/run.sh
 
 echo "Unpacking Files..."
 
@@ -75,12 +81,6 @@ unzip -o -qq Temp/WhateverGreen-1.4.9-RELEASE.zip -d Kexts/
 echo "Organising Files..."
 
 cp -rf OpenCore/Update/X64/EFI OpenCore/Update/
-
-cp -f Temp/DSDT-Asus-Maximus-VII-Hero-3503.aml DSDT/
-cp -f Temp/DSDT-Asus-Maximus-VIII-Gene-1902.aml DSDT/
-
-cp -f Temp/OpenCore-Configuration.pdf Docs/
-cp -f Temp/OpenCore-Configurator.zip Tools/
 
 cp -f Temp/Tools-AppCleaner.zip Tools/AppCleaner.zip
 cp -f Temp/Tools-PlistEditPro.zip Tools/PlistEditPro.zip
