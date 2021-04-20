@@ -48,7 +48,9 @@ wget -q -P Tools/ $FILES/OpenCore-Configurator.zip
 
 wget -q -P Temp/ $FILES/Tools-AppCleaner.zip
 wget -q -P Temp/ $FILES/Tools-ESPMounterPro.zip
+wget -q -P Temp/ $FILES/Tools-OCKexts.zip
 wget -q -P Temp/ $FILES/Tools-PlistEditPro.zip
+wget -q -P Temp/ $FILES/Tools-Releases.zip
 wget -q -P Temp/ $FILES/Tools-RunMe.zip
 
 wget -q -P Temp/ $KEXTS/AirportBrcmFixup-2.1.2-RELEASE.zip
@@ -87,7 +89,9 @@ cp -rf OpenCore/Update/X64/EFI OpenCore/Update/
 
 cp -f Temp/Tools-AppCleaner.zip Tools/AppCleaner.zip
 cp -f Temp/Tools-ESPMounterPro.zip Tools/ESPMounterPro.zip
+cp -f Temp/Tools-OCKexts.zip Tools/OCKexts.zip
 cp -f Temp/Tools-PlistEditPro.zip Tools/PlistEditPro.zip
+cp -f Temp/Tools-Releases.zip Tools/Releases.zip
 cp -f Temp/Tools-RunMe.zip Tools/RunMe.zip
 
 cp -rf Kexts/AtherosE2200Ethernet-V2.2.2/Release/AtherosE2200Ethernet.kext Kexts/
