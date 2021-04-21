@@ -1,8 +1,6 @@
 #!/bin/bash
 
-cd $HOME/MacUSB/Scripts/Linux
 sh $HOME/MacUSB/Scripts/Linux/update
-
 rm -rf $HOME/MacUSB/Uploads/*
 
 cd $HOME/MacUSB/OpenCore/Series-9
