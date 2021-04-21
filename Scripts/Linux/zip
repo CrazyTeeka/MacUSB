@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sh update
+sh $HOME/MacUSB/Scripts/Linux/update
 
 rm -rf $HOME/MacUSB/Uploads/*
 
