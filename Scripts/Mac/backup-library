@@ -1,2 +1,0 @@
-mkdir -p $TARGET/${(C)USER}/Library
-rsync -a $HOME/Library/* $TARGET/${(C)USER}/Library/
