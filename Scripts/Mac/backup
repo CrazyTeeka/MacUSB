@@ -1,6 +1,5 @@
 #!/bin/zsh
 
-SOURCE="/Volumes/USB/Mac"
 TARGET="/Volumes/USB/Mac"
 
 mkdir -p $TARGET/${(C)USER}/Home
