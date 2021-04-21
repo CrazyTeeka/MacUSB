@@ -1,0 +1,9 @@
+#!/bin/zsh
+
+mkdir -p $TARGET/${(C)USER}/Home
+
+rsync -a $HOME/Documents $TARGET/${(C)USER}/Home/
+rsync -a $HOME/Downloads $TARGET/${(C)USER}/Home/
+rsync -a $HOME/Movies    $TARGET/${(C)USER}/Home/
+rsync -a $HOME/Music     $TARGET/${(C)USER}/Home/
+rsync -a $HOME/Pictures  $TARGET/${(C)USER}/Home/
