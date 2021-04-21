@@ -1,1 +1,3 @@
+#!/bin/zsh
+
 sudo diskutil mount /dev/disk0s1 >/dev/null 2>/dev/null
