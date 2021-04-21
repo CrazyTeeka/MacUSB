@@ -1,9 +1,9 @@
 #!/bin/bash
 
 if [ -z "$1" ] || [ -z "$2" ]; then
-  echo "sh copy-efi.sh /dev/sdb OpenCore/Series-9"
-  echo "sh copy-efi.sh /dev/sdb OpenCore/Series-100"
-  echo "sh copy-efi.sh /dev/sdb OpenCore/Series-200"
+  echo "sh efi.sh /dev/sdb OpenCore/Series-9"
+  echo "sh efi.sh /dev/sdb OpenCore/Series-100"
+  echo "sh efi.sh /dev/sdb OpenCore/Series-200"
   exit 0
 fi
 
