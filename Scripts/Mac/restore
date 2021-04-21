@@ -7,3 +7,6 @@ rsync -a $SOURCE/${(C)USER}/Home/Downloads $HOME/
 rsync -a $SOURCE/${(C)USER}/Home/Movies    $HOME/
 rsync -a $SOURCE/${(C)USER}/Home/Music     $HOME/
 rsync -a $SOURCE/${(C)USER}/Home/Pictures  $HOME/
+
+rsync -a $SOURCE/${(C)USER}/Applications/* /Applications/
+rsync -a $SOURCE/${(C)USER}/Library/*      $HOME/Library/
