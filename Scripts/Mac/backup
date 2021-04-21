@@ -4,9 +4,12 @@ SOURCE="/Volumes/USB/Mac"
 TARGET="/Volumes/USB/Mac"
 
 mkdir -p $TARGET/${(C)USER}/Home
+mkdir -p $TARGET/${(C)USER}/Applications
 
 rsync -a $HOME/Documents $TARGET/${(C)USER}/Home/
 rsync -a $HOME/Downloads $TARGET/${(C)USER}/Home/
 rsync -a $HOME/Movies    $TARGET/${(C)USER}/Home/
 rsync -a $HOME/Music     $TARGET/${(C)USER}/Home/
 rsync -a $HOME/Pictures  $TARGET/${(C)USER}/Home/
+
+rsync -a /Applications/* $TARGET/${(C)USER}/Applications/
