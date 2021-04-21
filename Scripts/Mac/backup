@@ -1,5 +1,8 @@
 #!/bin/zsh
 
+SOURCE="/Volumes/USB/Mac"
+TARGET="/Volumes/USB/Mac"
+
 mkdir -p $TARGET/${(C)USER}/Home
 
 rsync -a $HOME/Documents $TARGET/${(C)USER}/Home/
