@@ -10,4 +10,4 @@ zip -r $HOME/MacUSB/Uploads/OpenCore-Series-9.zip EFI
 cd $HOME/MacUSB/OpenCore/Series-200
 zip -r $HOME/MacUSB/Uploads/OpenCore-Series-200.zip EFI
 
-cd $HOME/MacUSB
+cd $HOME/MacUSB/Scripts/Linux
