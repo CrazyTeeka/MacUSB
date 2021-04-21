@@ -4,17 +4,17 @@ SOURCE="/Volumes/USB/Mac"
 TARGET="/Volumes/USB/Mac"
 
 if [ -z "$1" ]; then
-  echo "sh run.sh backup"
-  echo "sh run.sh backup-apps"
-  echo "sh run.sh backup-library"
-  echo "sh run.sh backup-efi"
-  echo "sh run.sh restore"
-  echo "sh run.sh restore-efi"
-  echo "sh run.sh mount-efi"
-  echo "sh run.sh copy-efi"
-  echo "sh run.sh trim-enable"
-  echo "sh run.sh disable-gatekeeper"
-  echo "sh run.sh reset-dock"
+  echo "sh tool backup"
+  echo "sh tool backup-apps"
+  echo "sh tool backup-library"
+  echo "sh tool backup-efi"
+  echo "sh tool restore"
+  echo "sh tool restore-efi"
+  echo "sh tool mount-efi"
+  echo "sh tool copy-efi"
+  echo "sh tool trim-enable"
+  echo "sh tool disable-gatekeeper"
+  echo "sh tool reset-dock"
   exit 0
 fi
 
