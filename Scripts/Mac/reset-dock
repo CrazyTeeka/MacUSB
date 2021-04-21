@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 defaults write com.apple.dock "tilesize" -float 64
 defaults write com.apple.dock "magnification" -boolean false
 defaults write com.apple.dock "largesize" -float 128
@@ -8,5 +10,6 @@ defaults write com.apple.dock "launchanim" -boolean false
 defaults write com.apple.dock "autohide" -boolean false
 defaults write com.apple.dock "show-process-indicators" -boolean true
 defaults write com.apple.dock "show-recents" -boolean false
+
 sleep 1
 killall Dock
