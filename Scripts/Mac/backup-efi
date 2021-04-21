@@ -1,0 +1,4 @@
+sudo diskutil mount /dev/disk0s1 >/dev/null 2>/dev/null
+sudo rm -rf /Volumes/macOS/EFI.BACKUP
+sudo mkdir  /Volumes/macOS/EFI.BACKUP
+sudo cp -rf /Volumes/EFI/EFI/* /Volumes/macOS/EFI.BACKUP/
