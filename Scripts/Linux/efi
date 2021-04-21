@@ -8,7 +8,7 @@ if [ -z "$1" ] || [ -z "$2" ]; then
 fi
 
 if [ "$1" = "/dev/sda" ]; then
-  echo "You cannot write to boot drive."
+  echo "You cannot write to this drive."
   exit 0
 fi
 
@@ -16,13 +16,13 @@ USB="$1"   # Target Device
 EFI="$2"   # EFI Folder
 P1=$USB"1" # Partition 1
 
-sh update
+sh $HOME/MacUSB/Scripts/Linux/update
 
 sudo mkdir -p /media/$USER/EFI
 sudo mount $P1 /media/$USER/EFI
 
 sudo rm -rf /media/$USER/EFI/*
-sudo cp -rf $EFI/EFI /media/$USER/EFI/
+sudo cp -rf $HOME/MacUSB/$EFI/EFI /media/$USER/EFI/
 
 sudo eject $USB
 sudo rm -rf /media/$USER/*
