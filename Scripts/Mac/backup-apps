@@ -1,0 +1,2 @@
+mkdir -p $TARGET/${(C)USER}/Applications
+rsync -a /Applications/* $TARGET/${(C)USER}/Applications/
