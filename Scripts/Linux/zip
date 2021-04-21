@@ -1,7 +1,6 @@
 #!/bin/bash
 
-sh update-kexts.sh
-sh update-opencore.sh
+sh update
 
 rm -rf $HOME/MacUSB/Uploads/*
 
