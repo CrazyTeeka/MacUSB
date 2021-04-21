@@ -36,6 +36,9 @@ mkdir -p OpenCore/Series-100
 mkdir -p OpenCore/Series-200
 mkdir -p OpenCore/Update
 
+mkdir -p Scripts/Linux
+mkdir -p Scripts/Mac
+
 echo "Downloading Files..."
 
 wget -q -P Temp/ $OPENCORE/OpenCore-$OpenCoreVersion-RELEASE.zip
@@ -57,8 +60,21 @@ wget -q -P Temp/ $KEXTS/RestrictEvents-1.0.0-RELEASE.zip
 wget -q -P Temp/ $KEXTS/VirtualSMC-1.2.2-RELEASE.zip
 wget -q -P Temp/ $KEXTS/WhateverGreen-1.4.9-RELEASE.zip
 
-wget -q -P Scripts/ $SCRIPTS/install.sh
-wget -q -P Scripts/ $SCRIPTS/run.sh
+wget -q -P Scripts/Linux/ $SCRIPTS/Linux/efi
+wget -q -P Scripts/Linux/ $SCRIPTS/Linux/update
+wget -q -P Scripts/Linux/ $SCRIPTS/Linux/zip
+
+wget -q -P Scripts/Mac/ $SCRIPTS/Mac/backup
+wget -q -P Scripts/Mac/ $SCRIPTS/Mac/backup-efi
+wget -q -P Scripts/Mac/ $SCRIPTS/Mac/copy-efi
+wget -q -P Scripts/Mac/ $SCRIPTS/Mac/disable-gatekeeper
+wget -q -P Scripts/Mac/ $SCRIPTS/Mac/mount-efi
+wget -q -P Scripts/Mac/ $SCRIPTS/Mac/reset-dock
+wget -q -P Scripts/Mac/ $SCRIPTS/Mac/restore
+wget -q -P Scripts/Mac/ $SCRIPTS/Mac/restore-efi
+wget -q -P Scripts/Mac/ $SCRIPTS/Mac/trim-enable
+
+chmod -R +x Scripts/*
 
 wget -q -P Tools/ $TOOLS/App-Cleaner.zip
 wget -q -P Tools/ $TOOLS/ESP-Mounter-Pro.zip
