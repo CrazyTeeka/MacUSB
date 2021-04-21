@@ -16,8 +16,7 @@ USB="$1"   # Target Device
 EFI="$2"   # EFI Folder
 P1=$USB"1" # Partition 1
 
-sh update-kexts.sh
-sh update-opencore.sh
+sh update
 
 sudo mkdir -p /media/$USER/EFI
 sudo mount $P1 /media/$USER/EFI
