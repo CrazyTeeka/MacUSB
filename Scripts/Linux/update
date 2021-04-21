@@ -1,5 +1,9 @@
 #!/bin/bash
 
+cp -rf OpenCore/Update/EFI OpenCore/Series-9/
+cp -rf OpenCore/Update/EFI OpenCore/Series-100/
+cp -rf OpenCore/Update/EFI OpenCore/Series-200/
+
 cp -rf Kexts/AirportBrcmFixup.kext OpenCore/Series-9/EFI/OC/Kexts/
 cp -rf Kexts/AppleALC.kext OpenCore/Series-9/EFI/OC/Kexts/
 cp -rf Kexts/AtherosE2200Ethernet.kext OpenCore/Series-9/EFI/OC/Kexts/
