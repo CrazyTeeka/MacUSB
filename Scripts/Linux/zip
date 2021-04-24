@@ -6,6 +6,9 @@ rm -rf $HOME/MacUSB/Uploads/*
 cd $HOME/MacUSB/OpenCore/Series-9
 zip -r $HOME/MacUSB/Uploads/OpenCore-Series-9.zip EFI
 
+cd $HOME/MacUSB/OpenCore/Series-100
+zip -r $HOME/MacUSB/Uploads/OpenCore-Series-100.zip EFI
+
 cd $HOME/MacUSB/OpenCore/Series-200
 zip -r $HOME/MacUSB/Uploads/OpenCore-Series-200.zip EFI
 
