@@ -43,6 +43,7 @@ echo "Downloading Files..."
 
 wget -q -P Temp/ $OPENCORE/OpenCore-$OpenCoreVersion-RELEASE.zip
 wget -q -P Temp/ $OPENCORE/OpenCore-Series-9.zip
+wget -q -P Temp/ $OPENCORE/OpenCore-Series-100.zip
 wget -q -P Temp/ $OPENCORE/OpenCore-Series-200.zip
 wget -q -P Docs/ $OPENCORE/OpenCore-Configuration.pdf
 wget -q -P Tools/ $OPENCORE/OpenCore-Configurator.zip
@@ -86,7 +87,7 @@ echo "Unpacking Files..."
 
 unzip -o -qq Temp/OpenCore-$OpenCoreVersion-RELEASE.zip -d OpenCore/Update/
 unzip -o -qq Temp/OpenCore-Series-9.zip -d OpenCore/Series-9/
-unzip -o -qq Temp/OpenCore-Series-200.zip -d OpenCore/Series-100/
+unzip -o -qq Temp/OpenCore-Series-100.zip -d OpenCore/Series-100/
 unzip -o -qq Temp/OpenCore-Series-200.zip -d OpenCore/Series-200/
 
 unzip -o -qq Temp/AirportBrcmFixup-2.1.2-RELEASE.zip -d Kexts/
