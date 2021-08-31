@@ -1,8 +1,14 @@
 #!/bin/bash
 
+cp -rf $HOME/MacUSB/OpenCore/Update/EFI             $HOME/MacUSB/OpenCore/Series-6/
+cp -rf $HOME/MacUSB/OpenCore/Update/EFI             $HOME/MacUSB/OpenCore/Series-7/
+cp -rf $HOME/MacUSB/OpenCore/Update/EFI             $HOME/MacUSB/OpenCore/Series-8/
 cp -rf $HOME/MacUSB/OpenCore/Update/EFI             $HOME/MacUSB/OpenCore/Series-9/
 cp -rf $HOME/MacUSB/OpenCore/Update/EFI             $HOME/MacUSB/OpenCore/Series-100/
 cp -rf $HOME/MacUSB/OpenCore/Update/EFI             $HOME/MacUSB/OpenCore/Series-200/
+cp -rf $HOME/MacUSB/OpenCore/Update/EFI             $HOME/MacUSB/OpenCore/Series-300/
+cp -rf $HOME/MacUSB/OpenCore/Update/EFI             $HOME/MacUSB/OpenCore/Series-400/
+cp -rf $HOME/MacUSB/OpenCore/Update/EFI             $HOME/MacUSB/OpenCore/Series-500/
 
 cp -rf $HOME/MacUSB/Kexts/AirportBrcmFixup.kext     $HOME/MacUSB/OpenCore/Series-9/EFI/OC/Kexts/
 cp -rf $HOME/MacUSB/Kexts/AppleALC.kext             $HOME/MacUSB/OpenCore/Series-9/EFI/OC/Kexts/
