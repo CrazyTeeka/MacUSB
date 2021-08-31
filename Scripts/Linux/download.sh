@@ -65,8 +65,7 @@ mv $HOME/MacUSB/Download/EFI.Opencore.Desktop.KabyLake.zip          $HOME/MacUSB
 mv $HOME/MacUSB/Download/EFI.Opencore.Desktop.CoffeeLake.zip        $HOME/MacUSB/Download/OpenCore-Series-30.zip
 mv $HOME/MacUSB/Download/EFI.Opencore.Desktop.CometLake.zip         $HOME/MacUSB/Download/OpenCore-Series-40.zip
 mv $HOME/MacUSB/Download/EFI.Opencore.Desktop.RocketLake.zip        $HOME/MacUSB/Download/OpenCore-Series-50.zip
-
-cp $HOME/MacUSB/Download/OpenCore-Series-8.zip $HOME/MacUSB/Download/OpenCore-Series-9.zip
+cp $HOME/MacUSB/Download/OpenCore-Series-8.zip                      $HOME/MacUSB/Download/OpenCore-Series-9.zip
 
 md5sum "$HOME/MacUSB/Download/Old/Clover-Series-5.zip" >> $HOME/MacUSB/checksums.txt
 md5sum "$HOME/MacUSB/Download/Old/Clover-Series-6.zip" >> $HOME/MacUSB/checksums.txt
