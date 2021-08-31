@@ -97,6 +97,7 @@ wget -q -P Temp/ $KEXTS/RestrictEvents-1.0.3-RELEASE.zip
 wget -q -P Temp/ $KEXTS/VirtualSMC-1.2.6-RELEASE.zip
 wget -q -P Temp/ $KEXTS/WhateverGreen-1.5.2-RELEASE.zip
 
+wget -q -P Scripts/Linux/ $SCRIPTS/Linux/download.sh
 wget -q -P Scripts/Linux/ $SCRIPTS/Linux/update-opencore.sh
 
 wget -q -P Scripts/Mac/ $SCRIPTS/Mac/backup
