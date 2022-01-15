@@ -50,14 +50,14 @@ cp $HOME/MacUSB/Download/Clover-Series-5.zip  $HOME/MacUSB/Download/Clover-Serie
 cp $HOME/MacUSB/Download/Clover-Series-10.zip $HOME/MacUSB/Download/Clover-Series-20.zip
 cp $HOME/MacUSB/Download/Clover-Series-30.zip $HOME/MacUSB/Download/Clover-Series-40.zip
 
-wget -q -P $HOME/MacUSB/Download/ $OLARILA/OpenCore%20Folders/EFI.OpenCore.Desktop.SandyBridge.zip
-wget -q -P $HOME/MacUSB/Download/ $OLARILA/OpenCore%20Folders/EFI.OpenCore.Desktop.IvyBridge.zip
-wget -q -P $HOME/MacUSB/Download/ $OLARILA/OpenCore%20Folders/EFI.Opencore.Desktop.Haswell.Broadwell.zip
-wget -q -P $HOME/MacUSB/Download/ $OLARILA/OpenCore%20Folders/EFI.Opencore.Desktop.SkyLake.zip
-wget -q -P $HOME/MacUSB/Download/ $OLARILA/OpenCore%20Folders/EFI.Opencore.Desktop.KabyLake.zip
-wget -q -P $HOME/MacUSB/Download/ $OLARILA/OpenCore%20Folders/EFI.Opencore.Desktop.CoffeeLake.zip
-wget -q -P $HOME/MacUSB/Download/ $OLARILA/OpenCore%20Folders/EFI.Opencore.Desktop.CometLake.zip
-wget -q -P $HOME/MacUSB/Download/ $OLARILA/OpenCore%20Folders/EFI.Opencore.Desktop.RocketLake.zip
+wget -q -P $HOME/MacUSB/Download/ $OLARILA/OPENCORE/EFI.OpenCore.Desktop.SandyBridge.zip
+wget -q -P $HOME/MacUSB/Download/ $OLARILA/OPENCORE/EFI.OpenCore.Desktop.IvyBridge.zip
+wget -q -P $HOME/MacUSB/Download/ $OLARILA/OPENCORE/EFI.Opencore.Desktop.Haswell.Broadwell.zip
+wget -q -P $HOME/MacUSB/Download/ $OLARILA/OPENCORE/EFI.Opencore.Desktop.SkyLake.zip
+wget -q -P $HOME/MacUSB/Download/ $OLARILA/OPENCORE/EFI.Opencore.Desktop.KabyLake.zip
+wget -q -P $HOME/MacUSB/Download/ $OLARILA/OPENCORE/EFI.Opencore.Desktop.CoffeeLake.zip
+wget -q -P $HOME/MacUSB/Download/ $OLARILA/OPENCORE/EFI.Opencore.Desktop.CometLake.zip
+wget -q -P $HOME/MacUSB/Download/ $OLARILA/OPENCORE/EFI.Opencore.Desktop.RocketLake.zip
 
 mv $HOME/MacUSB/Download/EFI.OpenCore.Desktop.SandyBridge.zip       $HOME/MacUSB/Download/OpenCore-Series-6.zip
 mv $HOME/MacUSB/Download/EFI.OpenCore.Desktop.IvyBridge.zip         $HOME/MacUSB/Download/OpenCore-Series-7.zip
