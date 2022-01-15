@@ -31,15 +31,17 @@ wget -q -P $HOME/MacUSB/Download/Old/ $OPENCORE/OpenCore-Series-30.zip
 wget -q -P $HOME/MacUSB/Download/Old/ $OPENCORE/OpenCore-Series-40.zip
 wget -q -P $HOME/MacUSB/Download/Old/ $OPENCORE/OpenCore-Series-50.zip
 
-wget -q -P $HOME/MacUSB/Download/ $OLARILA/Folders/CLOVER.SERIES.CHIPSET.zip
-wget -q -P $HOME/MacUSB/Download/ $OLARILA/Folders/EFI%20Clover%20Serie%20100.200.zip
-wget -q -P $HOME/MacUSB/Download/ $OLARILA/Folders/EFI%20Clover%20Serie%20300.400.zip
-wget -q -P $HOME/MacUSB/Download/ $OLARILA/Folders/EFI%20Clover%20Serie%20500.zip
+wget -q -P $HOME/MacUSB/Download/ $OLARILA/CLOVER/CLOVER.SERIES.CHIPSET.zip
+wget -q -P $HOME/MacUSB/Download/ $OLARILA/CLOVER/EFI%20Clover%20Serie%20100.200.zip
+wget -q -P $HOME/MacUSB/Download/ $OLARILA/CLOVER/EFI%20Clover%20Serie%20300.400.zip
+wget -q -P $HOME/MacUSB/Download/ $OLARILA/CLOVER/EFI%20Clover%20Serie%20500.zip
+wget -q -P $HOME/MacUSB/Download/ $OLARILA/CLOVER/EFI%20Clover%20Serie%20600.zip
 
 mv "$HOME/MacUSB/Download/CLOVER.SERIES.CHIPSET.zip"    $HOME/MacUSB/Download/Clover-Series-5.zip
 mv "$HOME/MacUSB/Download/EFI Clover Serie 100.200.zip" $HOME/MacUSB/Download/Clover-Series-10.zip
 mv "$HOME/MacUSB/Download/EFI Clover Serie 300.400.zip" $HOME/MacUSB/Download/Clover-Series-30.zip
 mv "$HOME/MacUSB/Download/EFI Clover Serie 500.zip"     $HOME/MacUSB/Download/Clover-Series-50.zip
+mv "$HOME/MacUSB/Download/EFI Clover Serie 600.zip"     $HOME/MacUSB/Download/Clover-Series-60.zip
 
 cp $HOME/MacUSB/Download/Clover-Series-5.zip  $HOME/MacUSB/Download/Clover-Series-6.zip
 cp $HOME/MacUSB/Download/Clover-Series-5.zip  $HOME/MacUSB/Download/Clover-Series-7.zip
