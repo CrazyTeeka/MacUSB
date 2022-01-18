@@ -59,6 +59,7 @@ wget -q -P $HOME/MacUSB/Download/ $OLARILA/OPENCORE/EFI.Opencore.Desktop.KabyLak
 wget -q -P $HOME/MacUSB/Download/ $OLARILA/OPENCORE/EFI.Opencore.Desktop.CoffeeLake.zip
 wget -q -P $HOME/MacUSB/Download/ $OLARILA/OPENCORE/EFI.Opencore.Desktop.CometLake.zip
 wget -q -P $HOME/MacUSB/Download/ $OLARILA/OPENCORE/EFI.Opencore.Desktop.RocketLake.zip
+wget -q -P $HOME/MacUSB/Download/ $OLARILA/OPENCORE/EFI.Opencore.Desktop.AlderLake.zip
 
 mv $HOME/MacUSB/Download/EFI.OpenCore.Desktop.SandyBridge.zip       $HOME/MacUSB/Download/OpenCore-Series-6.zip
 mv $HOME/MacUSB/Download/EFI.OpenCore.Desktop.IvyBridge.zip         $HOME/MacUSB/Download/OpenCore-Series-7.zip
