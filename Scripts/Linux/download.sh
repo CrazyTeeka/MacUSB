@@ -63,11 +63,12 @@ wget -q -P $HOME/MacUSB/Download/ $OLARILA/OPENCORE/EFI.Opencore.Desktop.RocketL
 mv $HOME/MacUSB/Download/EFI.OpenCore.Desktop.SandyBridge.zip       $HOME/MacUSB/Download/OpenCore-Series-6.zip
 mv $HOME/MacUSB/Download/EFI.OpenCore.Desktop.IvyBridge.zip         $HOME/MacUSB/Download/OpenCore-Series-7.zip
 mv $HOME/MacUSB/Download/EFI.Opencore.Desktop.Haswell.Broadwell.zip $HOME/MacUSB/Download/OpenCore-Series-8.zip
-mv $HOME/MacUSB/Download/EFI.Opencore.Desktop.SkyLake.zip           $HOME/MacUSB/Download/OpenCore-Series-10.zip
-mv $HOME/MacUSB/Download/EFI.Opencore.Desktop.KabyLake.zip          $HOME/MacUSB/Download/OpenCore-Series-20.zip
-mv $HOME/MacUSB/Download/EFI.Opencore.Desktop.CoffeeLake.zip        $HOME/MacUSB/Download/OpenCore-Series-30.zip
-mv $HOME/MacUSB/Download/EFI.Opencore.Desktop.CometLake.zip         $HOME/MacUSB/Download/OpenCore-Series-40.zip
-mv $HOME/MacUSB/Download/EFI.Opencore.Desktop.RocketLake.zip        $HOME/MacUSB/Download/OpenCore-Series-50.zip
+mv $HOME/MacUSB/Download/EFI.Opencore.Desktop.SkyLake.zip           $HOME/MacUSB/Download/OpenCore-Series-100.zip
+mv $HOME/MacUSB/Download/EFI.Opencore.Desktop.KabyLake.zip          $HOME/MacUSB/Download/OpenCore-Series-200.zip
+mv $HOME/MacUSB/Download/EFI.Opencore.Desktop.CoffeeLake.zip        $HOME/MacUSB/Download/OpenCore-Series-300.zip
+mv $HOME/MacUSB/Download/EFI.Opencore.Desktop.CometLake.zip         $HOME/MacUSB/Download/OpenCore-Series-400.zip
+mv $HOME/MacUSB/Download/EFI.Opencore.Desktop.RocketLake.zip        $HOME/MacUSB/Download/OpenCore-Series-500.zip
+mv $HOME/MacUSB/Download/EFI.Opencore.Desktop.AlderLake.zip         $HOME/MacUSB/Download/OpenCore-Series-600.zip
 cp $HOME/MacUSB/Download/OpenCore-Series-8.zip                      $HOME/MacUSB/Download/OpenCore-Series-9.zip
 
 md5sum "$HOME/MacUSB/Download/Old/Clover-Series-5.zip" >> $HOME/MacUSB/checksums.txt
