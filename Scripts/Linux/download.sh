@@ -5,10 +5,10 @@ OPENCORE="https://github.com/CrazyTeeka/MacUSB/raw/master/OpenCore"
 OLARILA="https://www.olarila.com/files"
 
 mkdir -p $HOME/MacUSB/Download
-rm -rf $HOME/MacUSB/Download/*
-rm $HOME/MacUSB/checksums.txt
-
 mkdir -p $HOME/MacUSB/Download/Old
+
+rm -rf $HOME/MacUSB/Download/*
+rm -f  $HOME/MacUSB/checksums.txt
 
 wget -q -P $HOME/MacUSB/Download/Old/ $CLOVER/Clover-Series-5.zip
 wget -q -P $HOME/MacUSB/Download/Old/ $CLOVER/Clover-Series-6.zip
