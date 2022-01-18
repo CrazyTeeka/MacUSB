@@ -20,6 +20,7 @@ wget -q -P $HOME/MacUSB/Download/Old/ $CLOVER/Clover-Series-20.zip
 wget -q -P $HOME/MacUSB/Download/Old/ $CLOVER/Clover-Series-30.zip
 wget -q -P $HOME/MacUSB/Download/Old/ $CLOVER/Clover-Series-40.zip
 wget -q -P $HOME/MacUSB/Download/Old/ $CLOVER/Clover-Series-50.zip
+wget -q -P $HOME/MacUSB/Download/Old/ $CLOVER/Clover-Series-60.zip
 
 wget -q -P $HOME/MacUSB/Download/Old/ $OPENCORE/OpenCore-Series-6.zip
 wget -q -P $HOME/MacUSB/Download/Old/ $OPENCORE/OpenCore-Series-7.zip
