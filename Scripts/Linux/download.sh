@@ -87,22 +87,27 @@ md5sum "$HOME/MacUSB/Download/Clover-Series-9.zip" >> $HOME/MacUSB/checksums.txt
 
 echo "" >> $HOME/MacUSB/checksums.txt
 
-md5sum "$HOME/MacUSB/Download/Old/Clover-Series-10.zip" >> $HOME/MacUSB/checksums.txt
-md5sum "$HOME/MacUSB/Download/Old/Clover-Series-20.zip" >> $HOME/MacUSB/checksums.txt
-md5sum "$HOME/MacUSB/Download/Clover-Series-10.zip" >> $HOME/MacUSB/checksums.txt
-md5sum "$HOME/MacUSB/Download/Clover-Series-20.zip" >> $HOME/MacUSB/checksums.txt
+md5sum "$HOME/MacUSB/Download/Old/Clover-Series-100.zip" >> $HOME/MacUSB/checksums.txt
+md5sum "$HOME/MacUSB/Download/Old/Clover-Series-200.zip" >> $HOME/MacUSB/checksums.txt
+md5sum "$HOME/MacUSB/Download/Clover-Series-100.zip" >> $HOME/MacUSB/checksums.txt
+md5sum "$HOME/MacUSB/Download/Clover-Series-200.zip" >> $HOME/MacUSB/checksums.txt
 
 echo "" >> $HOME/MacUSB/checksums.txt
 
-md5sum "$HOME/MacUSB/Download/Old/Clover-Series-30.zip" >> $HOME/MacUSB/checksums.txt
-md5sum "$HOME/MacUSB/Download/Old/Clover-Series-40.zip" >> $HOME/MacUSB/checksums.txt
-md5sum "$HOME/MacUSB/Download/Clover-Series-30.zip" >> $HOME/MacUSB/checksums.txt
-md5sum "$HOME/MacUSB/Download/Clover-Series-40.zip" >> $HOME/MacUSB/checksums.txt
+md5sum "$HOME/MacUSB/Download/Old/Clover-Series-300.zip" >> $HOME/MacUSB/checksums.txt
+md5sum "$HOME/MacUSB/Download/Old/Clover-Series-400.zip" >> $HOME/MacUSB/checksums.txt
+md5sum "$HOME/MacUSB/Download/Clover-Series-300.zip" >> $HOME/MacUSB/checksums.txt
+md5sum "$HOME/MacUSB/Download/Clover-Series-400.zip" >> $HOME/MacUSB/checksums.txt
 
 echo "" >> $HOME/MacUSB/checksums.txt
 
-md5sum "$HOME/MacUSB/Download/Old/Clover-Series-50.zip" >> $HOME/MacUSB/checksums.txt
-md5sum "$HOME/MacUSB/Download/Clover-Series-50.zip" >> $HOME/MacUSB/checksums.txt
+md5sum "$HOME/MacUSB/Download/Old/Clover-Series-500.zip" >> $HOME/MacUSB/checksums.txt
+md5sum "$HOME/MacUSB/Download/Clover-Series-500.zip" >> $HOME/MacUSB/checksums.txt
+
+echo "" >> $HOME/MacUSB/checksums.txt
+
+md5sum "$HOME/MacUSB/Download/Old/Clover-Series-600.zip" >> $HOME/MacUSB/checksums.txt
+md5sum "$HOME/MacUSB/Download/Clover-Series-600.zip" >> $HOME/MacUSB/checksums.txt
 
 echo "" >> $HOME/MacUSB/checksums.txt
 
@@ -123,25 +128,30 @@ md5sum "$HOME/MacUSB/Download/OpenCore-Series-9.zip" >> $HOME/MacUSB/checksums.t
 
 echo "" >> $HOME/MacUSB/checksums.txt
 
-md5sum "$HOME/MacUSB/Download/Old/OpenCore-Series-10.zip" >> $HOME/MacUSB/checksums.txt
-md5sum "$HOME/MacUSB/Download/OpenCore-Series-10.zip" >> $HOME/MacUSB/checksums.txt
+md5sum "$HOME/MacUSB/Download/Old/OpenCore-Series-100.zip" >> $HOME/MacUSB/checksums.txt
+md5sum "$HOME/MacUSB/Download/OpenCore-Series-100.zip" >> $HOME/MacUSB/checksums.txt
 
 echo "" >> $HOME/MacUSB/checksums.txt
 
-md5sum "$HOME/MacUSB/Download/Old/OpenCore-Series-20.zip" >> $HOME/MacUSB/checksums.txt
-md5sum "$HOME/MacUSB/Download/OpenCore-Series-20.zip" >> $HOME/MacUSB/checksums.txt
+md5sum "$HOME/MacUSB/Download/Old/OpenCore-Series-200.zip" >> $HOME/MacUSB/checksums.txt
+md5sum "$HOME/MacUSB/Download/OpenCore-Series-200.zip" >> $HOME/MacUSB/checksums.txt
 
 echo "" >> $HOME/MacUSB/checksums.txt
 
-md5sum "$HOME/MacUSB/Download/Old/OpenCore-Series-30.zip" >> $HOME/MacUSB/checksums.txt
-md5sum "$HOME/MacUSB/Download/OpenCore-Series-30.zip" >> $HOME/MacUSB/checksums.txt
+md5sum "$HOME/MacUSB/Download/Old/OpenCore-Series-300.zip" >> $HOME/MacUSB/checksums.txt
+md5sum "$HOME/MacUSB/Download/OpenCore-Series-300.zip" >> $HOME/MacUSB/checksums.txt
 
 echo "" >> $HOME/MacUSB/checksums.txt
 
-md5sum "$HOME/MacUSB/Download/Old/OpenCore-Series-40.zip" >> $HOME/MacUSB/checksums.txt
-md5sum "$HOME/MacUSB/Download/OpenCore-Series-40.zip" >> $HOME/MacUSB/checksums.txt
+md5sum "$HOME/MacUSB/Download/Old/OpenCore-Series-400.zip" >> $HOME/MacUSB/checksums.txt
+md5sum "$HOME/MacUSB/Download/OpenCore-Series-400.zip" >> $HOME/MacUSB/checksums.txt
 
 echo "" >> $HOME/MacUSB/checksums.txt
 
-md5sum "$HOME/MacUSB/Download/Old/OpenCore-Series-50.zip" >> $HOME/MacUSB/checksums.txt
-md5sum "$HOME/MacUSB/Download/OpenCore-Series-50.zip" >> $HOME/MacUSB/checksums.txt
+md5sum "$HOME/MacUSB/Download/Old/OpenCore-Series-500.zip" >> $HOME/MacUSB/checksums.txt
+md5sum "$HOME/MacUSB/Download/OpenCore-Series-500.zip" >> $HOME/MacUSB/checksums.txt
+
+echo "" >> $HOME/MacUSB/checksums.txt
+
+md5sum "$HOME/MacUSB/Download/Old/OpenCore-Series-600.zip" >> $HOME/MacUSB/checksums.txt
+md5sum "$HOME/MacUSB/Download/OpenCore-Series-600.zip" >> $HOME/MacUSB/checksums.txt
