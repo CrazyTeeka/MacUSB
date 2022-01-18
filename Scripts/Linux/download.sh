@@ -15,22 +15,23 @@ wget -q -P $HOME/MacUSB/Download/Old/ $CLOVER/Clover-Series-6.zip
 wget -q -P $HOME/MacUSB/Download/Old/ $CLOVER/Clover-Series-7.zip
 wget -q -P $HOME/MacUSB/Download/Old/ $CLOVER/Clover-Series-8.zip
 wget -q -P $HOME/MacUSB/Download/Old/ $CLOVER/Clover-Series-9.zip
-wget -q -P $HOME/MacUSB/Download/Old/ $CLOVER/Clover-Series-10.zip
-wget -q -P $HOME/MacUSB/Download/Old/ $CLOVER/Clover-Series-20.zip
-wget -q -P $HOME/MacUSB/Download/Old/ $CLOVER/Clover-Series-30.zip
-wget -q -P $HOME/MacUSB/Download/Old/ $CLOVER/Clover-Series-40.zip
-wget -q -P $HOME/MacUSB/Download/Old/ $CLOVER/Clover-Series-50.zip
-wget -q -P $HOME/MacUSB/Download/Old/ $CLOVER/Clover-Series-60.zip
+wget -q -P $HOME/MacUSB/Download/Old/ $CLOVER/Clover-Series-100.zip
+wget -q -P $HOME/MacUSB/Download/Old/ $CLOVER/Clover-Series-200.zip
+wget -q -P $HOME/MacUSB/Download/Old/ $CLOVER/Clover-Series-300.zip
+wget -q -P $HOME/MacUSB/Download/Old/ $CLOVER/Clover-Series-400.zip
+wget -q -P $HOME/MacUSB/Download/Old/ $CLOVER/Clover-Series-500.zip
+wget -q -P $HOME/MacUSB/Download/Old/ $CLOVER/Clover-Series-600.zip
 
 wget -q -P $HOME/MacUSB/Download/Old/ $OPENCORE/OpenCore-Series-6.zip
 wget -q -P $HOME/MacUSB/Download/Old/ $OPENCORE/OpenCore-Series-7.zip
 wget -q -P $HOME/MacUSB/Download/Old/ $OPENCORE/OpenCore-Series-8.zip
 wget -q -P $HOME/MacUSB/Download/Old/ $OPENCORE/OpenCore-Series-9.zip
-wget -q -P $HOME/MacUSB/Download/Old/ $OPENCORE/OpenCore-Series-10.zip
-wget -q -P $HOME/MacUSB/Download/Old/ $OPENCORE/OpenCore-Series-20.zip
-wget -q -P $HOME/MacUSB/Download/Old/ $OPENCORE/OpenCore-Series-30.zip
-wget -q -P $HOME/MacUSB/Download/Old/ $OPENCORE/OpenCore-Series-40.zip
-wget -q -P $HOME/MacUSB/Download/Old/ $OPENCORE/OpenCore-Series-50.zip
+wget -q -P $HOME/MacUSB/Download/Old/ $OPENCORE/OpenCore-Series-100.zip
+wget -q -P $HOME/MacUSB/Download/Old/ $OPENCORE/OpenCore-Series-200.zip
+wget -q -P $HOME/MacUSB/Download/Old/ $OPENCORE/OpenCore-Series-300.zip
+wget -q -P $HOME/MacUSB/Download/Old/ $OPENCORE/OpenCore-Series-400.zip
+wget -q -P $HOME/MacUSB/Download/Old/ $OPENCORE/OpenCore-Series-500.zip
+wget -q -P $HOME/MacUSB/Download/Old/ $OPENCORE/OpenCore-Series-600.zip
 
 wget -q -P $HOME/MacUSB/Download/ $OLARILA/CLOVER/CLOVER.SERIES.CHIPSET.zip
 wget -q -P $HOME/MacUSB/Download/ $OLARILA/CLOVER/EFI%20Clover%20Serie%20100.200.zip
@@ -39,17 +40,18 @@ wget -q -P $HOME/MacUSB/Download/ $OLARILA/CLOVER/EFI%20Clover%20Serie%20500.zip
 wget -q -P $HOME/MacUSB/Download/ $OLARILA/CLOVER/EFI%20Clover%20Serie%20600.zip
 
 mv "$HOME/MacUSB/Download/CLOVER.SERIES.CHIPSET.zip"    $HOME/MacUSB/Download/Clover-Series-5.zip
-mv "$HOME/MacUSB/Download/EFI Clover Serie 100.200.zip" $HOME/MacUSB/Download/Clover-Series-10.zip
-mv "$HOME/MacUSB/Download/EFI Clover Serie 300.400.zip" $HOME/MacUSB/Download/Clover-Series-30.zip
-mv "$HOME/MacUSB/Download/EFI Clover Serie 500.zip"     $HOME/MacUSB/Download/Clover-Series-50.zip
-mv "$HOME/MacUSB/Download/EFI Clover Serie 600.zip"     $HOME/MacUSB/Download/Clover-Series-60.zip
+mv "$HOME/MacUSB/Download/EFI Clover Serie 100.200.zip" $HOME/MacUSB/Download/Clover-Series-100.zip
+mv "$HOME/MacUSB/Download/EFI Clover Serie 300.400.zip" $HOME/MacUSB/Download/Clover-Series-300.zip
+mv "$HOME/MacUSB/Download/EFI Clover Serie 500.zip"     $HOME/MacUSB/Download/Clover-Series-500.zip
+mv "$HOME/MacUSB/Download/EFI Clover Serie 600.zip"     $HOME/MacUSB/Download/Clover-Series-600.zip
 
 cp $HOME/MacUSB/Download/Clover-Series-5.zip  $HOME/MacUSB/Download/Clover-Series-6.zip
 cp $HOME/MacUSB/Download/Clover-Series-5.zip  $HOME/MacUSB/Download/Clover-Series-7.zip
 cp $HOME/MacUSB/Download/Clover-Series-5.zip  $HOME/MacUSB/Download/Clover-Series-8.zip
 cp $HOME/MacUSB/Download/Clover-Series-5.zip  $HOME/MacUSB/Download/Clover-Series-9.zip
-cp $HOME/MacUSB/Download/Clover-Series-10.zip $HOME/MacUSB/Download/Clover-Series-20.zip
-cp $HOME/MacUSB/Download/Clover-Series-30.zip $HOME/MacUSB/Download/Clover-Series-40.zip
+
+cp $HOME/MacUSB/Download/Clover-Series-100.zip $HOME/MacUSB/Download/Clover-Series-200.zip
+cp $HOME/MacUSB/Download/Clover-Series-300.zip $HOME/MacUSB/Download/Clover-Series-400.zip
 
 wget -q -P $HOME/MacUSB/Download/ $OLARILA/OPENCORE/EFI.OpenCore.Desktop.SandyBridge.zip
 wget -q -P $HOME/MacUSB/Download/ $OLARILA/OPENCORE/EFI.OpenCore.Desktop.IvyBridge.zip
