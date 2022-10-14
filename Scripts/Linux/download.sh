@@ -33,11 +33,11 @@ wget -q -P $HOME/MacUSB/Download/Old/ $OPENCORE/OpenCore-Series-400.zip
 wget -q -P $HOME/MacUSB/Download/Old/ $OPENCORE/OpenCore-Series-500.zip
 wget -q -P $HOME/MacUSB/Download/Old/ $OPENCORE/OpenCore-Series-600.zip
 
-wget -q -P $HOME/MacUSB/Download/ $OLARILA/CLOVER/CLOVER.SERIES.CHIPSET.zip
-wget -q -P $HOME/MacUSB/Download/ $OLARILA/CLOVER/EFI%20Clover%20Serie%20100.200.zip
-wget -q -P $HOME/MacUSB/Download/ $OLARILA/CLOVER/EFI%20Clover%20Serie%20300.400.zip
-wget -q -P $HOME/MacUSB/Download/ $OLARILA/CLOVER/EFI%20Clover%20Serie%20500.zip
-wget -q -P $HOME/MacUSB/Download/ $OLARILA/CLOVER/EFI%20Clover%20Serie%20600.zip
+wget -q -P $HOME/MacUSB/Download/ $OLARILA/CLOVER1/CLOVER.SERIES.CHIPSET.zip
+wget -q -P $HOME/MacUSB/Download/ $OLARILA/CLOVER1/EFI%20Clover%20Serie%20100.200.zip
+wget -q -P $HOME/MacUSB/Download/ $OLARILA/CLOVER1/EFI%20Clover%20Serie%20300.400.zip
+wget -q -P $HOME/MacUSB/Download/ $OLARILA/CLOVER1/EFI%20Clover%20Serie%20500.zip
+wget -q -P $HOME/MacUSB/Download/ $OLARILA/CLOVER1/EFI%20Clover%20Serie%20600.zip
 
 mv "$HOME/MacUSB/Download/CLOVER.SERIES.CHIPSET.zip"    $HOME/MacUSB/Download/Clover-Series-5.zip
 mv "$HOME/MacUSB/Download/EFI Clover Serie 100.200.zip" $HOME/MacUSB/Download/Clover-Series-100.zip
@@ -53,15 +53,15 @@ cp $HOME/MacUSB/Download/Clover-Series-5.zip  $HOME/MacUSB/Download/Clover-Serie
 cp $HOME/MacUSB/Download/Clover-Series-100.zip $HOME/MacUSB/Download/Clover-Series-200.zip
 cp $HOME/MacUSB/Download/Clover-Series-300.zip $HOME/MacUSB/Download/Clover-Series-400.zip
 
-wget -q -P $HOME/MacUSB/Download/ $OLARILA/OPENCORE/EFI.OpenCore.Desktop.SandyBridge.zip
-wget -q -P $HOME/MacUSB/Download/ $OLARILA/OPENCORE/EFI.OpenCore.Desktop.IvyBridge.zip
-wget -q -P $HOME/MacUSB/Download/ $OLARILA/OPENCORE/EFI.Opencore.Desktop.Haswell.Broadwell.zip
-wget -q -P $HOME/MacUSB/Download/ $OLARILA/OPENCORE/EFI.Opencore.Desktop.SkyLake.zip
-wget -q -P $HOME/MacUSB/Download/ $OLARILA/OPENCORE/EFI.Opencore.Desktop.KabyLake.zip
-wget -q -P $HOME/MacUSB/Download/ $OLARILA/OPENCORE/EFI.Opencore.Desktop.CoffeeLake.zip
-wget -q -P $HOME/MacUSB/Download/ $OLARILA/OPENCORE/EFI.Opencore.Desktop.CometLake.zip
-wget -q -P $HOME/MacUSB/Download/ $OLARILA/OPENCORE/EFI.Opencore.Desktop.RocketLake.zip
-wget -q -P $HOME/MacUSB/Download/ $OLARILA/OPENCORE/EFI.Opencore.Desktop.AlderLake.zip
+wget -q -P $HOME/MacUSB/Download/ $OLARILA/OPENCORE1/EFI.OpenCore.Desktop.SandyBridge.zip
+wget -q -P $HOME/MacUSB/Download/ $OLARILA/OPENCORE1/EFI.OpenCore.Desktop.IvyBridge.zip
+wget -q -P $HOME/MacUSB/Download/ $OLARILA/OPENCORE1/EFI.Opencore.Desktop.Haswell.Broadwell.zip
+wget -q -P $HOME/MacUSB/Download/ $OLARILA/OPENCORE1/EFI.Opencore.Desktop.SkyLake.zip
+wget -q -P $HOME/MacUSB/Download/ $OLARILA/OPENCORE1/EFI.Opencore.Desktop.KabyLake.zip
+wget -q -P $HOME/MacUSB/Download/ $OLARILA/OPENCORE1/EFI.Opencore.Desktop.CoffeeLake.zip
+wget -q -P $HOME/MacUSB/Download/ $OLARILA/OPENCORE1/EFI.Opencore.Desktop.CometLake.zip
+wget -q -P $HOME/MacUSB/Download/ $OLARILA/OPENCORE1/EFI.Opencore.Desktop.RocketLake.zip
+wget -q -P $HOME/MacUSB/Download/ $OLARILA/OPENCORE1/EFI.Opencore.Desktop.AlderLake.zip
 
 mv $HOME/MacUSB/Download/EFI.OpenCore.Desktop.SandyBridge.zip       $HOME/MacUSB/Download/OpenCore-Series-6.zip
 mv $HOME/MacUSB/Download/EFI.OpenCore.Desktop.IvyBridge.zip         $HOME/MacUSB/Download/OpenCore-Series-7.zip
