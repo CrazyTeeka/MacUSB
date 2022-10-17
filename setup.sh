@@ -1,7 +1,7 @@
 #!/bin/bash
 
-CloverVersion="5138"
-OpenCoreVersion="0.7.2"
+CloverVersion="5149"
+OpenCoreVersion="0.8.5"
 
 DSDT="https://github.com/CrazyTeeka/MacUSB/raw/master/DSDT"
 KEXTS="https://github.com/CrazyTeeka/MacUSB/raw/master/Kexts"
@@ -22,6 +22,7 @@ mkdir -p Tools
 
 rm -rf Clover/*
 rm -rf OpenCore/*
+rm -rf Download
 rm -rf DSDT/*
 rm -rf Kexts/*
 rm -rf Scripts/*
@@ -91,15 +92,15 @@ wget -q -P Tools/ $OPENCORE/OpenCore-Configurator.zip
 #wget -q -P DSDT/ $DSDT/Asus-RoG-Maximus-VII-Hero-3503.aml
 #wget -q -P DSDT/ $DSDT/Asus-RoG-Maximus-VIII-Gene-1902.aml
 
-wget -q -P Temp/ $KEXTS/AirportBrcmFixup-2.1.3-RELEASE.zip
-wget -q -P Temp/ $KEXTS/AppleALC-1.6.3-RELEASE.zip
+wget -q -P Temp/ $KEXTS/AirportBrcmFixup-2.1.6-RELEASE.zip
+wget -q -P Temp/ $KEXTS/AppleALC-1.7.5-RELEASE.zip
 wget -q -P Temp/ $KEXTS/AtherosE2200Ethernet-V2.2.2.zip
 wget -q -P Temp/ $KEXTS/IntelMausi-1.0.7-RELEASE.zip
-wget -q -P Temp/ $KEXTS/Lilu-1.5.5-RELEASE.zip
+wget -q -P Temp/ $KEXTS/Lilu-1.6.2-RELEASE.zip
 wget -q -P Temp/ $KEXTS/RealtekRTL8111-V2.4.2.zip
-wget -q -P Temp/ $KEXTS/RestrictEvents-1.0.3-RELEASE.zip
-wget -q -P Temp/ $KEXTS/VirtualSMC-1.2.6-RELEASE.zip
-wget -q -P Temp/ $KEXTS/WhateverGreen-1.5.2-RELEASE.zip
+wget -q -P Temp/ $KEXTS/RestrictEvents-1.0.8-RELEASE.zip
+wget -q -P Temp/ $KEXTS/VirtualSMC-1.3.0-RELEASE.zip
+wget -q -P Temp/ $KEXTS/WhateverGreen-1.6.1-RELEASE.zip
 
 wget -q -P Scripts/Linux/ $SCRIPTS/Linux/download.sh
 wget -q -P Scripts/Linux/ $SCRIPTS/Linux/update-opencore.sh
@@ -142,15 +143,15 @@ unzip -o -qq Temp/OpenCore-Series-400.zip -d OpenCore/Series-400/
 unzip -o -qq Temp/OpenCore-Series-500.zip -d OpenCore/Series-500/
 unzip -o -qq Temp/OpenCore-Series-600.zip -d OpenCore/Series-600/
 
-unzip -o -qq Temp/AirportBrcmFixup-2.1.3-RELEASE.zip -d Kexts/
-unzip -o -qq Temp/AppleALC-1.6.3-RELEASE.zip -d Kexts/
+unzip -o -qq Temp/AirportBrcmFixup-2.1.6-RELEASE.zip -d Kexts/
+unzip -o -qq Temp/AppleALC-1.7.5-RELEASE.zip -d Kexts/
 unzip -o -qq Temp/AtherosE2200Ethernet-V2.2.2.zip -d Kexts/
 unzip -o -qq Temp/IntelMausi-1.0.7-RELEASE.zip -d Kexts/
-unzip -o -qq Temp/Lilu-1.5.5-RELEASE.zip -d Kexts/
+unzip -o -qq Temp/Lilu-1.6.2-RELEASE.zip -d Kexts/
 unzip -o -qq Temp/RealtekRTL8111-V2.4.2.zip -d Kexts/
-unzip -o -qq Temp/RestrictEvents-1.0.3-RELEASE.zip -d Kexts/
-unzip -o -qq Temp/VirtualSMC-1.2.6-RELEASE.zip -d Kexts/
-unzip -o -qq Temp/WhateverGreen-1.5.2-RELEASE.zip -d Kexts/
+unzip -o -qq Temp/RestrictEvents-1.0.8-RELEASE.zip -d Kexts/
+unzip -o -qq Temp/VirtualSMC-1.3.0-RELEASE.zip -d Kexts/
+unzip -o -qq Temp/WhateverGreen-1.6.1-RELEASE.zip -d Kexts/
 
 echo "Organising Files..."
 
@@ -245,6 +246,6 @@ sed -i "s/<string>Olarila<\/string>/<string>Clovy<\/string>/g" Clover/Series-500
 sed -i "s/<string>Olarila<\/string>/<string>Clovy<\/string>/g" Clover/Series-600/EFI/CLOVER/config.plist
 
 chmod -R +x Scripts/*
-#rm -rf Temp
+rm -rf Temp
 
 echo "Done"
