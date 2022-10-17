@@ -89,9 +89,6 @@ wget -q -P Temp/ $OPENCORE/OpenCore-Series-600.zip
 wget -q -P Tools/ $CLOVER/Clover-Configurator.zip
 wget -q -P Tools/ $OPENCORE/OpenCore-Configurator.zip
 
-#wget -q -P DSDT/ $DSDT/Asus-RoG-Maximus-VII-Hero-3503.aml
-#wget -q -P DSDT/ $DSDT/Asus-RoG-Maximus-VIII-Gene-1902.aml
-
 wget -q -P Temp/ $KEXTS/AirportBrcmFixup-2.1.6-RELEASE.zip
 wget -q -P Temp/ $KEXTS/AppleALC-1.7.5-RELEASE.zip
 wget -q -P Temp/ $KEXTS/AtherosE2200Ethernet-V2.2.2.zip
@@ -103,7 +100,6 @@ wget -q -P Temp/ $KEXTS/VirtualSMC-1.3.0-RELEASE.zip
 wget -q -P Temp/ $KEXTS/WhateverGreen-1.6.1-RELEASE.zip
 
 wget -q -P Scripts/Linux/ $SCRIPTS/Linux/download.sh
-wget -q -P Scripts/Linux/ $SCRIPTS/Linux/update-opencore.sh
 
 wget -q -P Scripts/Mac/ $SCRIPTS/Mac/backup
 wget -q -P Scripts/Mac/ $SCRIPTS/Mac/backup-efi
